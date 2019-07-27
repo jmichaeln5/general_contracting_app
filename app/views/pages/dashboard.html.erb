@@ -1,0 +1,101 @@
+<p id="notice"><%= notice %></p>
+<div class="card container text-center">
+
+
+  <p> Pages#Dashboard</p>
+<!-- Button trigger modal -->
+<button type="button btn-primary" class="display-4" data-toggle="modal" data-target="#exampleModal">
+  View My Properties
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!-- List of properties loop begin -->
+      <% @properties.each do |property| %>
+          <div class="card">
+            <br>
+            <%= property.full_street_address %>
+            <br>
+            <%= property.user.email%>
+            <br>
+
+            <%= property.longitude %>, <%= property.latitude %>
+
+            <br>
+            <div>
+              <br>
+            <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+      <% end %>
+    <br>
+<!-- List of properties loop end -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+<br>
+
+<div id="map"></div>
+
+<script>
+
+var lat = 38.812016;
+var lng = -97.504928 ;
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 3.5,
+    center: {lat, lng}
+  });
+
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat, lng}
+  });
+  marker.addListener('click', toggleBounce);
+  }
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUrlQaMPYAMf2W6vaHFF7ufv-Bp6A7dZo&callback=initMap">
+</script>
+
+<hr>
+<div class="tex">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+<br>
+
+
+</div>

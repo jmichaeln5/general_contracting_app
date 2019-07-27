@@ -1,0 +1,63 @@
+<div class="card container">
+
+<div class="display-4 text-center py-5"> Property </div>
+<hr>
+<div class="text-center">
+<%= link_to 'Edit Property', edit_property_path(@property), class:"btn btn-outline-secondary" %>
+<br>
+<br>
+<div class="card container">
+  <br>
+  <strong>Address:</strong>
+
+  <%= @property.full_street_address %>
+
+
+<div id="map"></div>
+
+<script>
+
+var lat = <%= @property.lat %>;
+var lng = <%= @property.lng %>;
+
+var marker;
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: {lat, lng}
+  });
+
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat, lng}
+  });
+  marker.addListener('click', toggleBounce);
+}
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUrlQaMPYAMf2W6vaHFF7ufv-Bp6A7dZo&callback=initMap">
+</script>
+
+<br>
+</div>
+
+<br>
+
+<div class="text-center">
+
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+<br>
