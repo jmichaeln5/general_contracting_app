@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_07_29_023638) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+    t.string "link"
     t.string "city"
     t.string "state"
     t.integer "zip"

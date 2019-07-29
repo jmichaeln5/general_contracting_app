@@ -8,10 +8,16 @@
     </div>
   <% end %>
 
-      <div class="field">
+      <!-- <div class="field">
         <%= form.label :user_id, "User ID" %>
         <%#= form.hidden_field :user_id, id: :user_id, value: @current_user.id %>
          <%= form.text_field :user_id, id: :user_id, value: current_user.id %>
+      </div> -->
+
+
+      <div class="field">
+        <%= form.label :link %>
+        <%= form.text_field :link %>
       </div>
 
       <div class="field">
