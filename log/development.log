@@ -8988,3 +8988,85 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 56ms (Views: 47.4ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/dashboard" for 127.0.0.1 at 2019-07-29 00:43:23 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:25
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/pages/dashboard.html.erb:110
+  Rendered pages/dashboard.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 85ms (Views: 65.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-29 00:53:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_nav.html.erb:9
+  Rendered layouts/_nav.html.erb (5.1ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2019-07-29 00:53:29 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (2.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:25
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/pages/dashboard.html.erb:110
+  Rendered pages/dashboard.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 59ms (Views: 47.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/3/properties/new" for ::1 at 2019-07-29 00:53:30 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.4ms)
+  Rendered properties/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 77ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/3/properties" for ::1 at 2019-07-29 00:53:43 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eoy3394YGSY+fqi6P4L4vYPc5cV24558DD2miZr7nbszOcKsCGMi98y3TT6sfOQsYEhoFwxvMXRGoAg1zmne5g==", "property"=>{"link"=>"https://www.zillow.com/homedetails/2841-Somerset-Dr-APT-210-Lauderdale-Lakes-FL-33311/43094043_zpid/?", "address"=>"2841 Somerset Dr APT 210", "city"=>"Lauderdale Lakes", "state"=>"FL", "zip"=>"33311", "description"=>""}, "commit"=>"Create Property", "user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[36mProperty Create (7.4ms)[0m  [1m[32mINSERT INTO "properties" ("description", "address", "city", "state", "zip", "created_at", "updated_at", "user_id", "link") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", ""], ["address", "2841 Somerset Dr APT 210"], ["city", "Lauderdale Lakes"], ["state", "FL"], ["zip", 33311], ["created_at", "2019-07-29 04:53:44.483809"], ["updated_at", "2019-07-29 04:53:44.483809"], ["user_id", 3], ["link", "https://www.zillow.com/homedetails/2841-Somerset-Dr-APT-210-Lauderdale-Lakes-FL-33311/43094043_zpid/?"]]
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:45
+Redirected to http://localhost:3000/properties/11
+Completed 200 OK in 646ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/properties/11" for ::1 at 2019-07-29 00:53:44 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 42.5ms | ActiveRecord: 1.0ms)
+
+
