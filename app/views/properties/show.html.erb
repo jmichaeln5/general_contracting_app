@@ -1,6 +1,17 @@
 <div class="card container">
 
 <div class="display-4 text-center py-5"> Property </div>
+
+<% if @property.description.present? %>
+  <div class="text-center">
+    <strong>Description:</strong>
+    <%= @property.description %>
+  </div>
+  <br>
+<% end %>
+
+
+
 <hr>
 
 <div class="text-center">
