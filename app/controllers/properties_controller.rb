@@ -14,7 +14,7 @@ class PropertiesController < ApplicationController
 
   def index
     @user = current_user
-    @properties = Property.all
+    @properties = @user.properties
   end
 
   # GET /properties/1
@@ -92,6 +92,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:description, :latitude, :longitude, :address, :city, :state, :zip, :user_id)
+      params.require(:property).permit(:description, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id)
     end
 end

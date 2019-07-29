@@ -1,27 +1,42 @@
-
-<h1>All Properties</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.full_street_address %></td>
-        <td><%= link_to 'View Property', property %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<p id="notice"><%= notice %></p>
+<div class="card container text-center">
 
 <br>
 
-<%#= link_to 'New Property', new_property_path %>
+<div class="display-4 text-center py-5"> My Properties </div>
+<hr>
 
-<%= link_to 'New Property', new_user_property_path(@user) %>
+<%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+<br>
+
+<% @properties.each do |property| %>
+    <div class="card">
+      <br>
+      <%= property.full_street_address %>
+      <br>
+      <%= property.user.email%>
+      <br>
+
+      <%= property.longitude %>, <%= property.latitude %>
+
+      <br>
+      <div>
+        <br>
+      <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
+      <br>
+      <br>
+      </div>
+    </div>
+    <br>
+<% end %>
+
+<br>
+
+<hr>
+<div class="text">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+<br>
+
+</div>

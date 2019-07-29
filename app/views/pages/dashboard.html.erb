@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
-<div class="card container text-center">
+<div class="card container text-center py-5">
 
-
-  <p> Pages#Dashboard</p>
+<br>
 <!-- Button trigger modal -->
 <button type="button btn-primary" class="display-4" data-toggle="modal" data-target="#exampleModal">
   View My Properties
 </button>
 
+<br>
+<br>
+<hr>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -52,6 +54,8 @@
 
 <br>
 <%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+<br>
 
 <div id="map"></div>
 

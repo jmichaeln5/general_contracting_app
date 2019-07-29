@@ -1,19 +1,23 @@
 <div class="card container">
 
 <div class="display-4 text-center py-5"> Property </div>
+
+<div class="text-center">
+
+
+</div>
+
 <hr>
 <div class="text-center">
 <%= link_to 'Edit Property', edit_property_path(@property), class:"btn btn-outline-secondary" %>
 <br>
 <br>
 <div class="card container">
-  <br>
-  <strong>Address:</strong>
+<br>
+<strong>Address:</strong>
 
-  <%= @property.full_street_address %>
-  <%= @property.lat %>
-  <%= @property.lng %>
-
+<a href="<%= @property.link %>" target="_blank"><%= @property.full_street_address %></a>
+<br>
 <div id="map"></div>
 
 <script>
