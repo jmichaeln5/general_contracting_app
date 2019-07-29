@@ -22,16 +22,12 @@
       </div>
       <div class="modal-body">
 <!-- List of properties loop begin -->
-      <% @properties.last(3).each do |property| %>
+      <% @properties.last(4).each do |property| %>
           <div class="card">
             <br>
             <%= property.full_street_address %>
             <br>
             <%= property.user.email%>
-            <br>
-
-            <%= property.longitude %>, <%= property.latitude %>
-
             <br>
             <div>
               <br>
