@@ -15,14 +15,14 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">My Properties</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 <!-- List of properties loop begin -->
-      <% @properties.each do |property| %>
+      <% @properties.last(3).each do |property| %>
           <div class="card">
             <br>
             <%= property.full_street_address %>
@@ -44,6 +44,15 @@
       <% end %>
     <br>
 <!-- List of properties loop end -->
+
+  <div class="card">
+    <br>
+      <br>
+    <%= link_to 'View All Properties', user_properties_path(current_user), class:"btn btn-outline-primary-primary btn-block", style: 'color:blue' %>
+    <br>
+    <br>
+  </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
