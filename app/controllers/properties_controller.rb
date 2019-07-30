@@ -14,7 +14,7 @@ class PropertiesController < ApplicationController
 
   def index
     @user = current_user
-    @properties = @user.properties
+    @properties = current_user.properties.all.order("created_at DESC")
   end
 
   # GET /properties/1
