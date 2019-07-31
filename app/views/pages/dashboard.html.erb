@@ -3,9 +3,14 @@
 
   <br>
 <!-- Button trigger modal -->
-<button type="button btn-primary" class="display-4" data-toggle="modal" data-target="#exampleModal">
-  View My Properties
-</button>
+
+<div class="card">
+  <div type="button" class="display-4" data-toggle="modal" data-target="#exampleModal">
+    View My Properties
+  </div>
+</div>
+
+
 
 <br>
 <br>
@@ -25,10 +30,7 @@
       <% @properties.last(4).each do |property| %>
           <div class="card">
             <br>
-            <%= property.full_street_address %>
-            <br>
-            <%= property.user.email%>
-            <br>
+            <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
             <div>
               <br>
             <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
@@ -86,8 +88,34 @@
           center: {lat: 38.81201, lng: -97.504928}
         });
 
-        // Create an array of alphabetical characters used to label the markers.
+
+
+
+
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        var locations = []
+
+        console.warn(locations)
+
+        <% @properties.each do |location| %>
+
+          var lat = <%= location.lat %>;
+          var lng = <%= location.lng %>;
+
+          locations.push({"lat":lat,"lng":lng})
+
+        <% end %>
+
+
+
+
+
+
+
+
+
+
 
         // Add some markers to the map.
         // Note: The code uses the JavaScript Array.prototype.map() method to
@@ -103,21 +131,9 @@
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
       }
-
-      var locations = []
-
-      <% @properties.each do |location| %>
-
-        var lat = <%= location.lat %>;
-        var lng = <%= location.lng %>;
-
-        locations.push({"lat":lat,"lng":lng})
-
-      <% end %>
-
 </script>
-
 
 
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">

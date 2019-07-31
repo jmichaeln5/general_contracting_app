@@ -7,7 +7,6 @@
 <hr>
 
 <br>
-<br>
 <%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
 
 <br>
@@ -17,9 +16,6 @@
       <br>
       <br>
       <%= property.full_street_address %>
-      <br>
-      <%= property.user.email%>
-      <br>
       <div>
         <br>
       <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
