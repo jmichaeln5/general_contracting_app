@@ -11989,3 +11989,31 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 49ms (Views: 39.0ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/dashboard" for ::1 at 2019-07-30 21:45:06 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:30
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/pages/dashboard.html.erb:101
+  Rendered pages/dashboard.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard" for ::1 at 2019-07-30 21:45:52 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:30
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/pages/dashboard.html.erb:101
+  Rendered pages/dashboard.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 40ms (Views: 33.4ms | ActiveRecord: 1.7ms)
+
+
