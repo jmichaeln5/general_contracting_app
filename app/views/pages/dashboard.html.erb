@@ -88,15 +88,16 @@
           center: {lat: 38.81201, lng: -97.504928}
         });
 
-
-
-
-
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+//        alert(labels.split(''))
+
+      var commaSeperatedLabels = labels.split('')
+
+      alert(labels.split(''))
 
         var locations = []
 
-        console.warn(locations)
 
         <% @properties.each do |location| %>
 
@@ -108,11 +109,7 @@
         <% end %>
 
 
-
-
-
-
-
+var chars = "overpopulation".split('');
 
 
 

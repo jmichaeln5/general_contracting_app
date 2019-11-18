@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2019_07_29_023638) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.string "link"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 

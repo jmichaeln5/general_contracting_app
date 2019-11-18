@@ -39,8 +39,6 @@ class UserPropertiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /user_properties/1
-  # PATCH/PUT /user_properties/1.json
   def update
     respond_to do |format|
       if @user_property.update(user_property_params)
@@ -53,8 +51,6 @@ class UserPropertiesController < ApplicationController
     end
   end
 
-  # DELETE /user_properties/1
-  # DELETE /user_properties/1.json
   def destroy
     @user_property.destroy
     respond_to do |format|

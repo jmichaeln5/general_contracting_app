@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'pages/about'
+  get 'pages/test_page'
   get 'dashboard', to: 'pages#dashboard'
 
   devise_for :user
