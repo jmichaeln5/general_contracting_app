@@ -17,15 +17,17 @@
   </head>
 
   <body>
-    <%= render "layouts/nav" %>
-    <div class="container py-5">
-    <!-- <div> -->
 
-     <!-- <p class="notice" style="color:green;"><%= notice %></p>
-     <p class="alert" style="color:red;"><%= alert %></p> -->
-
+    <% if current_page?(root_path) %>
       <%= yield %>
-    </div>
+    <% else %>
+      <%= render "layouts/nav" %>
+      <div class="container py-5">
+       <!-- <p class="notice" style="color:green;"><%= notice %></p>
+       <p class="alert" style="color:red;"><%= alert %></p> -->
+        <%= yield %>
+      </div>
+    <% end %>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
