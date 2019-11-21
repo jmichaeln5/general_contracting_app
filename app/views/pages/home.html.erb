@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
 
-<!-- Navigation -->
+<!-- Nav Begin -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">PropertyBuddy</a>
@@ -49,8 +49,7 @@
     </div>
   </div>
 </nav>
-
-<a href="#myDiv" id="myButton">
+<!-- Nav End -->
 
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -63,22 +62,16 @@
 
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-          <div class="carousel-caption d-none d-md-block">
+          <!-- Text overlaying image -->
+          <!-- <div class="carousel-caption d-none d-md-block">
             <h2 class="display-4">First Slide</h2>
             <p class="lead">This is a description for the first slide.</p>
-          </div>
+          </div> -->
+          <!-- Text overlaying image -->
         </div>
         <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/3100371/pexels-photo-3100371.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="display-4">Second Slide</h2>
-            <p class="lead">This is a description for the second slide.</p>
-          </div>
         </div>
         <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/3225640/pexels-photo-3225640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="display-4">Third Slide</h2>
-            <p class="lead">This is a description for the third slide.</p>
-          </div>
         </div>
 
       </div>
@@ -86,56 +79,16 @@
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
-          </a>
+      </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
-
+      </a>
     </div>
-
-      <h1 class="centered"> Property Buddy </h1>
-
   </header>
 
+  <div class="container">
+    <h1 class="coverOverlayText">Property Buddy </h1>
+  </div>
 
-</a>
-
-
-<div>
-<div class="well text-center">
-    <div class="row">
-        <div class="col-md-6">
-            <a href="#"><img class="well-img" src="http://lorempixel.com/400/200/" alt="inn_logo"></a>
-        </div>
-        <div class="col-md-6">
-            <a href="#"><img  class="well-img" src="http://lorempixel.com/g/400/200/" alt="ccs_logo"></a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div id="myDiv">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-</div>
-
-<!-- <img src="https://via.placeholder.com/540x360" alt=""> -->
-
-
-<script type="text/javascript">
-function (){
-
-  $('.carousel').carousel({
-    // interval: 90000
-    // interval: 70000
-    interval: 1000
-  })
-
-
-  $('#myButton').click(function() {
-     $.scrollTo($('#myDiv'), 90000);
-  });
-
-}
-</script>
+  <p class="bottomCoverOverlayText halfOpacity">Press Anywhere to Continue</p>
