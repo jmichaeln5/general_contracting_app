@@ -12,9 +12,9 @@
   /* width: 100% ; */
 }
 
-.row {
+/* .row {
   border: 1px solid black;
-}
+} */
 
 .carousel-item {
   background-color: Black;
@@ -71,6 +71,27 @@
   text-decoration: underline;
 }
 
+
+.modalLeft {
+  float: left;
+  padding-left: 10%;
+
+}
+
+.modalLeft:hover {
+    text-decoration:none;
+  }
+
+.modalRight {
+  float: right;
+  padding-right: 10%;
+}
+
+.modalRight:hover {
+    text-decoration:none;
+  }
+
+
 /* ******* Media Queries ********** */
 
 @media only screen and (max-width: 600px) {
@@ -84,6 +105,16 @@
       line-height: 100%;
       text-align: center;
   }
+
+  .modalLeft {
+    padding-left: 0%;
+
+  }
+
+  .modalRight {
+    padding-right: 0%;
+  }
+
 
 
 }
