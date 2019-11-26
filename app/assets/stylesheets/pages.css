@@ -8,13 +8,7 @@
 
 .well-img {
   width: 105%;
-  /* height: 50%; */
-  /* width: 100% ; */
 }
-
-/* .row {
-  border: 1px solid black;
-} */
 
 .carousel-item {
   background-color: Black;
@@ -23,7 +17,6 @@
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
    -webkit-filter: brightness(50%);
-    /* -webkit-transition: 1s all; */
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -33,7 +26,6 @@
   -webkit-filter: brightness(20%);
 }
 
-/* Centered text over carousel item */
 .coverOverlayText {
   color: white;
   font-size: 11vw;
@@ -45,6 +37,11 @@
   transform: translate(-50%, -50%);
   -webkit-filter: brightness(90%);
   text-align: center;
+}
+
+.whiteText{
+  color: white !important;
+  text-decoration: none;
 }
 
 .bottomCoverOverlayText {
@@ -71,29 +68,26 @@
   text-decoration: underline;
 }
 
-
 .modalLeft {
   float: left;
-  padding-left: 10%;
-
+  padding-left: 15%;
 }
 
 .modalLeft:hover {
-    text-decoration:none;
+  background-color: transparent;
   }
 
 .modalRight {
   float: right;
-  padding-right: 10%;
+  padding-right: 15%;
 }
 
 .modalRight:hover {
-    text-decoration:none;
+  background-color: transparent;
   }
 
 
-/* ******* Media Queries ********** */
-
+/* ******* Media Queries ********************* */
 @media only screen and (max-width: 600px) {
 
   .coverOverlayText {
@@ -107,14 +101,13 @@
   }
 
   .modalLeft {
-    padding-left: 0%;
+    padding-left: 10%;
 
   }
 
   .modalRight {
-    padding-right: 0%;
+    padding-right: 10%;
   }
-
 
 
 }

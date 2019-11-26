@@ -26,9 +26,10 @@
       <%= yield %>
     <% else %>
       <%= render "layouts/nav" %>
+      <p class="notice" style="color:green;"><%= notice %></p>
+      <p class="alert" style="color:red;"><%= alert %></p>
+
       <div class="container py-5">
-       <!-- <p class="notice" style="color:green;"><%= notice %></p>
-       <p class="alert" style="color:red;"><%= alert %></p> -->
         <%= yield %>
       </div>
     <% end %>

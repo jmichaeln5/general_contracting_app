@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   def dashboard
     @properties = current_user.properties.all.order("created_at DESC")
 
-    byebug
+    # byebug
 
   end
 
