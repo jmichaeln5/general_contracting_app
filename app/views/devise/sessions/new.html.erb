@@ -2,9 +2,6 @@
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
     <div class="fadeIn first">
       <div class="container">
         <br>
@@ -12,9 +9,6 @@
         <hr/>
       </div>
     </div>
-
-    <!-- Login Form -->
-
         <div class="field fadeIn second" name="login" placeholder="login" id="login">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class:"widerTextField" %>
         </div>
@@ -35,8 +29,6 @@
           <%= f.submit "Log in" %>
         </div>
       <% end %>
-
-    <!-- Remind Passowrd -->
     <div id="formFooter">
       <%= render "devise/shared/links" %>
     </div>
