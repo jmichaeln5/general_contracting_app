@@ -8,82 +8,72 @@
   </div>
 </div>
 
-
-
 <br>
 <hr>
 
 <br>
-
 
 <div class="card container text-center py-5">
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">My Properties</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-<!-- List of properties loop begin -->
-      <% @properties.last(4).each do |property| %>
-          <div class="card">
-            <br>
-            <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
-            <div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">My Properties</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  <!-- List of properties loop begin -->
+        <% @properties.last(4).each do |property| %>
+            <div class="card">
               <br>
-            <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
-            <br>
-            <br>
+              <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
+              <div>
+                <br>
+              <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
+              <br>
+              <br>
+              </div>
             </div>
-          </div>
+            <br>
+        <% end %>
+      <br>
+  <!-- List of properties loop end -->
+
+        <div class="card">
           <br>
-      <% end %>
-    <br>
-<!-- List of properties loop end -->
+          <br>
+          <%= link_to 'View All Properties', user_properties_path(current_user), class:"btn btn-outline-primary-primary btn-block", style: 'color:blue' %>
+          <br>
+          <br>
+        </div>
 
-  <div class="card">
-    <br>
-    <br>
-    <%= link_to 'View All Properties', user_properties_path(current_user), class:"btn btn-outline-primary-primary btn-block", style: 'color:blue' %>
-    <br>
-    <br>
-  </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
+  <!-- end of modal -->
+
+  <%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+  <br>
+
+  <div id="map"></div>
+
+  <br> <hr>
+
+  <div class="tex">
+  <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+  </div>
+  <br>
 </div>
-<!-- end of modal -->
-
-<%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
-
-<br>
-
-<div id="map"></div>
-
-<br>
-
-
-<hr>
-<div class="tex">
-<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
-</div>
-<br>
-
-</div>
-
-
-
 <script>
-
       function initMap() {
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -92,31 +82,19 @@
         });
 
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var commaSeperatedLabels = labels.split('')
 
-//        alert(labels.split(''))
-
-      var commaSeperatedLabels = labels.split('')
-
-      alert(labels.split(''))
+        // alert(labels.split(''))
 
         var locations = []
 
-
         <% @properties.each do |location| %>
-
           var lat = <%= location.lat %>;
           var lng = <%= location.lng %>;
-
           locations.push({"lat":lat,"lng":lng})
-
         <% end %>
 
         var chars = "overpopulation".split('');
-
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
         var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
             position: location,

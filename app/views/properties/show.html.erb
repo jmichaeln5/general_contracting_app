@@ -19,15 +19,14 @@
 <div class="card container">
 <br>
 
-
 <% if @property.link.present? %>
   <strong>Address:</strong>
   <a href="<%= @property.link %>" target="_blank"><%= @property.full_street_address %></a>
+
 <% else %>
   <strong>Address:</strong>
   <%= @property.full_street_address %></a>
 <% end %>
-
 
 <br>
 <br>
