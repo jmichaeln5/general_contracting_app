@@ -1,4 +1,6 @@
 <%#= form_with(model: property, local: true) do |form| %>
+
+
 <%= form_with(model: [ @user, @user.properties.build ]) do |form| %>
 
   <% if property.errors.any? %>
@@ -12,6 +14,90 @@
       </ul>
     </div>
   <% end %>
+
+
+
+  <!-- ************************ -->
+  <!-- ************************ -->
+  <!-- ************************ -->
+  <br><br><hr><hr><br>
+  <h1>Test</h1>
+   <br>
+    <div class="container">
+        <h2 id="text-center"> Enter Location: </h2>
+        <form id="location-form">
+          <input type="text" id="location-input" class="form-control form-control-lg">
+          <br>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+          <div class="card-block" id="formatted-address"></div>
+          <div class="card-block" id="address-components"></div>
+          <div class="card-block" id="geometry"></div>
+    </div>
+    <script>
+      // call GeoCode
+      // geocode();
+
+      // Get location form
+      var locationForm = document.getElementById('location-form');
+
+      // Listen for Submit
+      locationForm.addEventListener('submit', geocode);
+
+        function geocode(e){
+          // Prevent actual Submit
+          e.preventDefault();
+
+          var location = document.getElementById('location-input').value;
+          axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+            params:{
+              address:location,
+              key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
+            }
+          })
+          .then(function(response){
+            // Log full response
+            console.dir(response);
+
+            // Formatted Address
+            var formattedAddress = response.data.results[0].formatted_address;
+
+
+          // Address Components
+            var addressComponents = response.data.results[0].address_components;
+
+
+            // Geometry
+            var lat = response.data.results[0].geometry.location.lat;
+            var lng = response.data.results[0].geometry.location.lng;
+            var geometryOutput =  `
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Latitude</strong>${lat}</li>
+                <li class="list-group-item"><strong>Longitude</strong>${lng}</li>
+              </ul>`;
+
+
+            // Output to app
+            document.getElementById('geometry').innerHTML = geometryOutput;
+          })
+          .catch(function(error){
+            console.log(error);
+          });
+        }
+    </script>
+  <!-- geocode video -->       <!--  13:36 -->
+  <!-- https://www.youtube.com/watch?v=pRiQeo17u6c&t=773s -->
+  <br><hr><hr><br><br>
+  <!-- ************************ -->
+  <!-- ************************ -->
+  <!-- ************************ -->
+
+
+
+
+
+
+
 
       <!-- <div class="field">
         <%= form.label :user_id, "User ID" %>
@@ -45,7 +131,6 @@
       </div>
 
     <hr>
-
 
       <!-- <div class="field">
         <%= form.label :latitude %>
