@@ -20,3 +20,7 @@
 html {
     scroll-behavior: smooth !important;
 }
+
+.hidden{
+  display: none;
+}

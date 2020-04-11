@@ -1,6 +1,31 @@
 <%#= form_with(model: property, local: true) do |form| %>
 
 
+  <!-- ************************ -->
+  <!-- ************************ -->
+  <!-- ************************ -->
+
+  <div class="container">
+      <h2 id="text-center"> Enter Location: </h2>
+      <form id="location-form">
+        <input type="text" id="location-input" class="form-control form-control-lg">
+        <br>
+        <button type="submit" id="submit-address" class="btn btn-primary btn-block">Submit</button>
+      </form>
+        <!-- <div class="card-block" id="formatted-address"></div>
+        <div class="card-block" id="address-components"></div>
+        <div class="card-block" id="geometry"></div> -->
+        <div class="field" id="formatted-address"></div>
+        <div class="field" id="address-components"></div>
+        <!-- <div class="field" id="geometry"></div> -->
+  </div>
+
+  <br><br><hr><hr><br>
+
+  <!-- ************************ -->
+  <!-- ************************ -->
+  <!-- ************************ -->
+
 <%= form_with(model: [ @user, @user.properties.build ]) do |form| %>
 
   <% if property.errors.any? %>
@@ -17,88 +42,6 @@
 
 
 
-  <!-- ************************ -->
-  <!-- ************************ -->
-  <!-- ************************ -->
-  <br><br><hr><hr><br>
-  <h1>Test</h1>
-   <br>
-    <div class="container">
-        <h2 id="text-center"> Enter Location: </h2>
-        <form id="location-form">
-          <input type="text" id="location-input" class="form-control form-control-lg">
-          <br>
-          <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        </form>
-          <div class="card-block" id="formatted-address"></div>
-          <div class="card-block" id="address-components"></div>
-          <div class="card-block" id="geometry"></div>
-    </div>
-    <script>
-      // call GeoCode
-      // geocode();
-
-      // Get location form
-      var locationForm = document.getElementById('location-form');
-
-      // Listen for Submit
-      locationForm.addEventListener('submit', geocode);
-
-        function geocode(e){
-          // Prevent actual Submit
-          e.preventDefault();
-
-          var location = document.getElementById('location-input').value;
-          axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-            params:{
-              address:location,
-              key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
-            }
-          })
-          .then(function(response){
-            // Log full response
-            console.dir(response);
-
-            // Formatted Address
-            var formattedAddress = response.data.results[0].formatted_address;
-
-
-          // Address Components
-            var addressComponents = response.data.results[0].address_components;
-
-
-            // Geometry
-            var lat = response.data.results[0].geometry.location.lat;
-            var lng = response.data.results[0].geometry.location.lng;
-            var geometryOutput =  `
-              <ul class="list-group">
-                <li class="list-group-item"><strong>Latitude</strong>${lat}</li>
-                <li class="list-group-item"><strong>Longitude</strong>${lng}</li>
-              </ul>`;
-
-
-            // Output to app
-            document.getElementById('geometry').innerHTML = geometryOutput;
-          })
-          .catch(function(error){
-            console.log(error);
-          });
-        }
-    </script>
-  <!-- geocode video -->       <!--  13:36 -->
-  <!-- https://www.youtube.com/watch?v=pRiQeo17u6c&t=773s -->
-  <br><hr><hr><br><br>
-  <!-- ************************ -->
-  <!-- ************************ -->
-  <!-- ************************ -->
-
-
-
-
-
-
-
-
       <!-- <div class="field">
         <%= form.label :user_id, "User ID" %>
         <%#= form.hidden_field :user_id, id: :user_id, value: @current_user.id %>
@@ -110,10 +53,31 @@
         <%= form.text_field :link %>
       </div>
 
-      <div class="field">
+      <div class="field" id="property_address">
         <%= form.label :address %>
         <%= form.text_field :address %>
       </div>
+
+      <div class="field" id="geometry-lat">
+        <%= form.label :latitude %>
+        <%= form.text_field :latitude %>
+      </div>
+
+
+      <div class="field" id="geometry-lng">
+        <%= form.label :longitude %>
+        <%= form.text_field :longitude %>
+      </div>
+
+      <!-- <div class="field" id="geometry-lat"></div>
+      <div class="field" id="geometry-lng"></div> -->
+
+
+      <!-- <div class="field">
+        <%= form.label :latitude, id:"geometry-lat" %>
+        <%= form.text_field :latitude %>
+      </div> -->
+
 
       <div class="field">
         <%= form.label :city %>
@@ -125,30 +89,146 @@
         <%= form.text_field :state %>
       </div>
 
-      <div class="field">
-        <%= form.label :zip %>
-        <%= form.number_field :zip %>
+
+      <div class="h3" id="html-zip">
+        ZIP
+        <label class="hidden" for="property_zip">Zip</label>
+        <!-- id for form.number_field = property_zip -->
+        <input type="number" name="property[zip]" id="property_zip">
       </div>
 
     <hr>
 
-      <!-- <div class="field">
-        <%= form.label :latitude %>
-        <%= form.text_field :latitude %>
-      </div>
 
-      <div class="field">
-        <%= form.label :longitude %>
-        <%= form.text_field :longitude %>
-      </div> -->
 
       <div class="field">
         <%= form.label :description %>
         <%= form.text_area :description %>
       </div>
 
-
       <div class="actions">
         <%= form.submit %>
       </div>
     <% end %>
+
+
+
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+
+    <br><br><hr><hr><br>
+
+
+    <script>
+      // call GeoCode
+      // geocode();
+
+      // Get location form
+      var submitAddress = document.getElementById("submit-address");
+      submitAddress.addEventListener('click', geocode);
+
+        function geocode(e){
+          // Prevent actual Submit
+          e.preventDefault();
+
+          var location = document.getElementById('location-input').value;
+          axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+            params:{
+              address:location,
+              key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
+            }
+          }).then(function(response){
+
+            // Log full response
+            console.dir(response);
+
+            // debugger
+
+            // Formatted Address
+            var formattedAddress = response.data.results[0].formatted_address;
+            var formattedAdressOutput =  `<ul class="list-group"><li class="list-group-item"> ${formattedAddress}</li></ul>`;
+
+
+          // Address Components
+            var addressComponents = response.data.results[0].address_components;
+            var addressComponentsOutput = '<ul class="list-group">';
+
+            for(var i = 0; i < addressComponents.length;i++){
+
+              addressComponentsOutput += `
+                <li class="list-group-item"><strong>${addressComponents[i].types[0]}</strong>: ${addressComponents[i].long_name}</li>
+              `;
+            }
+            addressComponentsOutput += '</ul>'
+
+            // Geometry
+
+            var propertyLatitude = response.data.results[0].geometry.location.lat;
+            var propertyLongitude = response.data.results[0].geometry.location.lng;
+
+
+            var geometryOutput = `
+              <ul class="list-group">
+                <li id="lat" class="list-group-item"><strong>Latitude</strong>${propertyLatitude}</li>
+                <li id=""class="list-group-item"><strong>Longitude</strong>${propertyLongitude}</li>
+              </ul>`;
+
+              var geometryOutputLat = `
+              <div class="field">
+                  <label for="property_latitude">Latitude</label>
+                  <input type="text" name="property[latitude]" id="property_latitude" value="${propertyLatitude}" >
+              </div>
+                `;
+
+                var geometryOutputLng = `
+                <div class="field">
+                    <label for="property_longitude">Longitude</label>
+                    <input type="text" name="property[longitude]" id="property_longitude" value="${propertyLongitude}" >
+                </div>
+                  `;
+
+            // Output to app
+
+            document.getElementById('formatted-address').innerHTML = formattedAdressOutput;
+            document.getElementById('address-components').innerHTML = addressComponentsOutput;
+            // document.getElementById('geometry').innerHTML = geometryOutput;
+
+            document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
+            document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
+            document.getElementById('formatted-address').innerHTML = formattedAdressOutput;
+
+
+            // Output Lat/Lng
+            // document.getElementById('property_longitude').innerHTML = propertyLongitude;
+            // document.getElementById('property_latitude').innerHTML = propertyLatitude;
+
+            // document.getElementById('property_address').innerText = formattedAdress;
+            // document.getElementById('property_latitude').innerText = propertyLatitude;
+            // document.getElementById('property_longitude').innerText = propertyLongitude;
+
+
+
+            console.log("Address Components:  " + addressComponents);
+            console.log("formattedAddress: " + formattedAddress);
+            console.log("lat: " + lat);
+            console.log("lng: " + lng);
+
+          })
+          .catch(function(error){
+            console.log(error);
+          });
+        }
+    </script>
+
+
+
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
+    <!-- ************************ -->
