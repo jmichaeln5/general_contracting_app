@@ -26,8 +26,10 @@
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-right: 10px;
-  float: none;
-  width: auto;
+  height: 100%;
+  float: left;
+  width: 390px;
+  overflow: auto;
 }
 
 #left-panel select, #left-panel input {
@@ -42,19 +44,16 @@
   font-size: 12px;
 }
 
-#left-panel {
-  height: 100%;
-  float: left;
-  width: 390px;
-  overflow: auto;
-}
 
 #right-panel {
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
-  float: none;
-  width: auto;
+  height: 100%;
+  float: right;
+  width: 390px;
+  overflow: auto;
+
 }
 
 #right-panel select, #right-panel input {
@@ -69,16 +68,16 @@
   font-size: 12px;
 }
 
-#right-panel {
-  height: 100%;
-  float: right;
-  width: 390px;
-  overflow: auto;
+#directions-panel {
+  margin-top: 10px;
+  // background-color: #FFEE77;
+  background-color: #a6e6d4;
+  padding: 10px;
+  overflow: scroll;
+  height: 174px;
+  margin-top: 10px;
+  width: 100%;
 }
-
-// #map {
-//   margin-right: 400px;
-// }
 
 #floating-panel {
   background: #fff;
@@ -89,13 +88,44 @@
   box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
   display: none;
 }
+// ////////////////////////////////
+// ////////////////////////////////
+// ////////////////////////////////
+#center-panel {
+  font-family: 'Roboto','sans-serif';
+  height: 100%;
+  width: auto;
+  overflow: auto;
+}
+
+#center-panel select, #center-panel input {
+  font-size: 15px;
+}
+
+#center-panel select {
+  width: 100%;
+}
+
+#center-panel i {
+  font-size: 12px;
+}
+
+// ////////////////////////////////
+// ////////////////////////////////
+
+
+
 @media print {
   #map {
     height: 500px;
     margin: 0;
   }
-  // #right-panel {
-  //   float: none;
-  //   width: auto;
-  // }
+  #right-panel {
+    float: none;
+    width: auto;
+  }
+  #left-panel {
+    float: none;
+    width: auto;
+  }
 }

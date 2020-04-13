@@ -19,7 +19,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">My Properties</h5>
+          <h5 class="modal-title display-4" id="exampleModalLabel" style="font-size:200%;" >My Properties</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -28,7 +28,9 @@
         <% @properties.last(4).each do |property| %>
             <div class="card">
               <br>
-              <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
+              <div class="display-4" style="font-size:150%;">
+                <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
+              </div>
               <br>
               <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
               <br><br>
@@ -38,14 +40,13 @@
         <br>
 
         <div class="card">
-          <br>
-          <br>
+          <br> <br>
           <%= link_to 'View All Properties', user_properties_path(current_user), class:"btn btn-outline-primary-primary btn-block", style: 'color:blue' %>
-          <br>
-          <br>
+          <br> <br>
         </div>
 
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>

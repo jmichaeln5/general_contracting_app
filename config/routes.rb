@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'directions/index'
+  get 'directions/waypoints'
+  get 'directions/test_page'
   # resources :properties
   # resources :user_properties
 

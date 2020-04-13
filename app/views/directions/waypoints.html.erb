@@ -2,7 +2,6 @@
 <br>
 
 <div id="map"></div>
-<div id="right-panel">
 
   <select id="start">
     <% @properties.each do |property|%>
@@ -13,6 +12,8 @@
       <br>
     <% end %>
   </select>
+
+
 
     <br>
     <b>Waypoints:</b>
@@ -56,6 +57,7 @@
             zoom: 3.5,
             center: {lat: 41.85, lng: -87.65}
           });
+
           directionsDisplay.setMap(map);
 
           document.getElementById('submit').addEventListener('click', function() {
@@ -90,11 +92,17 @@
               // For each route, display summary information.
               for (var i = 0; i < route.legs.length; i++) {
                 var routeSegment = i + 1;
-                summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-                    '</b><br>';
-                summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-                summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-                summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+
+                // summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+                //     '</b><br>';
+
+                summaryPanel.innerHTML +=
+                '<div class="field display-4"  style="font-size:200%;">Route Segment: ' + routeSegment + '</div><br>';
+
+                summaryPanel.innerHTML +=
+                '<strong>' + route.legs[i].start_address + '</strong>' + ' to ' + '<br>';
+                summaryPanel.innerHTML +=  '<strong> ' + route.legs[i].end_address + '</strong>' + '<br>';
+                summaryPanel.innerHTML += 'Distance: ' + route.legs[i].distance.text + '<br><hr>';
               }
             } else {
               window.alert('Directions request failed due to ' + status);
@@ -106,8 +114,3 @@
       <script async defer
   src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk&callback=initMap">
   </script>
-
-
-
-</div>
-</div>
