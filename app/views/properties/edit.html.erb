@@ -3,7 +3,9 @@
 <div class="card container text-center">
   <br>
   <div class="display-4 text-center py-5"> Editing Property </div>
+
   <hr>
+<br>
 
 
 <br>
@@ -93,6 +95,7 @@
     <%= form.text_field :longitude %>
   </div>
 
+  <br>
   <hr>
   <br>
 
@@ -101,19 +104,27 @@
   </div> -->
 
   <!-- <div class="actions text-center container" style="width:50%;"> -->
-    <div class="actions text-center container">
+  <div class="actions text-center container">
     <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
      Update Property
     <% end %>
   </div>
 
   <br>
+  <hr>
+  <br>
 
+  <div class="actions text-center container">
+    <%= link_to 'Delete Property', @property, method: :delete, data: { confirm: 'Are you sure you would like to delete this property forever?' }, class:"btn btn-danger btn-lg" %>
+  </div>
+
+  <br>
+  <br>
 
 <% end %>
 
-<hr>
-<br>
+
+
 </div>
 
 <br>
