@@ -11,6 +11,7 @@
 
         <% if current_user %>
 
+<!-- Dropdown when logged in -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= "Welcome #{current_user.email}"  %>
@@ -30,6 +31,7 @@
               </a>
             </div>
           </li>
+
         <% else %>
 
           <li class="nav-item">

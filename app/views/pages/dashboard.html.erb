@@ -10,7 +10,6 @@
 
 <br>
 <hr>
-
 <br>
 
 <div class="card container text-center py-5">
@@ -26,22 +25,17 @@
           </button>
         </div>
         <div class="modal-body">
-  <!-- List of properties loop begin -->
         <% @properties.last(4).each do |property| %>
             <div class="card">
               <br>
               <%= link_to "#{property.full_street_address}", property, style: 'color:black' %>
-              <div>
-                <br>
+              <br>
               <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
-              <br>
-              <br>
-              </div>
+              <br><br>
             </div>
             <br>
         <% end %>
-      <br>
-  <!-- List of properties loop end -->
+        <br>
 
         <div class="card">
           <br>
@@ -70,6 +64,7 @@
   </div>
   <br>
 </div>
+
 <script>
       function initMap() {
 
