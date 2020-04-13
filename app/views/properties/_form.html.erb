@@ -1,22 +1,26 @@
 <%#= form_with(model: property, local: true) do |form| %>
 
 <div class="card container text-center">
+
   <br>
   <div class="display-4 text-center py-5"> Add New Property </div>
-  <hr>
+  <!-- <hr> -->
+  <br>
 
-
-<br>
+  <div class="card container text-center">
+    <br>
+    <br>
+    <br>
   <form id="location-form">
     <input type="text" id="location-input" class="form-control form-control-lg">
     <br>
     <br>
     <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
   </form>
-
-<hr>
-<hr>
-
+  <br>
+  <br>
+</div>
+<!-- <hr> -->
 
 <%= form_with(model: [ @user, @user.properties.build ]) do |form| %>
 
@@ -93,6 +97,7 @@
     <%= form.text_field :longitude %>
   </div>
 
+<br>
   <hr>
   <br>
 
@@ -112,7 +117,6 @@
 
 <% end %>
 
-<hr>
 <br>
 </div>
 
@@ -209,11 +213,16 @@
         document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
         document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
 
+        alert("Address found! Click OK to continue");
+
       })
       .catch(function(error){
         // console.log(error);
         alert("Address Error. Please enter a valid address. Click OK to continue.");
 
       });
+
+
+
     }
 </script>

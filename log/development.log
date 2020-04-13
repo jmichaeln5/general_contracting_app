@@ -31805,3 +31805,800 @@ Processing by PropertiesController#edit as HTML
 Completed 200 OK in 101ms (Views: 87.1ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/properties/19/edit" for ::1 at 2020-04-13 00:01:38 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/properties/19/edit" for ::1 at 2020-04-13 00:01:39 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:01:43 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 74ms (Views: 62.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:01:45 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.2ms)
+  Rendered properties/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 71ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:04:46 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.4ms)
+  Rendered properties/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 62ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:05:18 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (13.3ms)
+  Rendered properties/new.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 91ms (Views: 85.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:06:11 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.2ms)
+  Rendered properties/new.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:07:46 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.8ms)
+  Rendered properties/new.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:07:57 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (13.5ms)
+  Rendered properties/new.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 87ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:08:01 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.7ms)
+  Rendered properties/new.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 108ms (Views: 101.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:08:06 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (10.3ms)
+  Rendered properties/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 75ms (Views: 69.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:08:32 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.6ms)
+  Rendered properties/new.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 87ms (Views: 78.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:08:47 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (13.5ms)
+  Rendered properties/new.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 81ms (Views: 74.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:08:57 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (9.5ms)
+  Rendered properties/new.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_nav.html.erb (3.5ms)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:09:02 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (12.1ms)
+  Rendered properties/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 92ms (Views: 86.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:09:06 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (18.8ms)
+  Rendered properties/new.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 83ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:09:29 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (12.8ms)
+  Rendered properties/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 108ms (Views: 101.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:09:36 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (10.2ms)
+  Rendered properties/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 101ms (Views: 95.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:10:04 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.8ms)
+  Rendered properties/new.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 96ms (Views: 88.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:10:10 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (12.2ms)
+  Rendered properties/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 90ms (Views: 84.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:10:18 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 94ms (Views: 81.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-04-13 00:10:19 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:30
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/pages/dashboard.html.erb:88
+  Rendered pages/dashboard.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 65ms (Views: 56.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:10:20 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 86ms (Views: 78.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:10:21 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (12.6ms)
+  Rendered properties/new.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_nav.html.erb (6.1ms)
+Completed 200 OK in 89ms (Views: 83.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:10:23 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 57.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:10:34 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (4.6ms)
+Completed 200 OK in 99ms (Views: 88.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:11:31 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:11:43 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 71ms (Views: 63.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:11:51 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:11:56 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 95ms (Views: 86.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:12:09 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 104ms (Views: 96.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:12:25 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 66ms (Views: 57.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/properties/19/edit" for ::1 at 2020-04-13 00:12:32 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 66ms (Views: 54.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:12:38 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 66ms (Views: 59.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-04-13 00:12:38 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 4]]
+  ↳ app/views/pages/dashboard.html.erb:30
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/pages/dashboard.html.erb:88
+  Rendered pages/dashboard.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:12:50 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 90ms (Views: 82.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/properties/19" for ::1 at 2020-04-13 00:12:56 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav.html.erb (14.1ms)
+Completed 200 OK in 138ms (Views: 123.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:17:55 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 51.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:17:56 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.3ms)
+  Rendered properties/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 63ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1/properties" for ::1 at 2020-04-13 00:18:09 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RmLVybwbhjos95JT2XS+mpARpThTOg51UO+378NYXlMOkWWlCKPcNN8oAnArFnXquBvuQnwXl20UdJsm52FjxA==", "property"=>{"link"=>"https://www.zillow.com/homedetails/821-Himmarshee-St-Fort-Lauderdale-FL-33312/43204178_zpid/", "description"=>"", "address"=>"821 Himmarshee Street", "city"=>"Fort Lauderdale", "state"=>"Florida", "zip"=>"33312", "latitude"=>"26.1205296", "longitude"=>"-80.15256169999999"}, "button"=>"", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[36mProperty Create (1.3ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 26.120411440407672], ["longitude", -80.15227643065575], ["address", "821 Himmarshee Street"], ["link", "https://www.zillow.com/homedetails/821-Himmarshee-St-Fort-Lauderdale-FL-33312/43204178_zpid/"], ["city", "Fort Lauderdale"], ["state", "Florida"], ["zip", 33312], ["created_at", "2020-04-13 04:18:09.980185"], ["updated_at", "2020-04-13 04:18:09.980185"], ["user_id", 1]]
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:45
+Redirected to http://localhost:3000/properties/20
+Completed 200 OK in 443ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/properties/20" for ::1 at 2020-04-13 00:18:10 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (3.7ms)
+Completed 200 OK in 78ms (Views: 67.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-13 00:48:41 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:12
+  Rendered layouts/_landing_page_nav.html.erb (3.4ms)
+  Rendered pages/home.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:48:44 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/20" for ::1 at 2020-04-13 00:48:46 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 68ms (Views: 58.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/properties/20/edit" for ::1 at 2020-04-13 00:48:47 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 112ms (Views: 102.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:48:53 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/properties/18" for ::1 at 2020-04-13 00:48:55 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 67ms (Views: 57.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/18/edit" for ::1 at 2020-04-13 00:48:57 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 73ms (Views: 62.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/properties/18" for ::1 at 2020-04-13 00:49:01 -0400
+Processing by PropertiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xQeNQNBKm2Mji3JHskQPsyy15CbhlRD4sf5NYsu1Q5uwgcja+cIevfw99FO9lYhmqoS5/G3nOOqlLvoxoH9pYw==", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:75
+  [1m[36mProperty Destroy (0.5ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/properties_controller.rb:75
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:75
+Redirected to http://localhost:3000/users/1/properties
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:49:01 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 52ms (Views: 43.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-04-13 00:49:03 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.2ms)
+  Rendered properties/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 84ms (Views: 75.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/1/properties" for ::1 at 2020-04-13 00:49:13 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5i4DW+7GeAiIgGCJlNX5ibQvQTUKg1FcDabVMJXggaOu3bM3Wn4iBntf8KpmtzL5nCUKTyWuyERJPfn5sdm8NA==", "property"=>{"link"=>"", "description"=>"", "address"=>"924 Southeast 2nd Street", "city"=>"Fort Lauderdale", "state"=>"Florida", "zip"=>"33301", "latitude"=>"26.120637", "longitude"=>"-80.13346399999999"}, "button"=>"", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[36mProperty Create (0.8ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 26.121235044190843], ["longitude", -80.1340531002797], ["address", "924 Southeast 2nd Street"], ["link", ""], ["city", "Fort Lauderdale"], ["state", "Florida"], ["zip", 33301], ["created_at", "2020-04-13 04:49:13.468188"], ["updated_at", "2020-04-13 04:49:13.468188"], ["user_id", 1]]
+  ↳ app/controllers/properties_controller.rb:45
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:45
+Redirected to http://localhost:3000/properties/21
+Completed 200 OK in 473ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/properties/21" for ::1 at 2020-04-13 00:49:13 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:23
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 51.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/properties/21/edit" for ::1 at 2020-04-13 00:49:46 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 67ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/properties/21/edit" for ::1 at 2020-04-13 00:50:14 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:85
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:90
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:34
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-04-13 00:50:33 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:14
+  Rendered properties/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 92ms (Views: 83.4ms | ActiveRecord: 1.6ms)
+
+
