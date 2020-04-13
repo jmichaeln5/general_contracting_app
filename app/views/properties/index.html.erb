@@ -15,7 +15,9 @@
     <div class="card">
       <br>
       <br>
-      <%= property.full_street_address %>
+        <div class="field display-4"  style="font-size:150%;">
+        <%= property.full_street_address %>
+        </div>
       <div>
         <br>
       <%= link_to 'View Property', property, class:"btn btn-outline-primary", style: 'color:blue' %>
@@ -28,10 +30,9 @@
 
 <br>
 
-<hr>
-<div class="text">
-<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>
-<br>
 
+ <br>
+<div class="text-center">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>

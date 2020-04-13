@@ -33,6 +33,22 @@
 
 <div id="map"></div>
 
+<br>
+</div>
+
+<br>
+<br>
+
+</div>
+</div>
+
+
+<br>
+<div class="text-center">
+  <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+
+
 <script type="text/javascript">
 
 var lat = <%= @property.lat %>;
@@ -54,14 +70,3 @@ function initMap() {
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUrlQaMPYAMf2W6vaHFF7ufv-Bp6A7dZo&callback=initMap">
 </script>
-
-<br>
-</div>
-
-<br>
-
-<div class="text-center">
-
-<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
-</div>
-<br>
