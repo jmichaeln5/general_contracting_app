@@ -1,10 +1,15 @@
 <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light"> -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-  <li class="navbar-brand">
-    <a class="navbar-brand" href="/"> PropertyBuddy </a>
-  </li>
+  <% if current_user %>
+    <li class="navbar-brand">
+      <%= link_to "PropertyBuddy", user_properties_path(current_user), class:"navbar-brand" %>
+    </li>
+  <% else %>
+      <li class="navbar-brand">
+        <a class="navbar-brand" href="/"> PropertyBuddy </a>
+      </li>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,6 +30,8 @@
           <%= link_to "Directions", directions_index_path, class:"nav-link" %>
         </li>
       </ul>
+
+      <hr>
 <!-- Nav Right -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

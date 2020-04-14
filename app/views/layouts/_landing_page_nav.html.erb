@@ -1,52 +1,63 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light"> -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <% if current_user %>
+    <li class="navbar-brand">
+      <%= link_to "PropertyBuddy", user_properties_path(current_user), class:"navbar-brand" %>
+    </li>
+  <% else %>
+      <li class="navbar-brand">
+        <a class="navbar-brand" href="/"> PropertyBuddy </a>
+      </li>
+  <% end %>
 
-  <div class="container">
-    <a class="navbar-brand" href="/">PropertyBuddy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <% if current_user %>
-
-<!-- Dropdown when logged in -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= "Welcome #{current_user.email}"  %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item">
-                <%= link_to "Dashboard", dashboard_path, class:"dropdown-item" %>
-              </a>
-              <a class="dropdown-item">
-                <%= link_to "Properties", user_properties_path(current_user), class:"dropdown-item"  %>
-              </a>
-              <a class="dropdown-item">
-                <%= link_to "Account Settings", edit_user_registration_path, class:"dropdown-item" %>
-              </a>
-              <a class="dropdown-item">
-                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-              </a>
-            </div>
-          </li>
-
-        <% else %>
-
-          <li class="nav-item">
-            <%= link_to "About", pages_about_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign In",  new_user_session_path, class:"nav-link"   %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Register",   new_user_registration_path, class:"nav-link"   %>
-          </li>
-
-        <% end %>
-
+    <% if current_user %>
+<!-- Nav Left -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Dashboard", dashboard_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Properties", user_properties_path(current_user), class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Directions", directions_index_path, class:"nav-link" %>
+        </li>
       </ul>
-    </div>
+
+      <hr>
+<!-- Nav Right -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Account Settings", edit_user_registration_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
+        </li>
+      </ul>
+    <% else %>
+<!-- Nav Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to "About", pages_about_path, class:"nav-link" %>
+            </li>
+          </ul>
+<!-- Nav Right -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Sign In",  new_user_session_path, class:"nav-link"   %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Register",   new_user_registration_path, class:"nav-link"   %>
+        </li>
+      </ul>
+    <% end %>
+
   </div>
 </nav>
