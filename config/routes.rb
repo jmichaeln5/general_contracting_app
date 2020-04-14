@@ -1,25 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'directions/index'
-  get 'directions/waypoints'
-  get 'directions/test_page'
-  # resources :properties
-  # resources :user_properties
-
   root 'pages#home'
+  get 'pages/index'
   get 'pages/about'
-  get 'pages/test_page'
   get 'dashboard', to: 'pages#dashboard'
 
-  devise_for :user
-
-  get '/users/:id', to:'users#show'
-  get '/users', to:'users#index'
-
-  get 'pages/index'
+  get 'directions/index'
 
   get '/all_properties' => 'properties#all_properties'
 
+  devise_for :user
+  get '/users/:id', to:'users#show'
+  get '/users', to:'users#index'
   resources :users, only: [:index, :show]
 
   resources :users do

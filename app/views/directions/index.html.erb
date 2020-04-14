@@ -1,71 +1,101 @@
-<div class="display-4"> Step by Step Directions</div>
+<div class="display-4">Directions</div>
+<br>
+<div id="map"></div>
+<br>
+<strong>Start:</strong>
+<select id="start">
+  <% @properties.each do |property|%>
+  <option value="<%=property.lat%>,<%=property.lng%>">
+    <%= property.state %>
+    <%= property.address %>
+  </option>
+  <% end %>
+</select>
+
+<br>
+<b>Waypoints:</b>
+<br>
+<i>(Ctrl+Click or Cmd+Click for multiple selection)</i>
 <br>
 
-<div id="map"></div>
+<select multiple id="waypoints">
+  <% @properties.each do |property|%>
+    <option value="<%=property.lat%>,<%=property.lng%>">
+      <%= property.state %>-
+      <%= property.address %>
+    </option>
+    <br>
+  <% end %>
+</select>
+
+<br>
+<strong>End:</strong>
+
+<select id="end">
+  <% @properties.reverse.each do |property|%>
+    <option value="<%=property.lat%>,<%=property.lng%>">
+      <%= property.state %>
+      <%= property.address %>
+    </option>
+  <% end %>
+</select>
 
 <div class="card">
-    <div id="right-panel"> </div>
+  <br>
+  <input type="submit" id="request-directions">
+  <br>
 </div>
 
-  <div id="floating-panel">
-    <strong>Start:</strong>
-    <select id="start">
-      <% @properties.each do |property|%>
-      <option value="<%=property.lat%>,<%=property.lng%>">
-        <%= property.state %>
-        <%= property.address %>
-      </option>
-      <% end %>
-    </select>
-
-    <br>
-    <strong>End:</strong>
-
-    <select id="end">
-      <% @properties_reversed.each do |property|%>
-      <option value="<%=property.lat%>,<%=property.lng%>">
-        <%= property.state %>
-        <%= property.address %>
-      </option>
-      <% end %>
-    </select>
-  </div>
-
-  <br>
-
+<div class="card">
+    <div id="direction-div"> </div>
+</div>
 
 <script>
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 3.5,
       center: {lat: 41.85, lng: -87.65}
     });
+
     directionsRenderer.setMap(map);
-    directionsRenderer.setPanel(document.getElementById('right-panel'));
+    directionsRenderer.setPanel(document.getElementById('direction-div'));
 
-    var control = document.getElementById('floating-panel');
-    control.style.display = 'block';
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+    document.getElementById('request-directions').addEventListener('click', function() {
+      calculateAndDisplayRoute(directionsService, directionsRenderer, directionsDisplay);
+    });
 
-    var onChangeHandler = function() {
-      calculateAndDisplayRoute(directionsService, directionsRenderer);
-    };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
   }
 
-  function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  function calculateAndDisplayRoute(directionsService, directionsRenderer, directionsDisplay) {
+
+    var waypts = [];
+    var checkboxArray = document.getElementById('waypoints');
+    for (var i = 0; i < checkboxArray.length; i++) {
+      if (checkboxArray.options[i].selected) {
+        waypts.push({
+          location: checkboxArray[i].value,
+          stopover: true
+        });
+      }
+    }
+
     var start = document.getElementById('start').value;
     var end = document.getElementById('end').value;
     directionsService.route({
       origin: start,
       destination: end,
+      waypoints: waypts,
+      optimizeWaypoints: true,
       travelMode: 'DRIVING'
     }, function(response, status) {
       if (status === 'OK') {
+
         directionsRenderer.setDirections(response);
+
       } else {
         window.alert('Directions request failed due to ' + status);
       }
