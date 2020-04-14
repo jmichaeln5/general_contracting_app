@@ -1,22 +1,32 @@
-<!-- <p id="notice"><%#= notice %></p> -->
-<div class="card container text-center">
+
+<h1>Test Page</h1>
+
+
+<p id="notice"><%#= notice %></p>
+
+<!-- Button trigger modal -->
+
+<div class="card py-5 text-center">
+  <%= link_to "View My Properties", user_properties_path(current_user), class:"display-4 no-decoration-link" %>
+</div>
+
+
 <br>
-<div class="display-4 text-center py-5"> Dashboard </div>
 <hr>
-<%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
-<br>
-<div id="map"></div>
-
 <br>
 
+<div class="card container text-center py-5">
+
+  <%= link_to 'Add New Property',  new_user_property_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+  <br>
+  <div id="map"></div>
+  <br> <hr>
+  <div class="tex">
+  <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+  </div>
+  <br>
 </div>
-
- <br>
-<div class="text-center">
-<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
-</div>
-
-
 
 <script>
       function initMap() {

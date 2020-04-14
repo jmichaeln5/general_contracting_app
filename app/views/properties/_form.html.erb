@@ -1,27 +1,29 @@
 <%#= form_with(model: property, local: true) do |form| %>
 
 <div class="card container text-center">
-
   <br>
   <div class="display-4 text-center py-5"> Add New Property </div>
   <!-- <hr> -->
-  <br>
-  <div class="card container text-center">
-    <br>
-    <br>
-    <br>
+  <hr>
   <form id="location-form">
     <input type="text" id="location-input" class="form-control form-control-lg">
     <br>
     <br>
     <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
   </form>
-  <br>
-  <br>
-</div>
 <!-- <hr> -->
 
 <%= form_with(model: [ @user, @user.properties.build ]) do |form| %>
+
+  <br>
+  <div class="container">
+    <div class="btn btn-outline-secondary reset">
+      Clear Field
+    </div>
+  </div>
+  <br>
+
+  <hr>
 
   <% if property.errors.any? %>
     <div id="error_explanation">
@@ -57,45 +59,47 @@
   <hr>
   <br>
 
+  <div id="address-form">
+    <div class="field display-4"  style="font-size:200%;" id="property-address">
+      <%= form.label :address %>
+      <br>
+      <%= form.text_field :address %>
+    </div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-address">
-    <%= form.label :address %>
-    <br>
-    <%= form.text_field :address %>
-  </div>
+    <div id="scroll-to-address"></div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-city">
-    <%= form.label :city %>
-    <br>
-    <%= form.text_field :city %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-city">
+      <%= form.label :city %>
+      <br>
+      <%= form.text_field :city %>
+    </div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-state">
-    <%= form.label :state %>
-    <br>
-    <%= form.text_field :state %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-state">
+      <%= form.label :state %>
+      <br>
+      <%= form.text_field :state %>
+    </div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-zip">
-    <%= form.label :zip %>
-    <br>
-    <%= form.text_field :zip %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-zip">
+      <%= form.label :zip %>
+      <br>
+      <%= form.text_field :zip %>
+    </div>
 
-  <div class="field hidden" id="geometry-lat">
-    <%= form.label :latitude %>
-    <br>
-    <%= form.text_field :latitude %>
-  </div>
+    <div class="field hidden" id="geometry-lat">
+      <%= form.label :latitude %>
+      <br>
+      <%= form.text_field :latitude %>
+    </div>
 
-  <div class="field hidden" id="geometry-lng">
-    <%= form.label :longitude %>
-    <br>
-    <%= form.text_field :longitude %>
-  </div>
+    <div  class="field hidden" id="geometry-lng">
+      <%= form.label :longitude %>
+      <br>
+      <%= form.text_field :longitude %>
+    </div>
+ </div>
 
   <br>
-  <hr>
   <br>
 
   <!-- <div class="actions text-center container" style="width:50%;"> -->
@@ -120,11 +124,20 @@
 </div>
 
 <script>
-  // call GeoCode
+
+$(".reset").click(function() {
+    $(this).closest('form').find("input[type=text], textarea").val("");
+});
 
   // Get location form
   var submitAddress = document.getElementById("submit-address");
   submitAddress.addEventListener('click', geocode);
+
+  var addressScroll = $("#submit-address").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#scroll-to-address").offset().top
+      }, 100);
+  });
 
     function geocode(e){
       // Prevent actual Submit
@@ -137,8 +150,6 @@
           key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
         }
       }).then(function(response){
-
-        // Log full response
         // console.dir(response);
 
         // let propertyAddress = response.data.results[0].formatted_address;
@@ -205,15 +216,11 @@
         document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
         document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
 
-        alert("Address found! Click OK to continue");
+        submitAddress.addEventListener('click', addressScroll);
 
       }).catch(function(error){
         // console.log(error);
         alert("Address Error. Please enter a valid address. Click OK to continue.");
-
       });
-
-
-
     }
 </script>

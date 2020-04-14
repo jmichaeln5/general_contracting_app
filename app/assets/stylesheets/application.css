@@ -21,6 +21,32 @@ html {
     scroll-behavior: smooth !important;
 }
 
+.no-decoration-link{
+    text-decoration: none !important;
+    color: black;
+}
 .hidden{
   display: none;
+}
+
+.desk{
+
+}
+
+.div-only-mobile{
+
+}
+
+@media screen and (max-width : 1920px){
+  .div-only-mobile{
+  visibility:hidden;
+  }
+}
+@media screen and (max-width : 906px){
+ .desk{
+  visibility:hidden;
+  }
+ .div-only-mobile{
+  visibility:visible;
+  }
 }
