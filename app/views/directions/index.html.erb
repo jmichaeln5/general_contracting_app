@@ -72,10 +72,21 @@ End:</div>
 </div>
 
   <br>
-  <input type="submit" id="request-directions">
+
+  <!-- <input type="submit" id="request-directions"> -->
+  <div class="actions text-center container">
+    <%= button_tag(type: 'submit', id: "request-directions", class: "btn btn-info btn-lg") do %>
+      Get Directions
+    <% end %>
+    <br>
+    <br>
+  </div>
+
 
   <div class="card">
-    <div id="direction-div"> </div>
+    <div id="direction-div">
+      <div id="scroll-to-directions"></div>
+    </div>
   </div>
 </div>
 
@@ -87,13 +98,25 @@ End:</div>
 </div>
 
 <script>
+
+    var requestDirections = document.getElementById("request-directions");
+
+    var addressScrollDown = $("#request-directions").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#scroll-to-directions").offset().top
+        }, 500);
+    });
+
+
+
+
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 3.5,
+      zoom: 3,
       center: {lat: 41.85, lng: -87.65}
     });
 
@@ -131,6 +154,7 @@ End:</div>
       if (status === 'OK') {
 
         directionsRenderer.setDirections(response);
+        requestDirections.addEventListener('click', addressScrollDown);
 
       } else {
         window.alert('Directions request failed due to ' + status);
