@@ -5,6 +5,8 @@
   <div class="display-4 text-center py-5"> Add New Property </div>
   <!-- <hr> -->
   <hr>
+  <br>
+
   <form id="location-form">
     <input type="text" id="location-input" class="form-control form-control-lg">
     <br>
@@ -16,13 +18,14 @@
 <%= form_with(model: [ @user, @user.properties.build ]) do |form| %>
 
   <br>
+
   <div class="container">
     <div class="btn btn-outline-secondary reset">
-      Clear Field
+      Clear Fields
     </div>
   </div>
-  <br>
 
+  <br>
   <hr>
 
   <% if property.errors.any? %>
@@ -59,14 +62,21 @@
   <hr>
   <br>
 
+  <div id="scroll-to-address"></div>
+
+
+  <div id="invalid-address" class="hidden">
+    <div class=" container display-4" style="font-size:300%; color:red;">
+      Invalid Address
+    </div>
+  </div>
+
   <div id="address-form">
     <div class="field display-4"  style="font-size:200%;" id="property-address">
       <%= form.label :address %>
       <br>
       <%= form.text_field :address %>
     </div>
-
-    <div id="scroll-to-address"></div>
 
     <div class="field display-4"  style="font-size:200%;" id="property-city">
       <%= form.label :city %>
@@ -102,7 +112,6 @@
   <br>
   <br>
 
-  <!-- <div class="actions text-center container" style="width:50%;"> -->
   <div class="actions text-center container">
     <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
      Create Property
@@ -125,18 +134,18 @@
 
 <script>
 
-$(".reset").click(function() {
-    $(this).closest('form').find("input[type=text], textarea").val("");
-});
+  var resetFeilds = $(".reset").click(function() {
+      $(this).closest('form').find("input[type=text], textarea").val("");
+  });
 
   // Get location form
   var submitAddress = document.getElementById("submit-address");
   submitAddress.addEventListener('click', geocode);
 
-  var addressScroll = $("#submit-address").click(function() {
+  var addressScrollDown = $("#submit-address").click(function() {
       $([document.documentElement, document.body]).animate({
           scrollTop: $("#scroll-to-address").offset().top
-      }, 100);
+      }, 500);
   });
 
     function geocode(e){
@@ -159,6 +168,15 @@ $(".reset").click(function() {
         let propertyZip = response.data.results[0].address_components[7].long_name
         let propertyLatitude = response.data.results[0].geometry.location.lat;
         let propertyLongitude = response.data.results[0].geometry.location.lng;
+
+        const addressComponents = [
+        propertyAddress ,
+        propertyCity ,
+        propertyState ,
+        propertyZip ,
+        propertyLatitude ,
+        propertyLongitude
+        ]
 
         let propertyAddressOutput = `
         <div class="field">
@@ -216,11 +234,20 @@ $(".reset").click(function() {
         document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
         document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
 
-        submitAddress.addEventListener('click', addressScroll);
+        submitAddress.addEventListener('click', addressScrollDown);
+
 
       }).catch(function(error){
+
         // console.log(error);
-        alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // $( ".field" ).effect( "shake" );
+        // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
+        $( ".reset" ).trigger( "click" );
+        $("#invalid-address").show().delay(2500).fadeOut();
       });
     }
+
+
+
 </script>

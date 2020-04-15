@@ -3,33 +3,32 @@
 <div class="card container text-center">
   <br>
   <div class="display-4 text-center py-5"> Editing Property </div>
-
   <hr>
   <br>
 
-  <br>
   <form id="location-form">
     <input type="text" id="location-input" class="form-control form-control-lg">
     <br>
     <br>
-
-    <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address
-    </button>
+    <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
   </form>
 
-  <%= form_with(model: @property, local: true) do |form| %>
+<%= form_with(model: @property, local: true) do |form| %>
 
   <br>
+
   <div class="container">
     <div class="btn btn-outline-secondary reset">
-      Clear Field
+      Clear Fields
     </div>
   </div>
+
+  <br>
   <hr>
 
   <% if @property.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this @property from being saved:</h2>
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
 
       <ul>
       <% @property.errors.full_messages.each do |message| %>
@@ -57,57 +56,59 @@
   <hr>
   <br>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-address">
-    <%= form.label :address %>
-    <br>
-    <%= form.text_field :address %>
-  </div>
-
   <div id="scroll-to-address"></div>
 
 
-  <div class="field display-4"  style="font-size:200%;" id="property-city">
-    <%= form.label :city %>
-    <br>
-    <%= form.text_field :city %>
+  <div id="invalid-address" class="hidden">
+    <div class=" container display-4" style="font-size:300%; color:red;">
+      Invalid Address
+    </div>
   </div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-state">
-    <%= form.label :state %>
-    <br>
-    <%= form.text_field :state %>
-  </div>
+  <div id="address-form">
+    <div class="field display-4"  style="font-size:200%;" id="property-address">
+      <%= form.label :address %>
+      <br>
+      <%= form.text_field :address %>
+    </div>
 
-  <div class="field display-4"  style="font-size:200%;" id="property-zip">
-    <%= form.label :zip %>
-    <br>
-    <%= form.text_field :zip %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-city">
+      <%= form.label :city %>
+      <br>
+      <%= form.text_field :city %>
+    </div>
 
-  <div class="field hidden" id="geometry-lat">
-    <%= form.label :latitude %>
-    <br>
-    <%= form.text_field :latitude %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-state">
+      <%= form.label :state %>
+      <br>
+      <%= form.text_field :state %>
+    </div>
 
-  <div class="field hidden" id="geometry-lng">
-    <%= form.label :longitude %>
-    <br>
-    <%= form.text_field :longitude %>
-  </div>
+    <div class="field display-4"  style="font-size:200%;" id="property-zip">
+      <%= form.label :zip %>
+      <br>
+      <%= form.text_field :zip %>
+    </div>
+
+    <div class="field hidden" id="geometry-lat">
+      <%= form.label :latitude %>
+      <br>
+      <%= form.text_field :latitude %>
+    </div>
+
+    <div  class="field hidden" id="geometry-lng">
+      <%= form.label :longitude %>
+      <br>
+      <%= form.text_field :longitude %>
+    </div>
+ </div>
 
   <br>
-  <hr>
   <br>
 
-  <!-- <div class="actions text-center">
-    <%= form.submit %>
-  </div> -->
-
-  <!-- <div class="actions text-center container" style="width:50%;"> -->
   <div class="actions text-center container">
     <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
-     Update Property
+     Create Property
     <% end %>
   </div>
 
@@ -120,12 +121,10 @@
   </div>
 
   <br>
-  <br>
 
 <% end %>
 
-
-
+<br>
 </div>
 
 <br>
@@ -137,22 +136,19 @@
 
 <script>
 
-$(".reset").click(function() {
-    $(this).closest('form').find("input[type=text], textarea").val("");
-});
-
-  // call GeoCode
+  var resetFeilds = $(".reset").click(function() {
+      $(this).closest('form').find("input[type=text], textarea").val("");
+  });
 
   // Get location form
   var submitAddress = document.getElementById("submit-address");
   submitAddress.addEventListener('click', geocode);
 
-  var addressScroll = $("#submit-address").click(function() {
+  var addressScrollDown = $("#submit-address").click(function() {
       $([document.documentElement, document.body]).animate({
           scrollTop: $("#scroll-to-address").offset().top
-      }, 100);
+      }, 500);
   });
-
 
     function geocode(e){
       // Prevent actual Submit
@@ -165,8 +161,6 @@ $(".reset").click(function() {
           key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
         }
       }).then(function(response){
-
-        // Log full response
         // console.dir(response);
 
         // let propertyAddress = response.data.results[0].formatted_address;
@@ -176,6 +170,15 @@ $(".reset").click(function() {
         let propertyZip = response.data.results[0].address_components[7].long_name
         let propertyLatitude = response.data.results[0].geometry.location.lat;
         let propertyLongitude = response.data.results[0].geometry.location.lng;
+
+        const addressComponents = [
+        propertyAddress ,
+        propertyCity ,
+        propertyState ,
+        propertyZip ,
+        propertyLatitude ,
+        propertyLongitude
+        ]
 
         let propertyAddressOutput = `
         <div class="field">
@@ -233,13 +236,24 @@ $(".reset").click(function() {
         document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
         document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
 
-        submitAddress.addEventListener('click', addressScroll);
+        submitAddress.addEventListener('click', addressScrollDown);
 
-      })
-      .catch(function(error){
+
+      }).catch(function(error){
+
         // console.log(error);
-        alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // $( ".field" ).effect( "shake" );
+        // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
+        $( ".reset" ).trigger( "click" );
+        $("#invalid-address").show().delay(2500).fadeOut();
+
 
       });
+
+
     }
+
+
+
 </script>
