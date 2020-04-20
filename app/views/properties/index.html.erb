@@ -7,6 +7,12 @@
 
 <br>
 
+
+<%= form_tag user_properties_path, :method => 'get'  do %>
+  <%= text_field_tag :search_data, params[:search_data]%>
+  <%= submit_tag "Search", :name => nil  %>
+<% end %>
+
 <% @properties.each do |property| %>
     <div class="card">
       <br>

@@ -24,5 +24,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:email, :encrypted_password)
     end
 
-
 end

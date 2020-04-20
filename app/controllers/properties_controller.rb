@@ -15,6 +15,14 @@ class PropertiesController < ApplicationController
   def index
     @user = current_user
     @properties = current_user.properties.all.order("created_at DESC")
+
+    # if params[:search_data]
+    #   byebug
+    #   @properties = current_user.properties.search(params[:search_data]).order("created_at DESC")
+    # else
+    #   @properties = current_user.properties.all.order('created_at DESC')
+    # end
+
   end
 
   # GET /properties/1
@@ -92,6 +100,7 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
+      # params.require(:property).permit(:description, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id, :search_data)
       params.require(:property).permit(:description, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id)
     end
 end

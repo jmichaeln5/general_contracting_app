@@ -3,13 +3,11 @@
 <%= render "layouts/landing_page_nav" %>
 
 <!-- Trigger Modal Begin-->
-
   <% if current_user.present? == false %>
     <div  data-toggle="modal" data-target="#continueModal">
   <% else %>
     <div>
   <% end %>
-
 
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   devise_for :user
   get '/users/:id', to:'users#show'
   get '/users', to:'users#index'
+  get '/users', to:'users#index'
+
   resources :users, only: [:index, :show]
 
   resources :users do
