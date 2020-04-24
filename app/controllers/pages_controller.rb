@@ -18,7 +18,6 @@ class PagesController < ApplicationController
     @properties = current_user.properties.all.order("created_at DESC")
   end
 
-
   private
 
 
