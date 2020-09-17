@@ -57814,3 +57814,2384 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.5ms)
 
 
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-05-01 15:14:35 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-01 15:14:43 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-07 19:17:37 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-07 19:17:45 -0400
+  
+PG::ConnectionBad (FATAL:  the database system is starting up
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-07 19:17:54 -0400
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (13.1ms)
+  Rendered pages/home.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 360ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-05-07 19:17:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.7ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 141ms (Views: 96.9ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-05-07 19:18:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-05-07 19:18:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-05-07 19:18:40 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XqXXN9yo+bvqw7jujoPkMS9bGvL6J/AjMVMBIvhoyF686qHqXRiUmixy1vblQ1mWW2QqboU2D7sBYPepm04FJg==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2020-05-07 19:18:40 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (3.5ms)
+  Rendered pages/home.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 102ms (Views: 97.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 19:18:44 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (3.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (5.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 104ms (Views: 57.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-05-07 19:18:46 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 83ms (Views: 73.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:18:49 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 102ms (Views: 90.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/user/sign_out" for ::1 at 2020-05-07 19:18:50 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Fd+awGNvcwd+kbCeR42cQ4g1KQnd9Xqqq5eZ1f8gzHDbtGkqQyfrBKC0R9yQtpmxYZK794hjwXbJC+O1yByMw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-07 19:18:50 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (1.6ms)
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 79ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-05-07 19:18:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_nav.html.erb (4.1ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-05-07 19:18:58 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RLINAZ0nEVz447YnPeWtAy/+RFolI6iU4IvnFYgfb5vF0FHOqoUsPmsDqAxpvi06jdSIUcYPRP/T9Ie7Kg8Ovw==", "user"=>{"email"=>"user1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 140ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-05-07 19:18:58 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (3.9ms)
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:19:00 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (6.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (56.8ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 130ms (Views: 112.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/properties/26" for ::1 at 2020-05-07 19:19:06 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 82ms (Views: 66.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:19:20 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 45.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:19:37 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 65ms (Views: 56.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:20:05 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:20:13 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 58ms (Views: 51.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 19:20:18 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (4.1ms)
+  Rendered pages/dashboard.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 71ms (Views: 62.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:20:19 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:16
+  Rendered properties/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 121ms (Views: 112.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:20 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (27.8ms)
+  Rendered properties/new.html.erb within layouts/application (33.8ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 107ms (Views: 98.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:24 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.5ms)
+  Rendered properties/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 78ms (Views: 70.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:29 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.8ms)
+  Rendered properties/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:41 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.0ms)
+  Rendered properties/new.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 122ms (Views: 114.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:46 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.8ms)
+  Rendered properties/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 98ms (Views: 92.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:48 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.8ms)
+  Rendered properties/new.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:52 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (4.4ms)
+  Rendered properties/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 54ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:53 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (9.2ms)
+  Rendered properties/new.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 96ms (Views: 88.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:20:54 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.5ms)
+  Rendered properties/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 71ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:00 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.0ms)
+  Rendered properties/new.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_nav.html.erb (6.7ms)
+Completed 200 OK in 92ms (Views: 82.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:01 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.6ms)
+  Rendered properties/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 86ms (Views: 80.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:07 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (10.6ms)
+  Rendered properties/new.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 78ms (Views: 71.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:15 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (9.7ms)
+  Rendered properties/new.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_nav.html.erb (6.3ms)
+Completed 200 OK in 95ms (Views: 87.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:25 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.8ms)
+  Rendered properties/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:26 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.2ms)
+  Rendered properties/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_nav.html.erb (4.0ms)
+Completed 200 OK in 108ms (Views: 100.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:33 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (8.7ms)
+  Rendered properties/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_nav.html.erb (3.3ms)
+Completed 200 OK in 77ms (Views: 70.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:38 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (7.3ms)
+  Rendered properties/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 82ms (Views: 75.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:43 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (4.9ms)
+  Rendered properties/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav.html.erb (14.5ms)
+Completed 200 OK in 83ms (Views: 75.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:50 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.8ms)
+  Rendered properties/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:21:56 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (6.9ms)
+  Rendered properties/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 83ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:22:02 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (9.6ms)
+  Rendered properties/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 100ms (Views: 92.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/properties/new" for ::1 at 2020-05-07 19:22:08 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (5.7ms)
+  Rendered properties/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:22:14 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 117ms (Views: 104.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:22:48 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 56ms (Views: 48.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:22:54 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav.html.erb (3.8ms)
+Completed 200 OK in 96ms (Views: 87.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:22:59 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 83ms (Views: 75.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:23:03 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 68ms (Views: 61.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:23:07 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 67ms (Views: 59.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:23:08 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 91ms (Views: 80.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:23:31 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 58.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 19:27:21 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (5.1ms)
+  Rendered pages/dashboard.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 71ms (Views: 61.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:27:25 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 95ms (Views: 86.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:27:36 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 19:27:39 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (3.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 85ms (Views: 75.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:27:46 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 78ms (Views: 71.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 19:27:49 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (3.3ms)
+  Rendered pages/dashboard.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 80ms (Views: 70.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:27:51 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 90ms (Views: 82.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:27:54 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 87ms (Views: 78.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:28:27 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 65ms (Views: 59.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:28:38 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 61ms (Views: 54.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:28:44 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:28:53 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 61.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:28:59 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 46.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:29:06 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 81ms (Views: 72.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:29:09 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 81ms (Views: 71.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:29:12 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_nav.html.erb (7.0ms)
+Completed 200 OK in 122ms (Views: 114.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:29:17 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:29:23 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 74ms (Views: 64.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 19:30:17 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 19:30:21 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (7.3ms)
+Completed 200 OK in 90ms (Views: 81.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-05-07 23:33:00 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 229ms (Views: 198.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 23:33:14 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (6.3ms)
+  Rendered pages/dashboard.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 94ms (Views: 84.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/properties" for ::1 at 2020-05-07 23:33:17 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 88ms (Views: 81.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 23:33:22 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (4.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (9.2ms)
+  Rendered pages/dashboard.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 141ms (Views: 127.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-07 23:33:24 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (2.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (8.2ms)
+  Rendered pages/dashboard.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 155ms (Views: 141.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:25:02 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (10.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_nav.html.erb (6.1ms)
+Completed 200 OK in 188ms (Views: 156.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:25:16 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (10.6ms)
+  Rendered pages/dashboard.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_nav.html.erb (3.8ms)
+Completed 200 OK in 183ms (Views: 172.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:25:20 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (4.5ms)
+  Rendered pages/dashboard.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_nav.html.erb (3.6ms)
+Completed 200 OK in 112ms (Views: 100.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:25:56 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:50
+  Rendered properties/_dashboard.html.erb (3.0ms)
+  Rendered pages/dashboard.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 76ms (Views: 66.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:26:08 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:61
+  Rendered properties/_dashboard.html.erb (5.2ms)
+  Rendered pages/dashboard.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 96ms (Views: 88.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:26:15 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:61
+  Rendered properties/_dashboard.html.erb (5.7ms)
+  Rendered pages/dashboard.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_nav.html.erb (3.6ms)
+Completed 200 OK in 90ms (Views: 80.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:26:36 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:61
+  Rendered properties/_dashboard.html.erb (10.7ms)
+  Rendered pages/dashboard.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_nav.html.erb (13.5ms)
+Completed 200 OK in 101ms (Views: 93.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:26:49 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:61
+  Rendered properties/_dashboard.html.erb (6.1ms)
+  Rendered pages/dashboard.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_nav.html.erb (3.9ms)
+Completed 200 OK in 106ms (Views: 98.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-05-08 14:27:14 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 1]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (2.6ms)
+  Rendered pages/dashboard.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 79ms (Views: 71.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+Started GET "/" for ::1 at 2020-07-17 22:45:15 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-17 22:45:40 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (4.8ms)
+  Rendered pages/home.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 340ms (Views: 331.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-07-17 22:47:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 124ms (Views: 93.6ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 16:41:40 -0400
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 345ms (Views: 338.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-08-31 16:41:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 105ms (Views: 78.2ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 16:42:07 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (1.9ms)
+  Rendered pages/home.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 63ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-08-31 16:42:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-08-31 16:42:59 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zEDOTk8s3yfDcQrjY33Hiz8NqdTwMnQ7yoPg5lvkeEMxD7v//jgsHoneE3khBP7VXp1vTZhS2WeknkL3gKkYcg==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 593ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 16:42:59 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 16:44:10 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (4.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 101ms (Views: 57.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 16:44:11 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (3.6ms)
+  Rendered pages/dashboard.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 58.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 16:44:13 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (2.5ms)
+  Rendered pages/dashboard.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/user/sign_out" for ::1 at 2020-08-31 16:44:14 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QL7Z/0roEJpZ9Vbk4JimRmVivk9vOLCza80zL3N21lxp/UKNyW1tNieIcOt61EF+k/M3hKWClWYfPebKXBrOyw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 16:44:14 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (1.3ms)
+  Rendered pages/home.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-08-31 16:44:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-08-31 16:44:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rHsdnZWtRZTyNeCdm9lyOZh+C14ok6y9FXqldScGpWybnON+1qa33QitrYBKNOFPvHEOtltA+8iGCAdhwxC08Q==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 166ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 16:44:21 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (2.4ms)
+  Rendered pages/home.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 16:54:18 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 77ms (Views: 66.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-08-31 16:54:22 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 57ms (Views: 47.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 16:54:24 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (2.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 63ms (Views: 53.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-08-31 16:54:25 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 76ms (Views: 69.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 16:54:28 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3/properties/new" for ::1 at 2020-08-31 16:55:09 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (10.6ms)
+  Rendered properties/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 150ms (Views: 80.5ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/users/3/properties" for ::1 at 2020-08-31 16:55:32 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7J904FlgNGQHJEDQ0Mjita/7CBewmZvOoZnf95+sDWxgASXvlGQ4U3yBDXaOo7vwjPbAoxgL8p+DCwNVapyQA==", "property"=>{"user_id"=>"3", "link"=>"", "description"=>"", "address"=>"924 Southeast 2nd Street", "city"=>"Fort Lauderdale", "state"=>"Florida", "zip"=>"33301", "latitude"=>"26.120637", "longitude"=>"-80.13346399999999"}, "button"=>"", "user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[36mProperty Create (22.3ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 26.121235044190843], ["longitude", -80.1340531002797], ["address", "924 Southeast 2nd Street"], ["link", ""], ["city", "Fort Lauderdale"], ["state", "Florida"], ["zip", 33301], ["created_at", "2020-08-31 20:55:33.325390"], ["updated_at", "2020-08-31 20:55:33.325390"], ["user_id", 3]]
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:53
+Redirected to http://localhost:3000/properties/32
+Completed 200 OK in 526ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/properties/32" for ::1 at 2020-08-31 16:55:33 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 82ms (Views: 68.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 16:55:36 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 47.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 17:08:52 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (24.4ms)
+  Rendered pages/home.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 317ms (Views: 302.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 17:08:59 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (22.4ms)
+  Rendered pages/dashboard.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 134ms (Views: 81.7ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/user/sign_out" for ::1 at 2020-08-31 17:10:14 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+yHZzW+M6BcU1Xg9qDbCOqMjUOANyQg4oS7sgvdbZW3Nb79OqV89Xz40eUW9iio4PPcYJMk3NfFS4ilWS5uaeQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 17:10:14 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-08-31 17:10:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-08-31 17:10:20 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7EmTQuFDahvI4mE13Wd279FhkU8W/n3f12hIf1gwk5ppZpPL6kZ93QlRJdLgmRo6mmMt1dAWK7oQm9TicTKY6w==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 154ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 17:10:20 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (15.7ms)
+  Rendered pages/dashboard.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 54.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-08-31 17:10:24 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 64ms (Views: 55.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 17:10:26 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 69ms (Views: 58.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 17:10:27 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (2.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (5.4ms)
+  Rendered pages/dashboard.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 113ms (Views: 100.5ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+Started GET "/" for ::1 at 2020-08-31 19:07:40 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (27.4ms)
+  Rendered pages/home.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 293ms (Views: 275.9ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 19:07:43 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 119ms (Views: 70.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/3/properties/new" for ::1 at 2020-08-31 19:07:47 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (28.0ms)
+  Rendered properties/new.html.erb within layouts/application (33.3ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 105ms (Views: 95.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/3/properties" for ::1 at 2020-08-31 19:07:59 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/kQdWQtZMxK+X57pEc8yDKqfBQFjtYj7Ifhshht8TpNTpL2d46TcFBsamlhK6NzckGdZdOodq8mjB4+X8Uc6g==", "property"=>{"user_id"=>"3", "link"=>"", "description"=>"", "address"=>"120 Sweet Bay Circle", "city"=>"Jupiter", "state"=>"Florida", "zip"=>"33458", "latitude"=>"26.8969952", "longitude"=>"-80.100216"}, "button"=>"", "user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[36mProperty Create (9.4ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 26.896852], ["longitude", -80.100447], ["address", "120 Sweet Bay Circle"], ["link", ""], ["city", "Jupiter"], ["state", "Florida"], ["zip", 33458], ["created_at", "2020-08-31 23:07:59.810085"], ["updated_at", "2020-08-31 23:07:59.810085"], ["user_id", 3]]
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:53
+Redirected to http://localhost:3000/properties/33
+Completed 200 OK in 509ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/properties/33" for ::1 at 2020-08-31 19:07:59 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 89ms (Views: 70.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 19:08:08 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (60.0ms)
+  Rendered pages/dashboard.html.erb within layouts/application (65.2ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 712ms (Views: 705.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 19:08:13 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (3.0ms)
+  Rendered pages/dashboard.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 54ms (Views: 46.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-08-31 19:08:24 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 70ms (Views: 61.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-08-31 19:08:29 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 58ms (Views: 47.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 19:09:24 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (4.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (6.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 115ms (Views: 94.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 19:45:47 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (4.9ms)
+  Rendered pages/dashboard.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 107ms (Views: 91.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-08-31 19:45:50 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:49
+  Rendered properties/_dashboard.html.erb (3.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 93ms (Views: 78.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2020-09-02 06:51:12 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (29.6ms)
+  Rendered pages/home.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 348ms (Views: 325.2ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-09-02 06:51:18 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 121ms (Views: 61.0ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-02 06:51:19 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 113ms (Views: 61.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/properties/33" for ::1 at 2020-09-02 06:51:21 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 101ms (Views: 84.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-02 06:56:46 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 63.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3/properties/new" for ::1 at 2020-09-02 06:56:49 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (29.6ms)
+  Rendered properties/new.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 93ms (Views: 82.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/3/properties" for ::1 at 2020-09-02 06:57:21 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uZJw1/r8t8vFWY33w5NsHQR2VSUkwhQPPODzq7fk1/JTJfJU6V9Ad9/MmeUG//OmRJ20VPLktIP26wwn8Ew6Ig==", "property"=>{"user_id"=>"3", "link"=>"", "description"=>"", "address"=>"APT 1 6395", "city"=>"North Fort Lauderdale", "state"=>"Broward County", "zip"=>"United States", "latitude"=>"26.2086942", "longitude"=>"-80.10062309999999"}, "button"=>"", "user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[36mProperty Create (15.1ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 26.2086942], ["longitude", -80.10062309999999], ["address", "APT 1 6395"], ["link", ""], ["city", "North Fort Lauderdale"], ["state", "Broward County"], ["zip", 0], ["created_at", "2020-09-02 10:57:21.988302"], ["updated_at", "2020-09-02 10:57:21.988302"], ["user_id", 3]]
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:53
+Redirected to http://localhost:3000/properties/34
+Completed 200 OK in 482ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/properties/34" for ::1 at 2020-09-02 06:57:22 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 58.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-09-02 17:08:33 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (20.7ms)
+  Rendered pages/home.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 215ms (Views: 199.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/user/sign_out" for ::1 at 2020-09-02 17:08:37 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DiSNs6EkCxe+tc70OE3tSFnBFXZwORgjRqZSls913WfaXh8OeC56x7hjaBKA3fWnd75utUsz3u+P0+vrIqzP5g=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-09-02 17:08:38 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (5.6ms)
+  Rendered pages/home.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 121ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-09-02 17:08:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 138ms (Views: 84.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-09-02 17:08:43 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lefWOQf0HFWJwCzvGXkqq2HIIXy/i62cvoQ/5T+I8NyPIgYvN9e/VZfd98tQTlAd8QMjuy1cc0kgB5ht75Loyg==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 177ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-09-02 17:08:43 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (1.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:43
+  Rendered properties/_dashboard.html.erb (5.4ms)
+  Rendered pages/dashboard.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_nav.html.erb (3.8ms)
+Completed 200 OK in 76ms (Views: 66.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-03 14:17:03 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (26.8ms)
+  Rendered pages/home.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 341ms (Views: 323.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for ::1 at 2020-09-03 14:47:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (5.1ms)
+  Rendered pages/home.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/user/sign_out" for ::1 at 2020-09-03 15:28:13 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jRlzJmiki/QaOVMzFilQwT2tC46Fp0xNZXj7weKLdzTQFO654CYyPlCN8R4ASeahvknglL6u4KoUf2/OogVTdA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-09-03 15:28:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-03 15:29:06 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (2.0ms)
+  Rendered pages/home.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-09-03 15:29:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 133ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-08 14:37:03 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (14.1ms)
+  Rendered pages/home.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 213ms (Views: 191.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-09-08 14:37:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.8ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 118ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-09-08 14:37:39 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RUdacAY99tTASkQ3XyIkwoh5RY/YibmDkylV17PJSlwMDHz72WphmFATh+z+ZI+2x7DEKPj4yYEeF7l5eyghHw==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 222ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-09-08 14:37:40 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (3.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:43
+  Rendered properties/_dashboard.html.erb (32.0ms)
+  Rendered pages/dashboard.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 154ms (Views: 70.3ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-08 14:37:57 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_nav.html.erb (3.4ms)
+Completed 200 OK in 77ms (Views: 67.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/properties/32" for ::1 at 2020-09-08 14:38:02 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 147ms (Views: 111.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-09-08 14:38:12 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 60ms (Views: 49.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-08 14:38:25 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 79ms (Views: 65.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/3/properties/new" for ::1 at 2020-09-08 14:38:27 -0400
+Processing by PropertiesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/_form.html.erb (11.0ms)
+  Rendered properties/new.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 87ms (Views: 72.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/3/properties" for ::1 at 2020-09-08 14:39:26 -0400
+Processing by PropertiesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xQmMp1N6hizQTD1W7bi/MglBWG+qa2jQfEAGxqR08Mh8MCNatin0hZYC2lIeKOM75+9wPn7N/a05bcIMc2u8Sg==", "property"=>{"user_id"=>"3", "link"=>"", "description"=>"", "address"=>"823 Southwest 4th Street", "city"=>"Miami", "state"=>"Florida", "zip"=>"33130", "latitude"=>"25.7701142", "longitude"=>"-80.2080795"}, "button"=>"", "user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[36mProperty Create (14.3ms)[0m  [1m[32mINSERT INTO "properties" ("description", "latitude", "longitude", "address", "link", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", ""], ["latitude", 25.77008165], ["longitude", -80.2080444], ["address", "823 Southwest 4th Street"], ["link", ""], ["city", "Miami"], ["state", "Florida"], ["zip", 33130], ["created_at", "2020-09-08 18:39:27.800479"], ["updated_at", "2020-09-08 18:39:27.800479"], ["user_id", 3]]
+  ↳ app/controllers/properties_controller.rb:53
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:53
+Redirected to http://localhost:3000/properties/35
+Completed 200 OK in 1100ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/properties/35" for ::1 at 2020-09-08 14:39:27 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:93
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:98
+  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:31
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-09-08 14:39:31 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 70ms (Views: 59.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-08 14:40:24 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-09 16:52:01 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_landing_page_nav.html.erb:4
+  Rendered layouts/_landing_page_nav.html.erb (25.4ms)
+  Rendered pages/home.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 320ms (Views: 304.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-09 16:55:26 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (2.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (29.4ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 139ms (Views: 78.0ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/directions/index" for ::1 at 2020-09-09 16:55:27 -0400
+Processing by DirectionsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering directions/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/directions/index.html.erb:16
+  Rendered directions/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 67ms (Views: 57.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-09-09 16:55:29 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:43
+  Rendered properties/_dashboard.html.erb (3.6ms)
+  Rendered pages/dashboard.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+Started GET "/" for ::1 at 2020-09-17 15:44:30 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_landing_page_nav.html.erb (3.6ms)
+  Rendered pages/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 271ms (Views: 263.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2020-09-17 15:45:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 750ms (Views: 726.6ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/user/sign_in" for ::1 at 2020-09-17 15:45:15 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKjOaR9YEpxPjtkl85yz+LlqWMCawxkd5FRI6sM8VB9zHrc0+gIJBmWMPn0ZG1cYcq9mzX1OL6QsurneOq4qTA==", "user"=>{"email"=>"SampleAccount@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sampleaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 162ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2020-09-17 15:45:15 -0400
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mProperty Load (3.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/_dashboard.html.erb:43
+  Rendered properties/_dashboard.html.erb (18.7ms)
+  Rendered pages/dashboard.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 94ms (Views: 57.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/3/properties" for ::1 at 2020-09-17 15:45:18 -0400
+Processing by PropertiesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."user_id" = $1 ORDER BY created_at DESC[0m  [["user_id", 3]]
+  ↳ app/views/properties/index.html.erb:15
+  Rendered properties/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 49.3ms | ActiveRecord: 1.2ms)
+
+
