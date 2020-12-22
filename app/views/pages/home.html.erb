@@ -35,12 +35,12 @@
 
       <% if current_user.present? == false %>
         <div class="container">
-          <h1 class="coverOverlayText">Property Buddy </h1>
+          <h1 class="coverOverlayText">General Contracting App </h1>
         </div>
       <% end %>
 
       <% if current_user %>
-          <h1 class="coverOverlayText"> <%= link_to "Property Buddy", user_properties_path(current_user), class:"whiteText" %> </h1>
+          <h1 class="coverOverlayText"> <%= link_to "General Contracting App", user_clients_path(current_user), class:"whiteText" %> </h1>
       <% else %>
         <p class="bottomCoverOverlayText halfOpacity">Press Anywhere to Continue</p>
       <% end %>
@@ -51,7 +51,7 @@
           <div class="modal-content" >
             <div class="modal-header">
               <!-- Modal Title -->
-              <h5 class="modal-title" id="exampleModalLabel">PropertyBuddy</h5>
+              <h5 class="modal-title" id="exampleModalLabel">General Contracting App</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

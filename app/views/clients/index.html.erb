@@ -1,0 +1,40 @@
+<!-- <p id="notice"><%#= notice %></p> -->
+<div class="card container text-center">
+<br>
+<div class="display-4 text-center py-5"> My Clients </div>
+<hr>
+<%= link_to 'Add New Client',  new_user_client_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+<br>
+
+<!-- <%= form_tag user_clients_path, :method => 'get'  do %>
+  <%= text_field_tag :search_data, params[:search_data]%>
+  <%= submit_tag "Search", :name => nil  %>
+<% end %> -->
+
+<% @clients.each do |client| %>
+    <div class="card">
+      <br>
+      <br>
+        <div class="field display-4"  style="font-size:150%;">
+        <%= client.full_street_address %>
+        </div>
+      <div>
+        <br>
+      <%= link_to 'View Client', client, class:"btn btn-outline-primary", style: 'color:blue' %>
+      <br>
+      <br>
+      </div>
+    </div>
+    <br>
+<% end %>
+
+<br>
+
+</div>
+
+ <br>
+<div class="text-center">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+<br>

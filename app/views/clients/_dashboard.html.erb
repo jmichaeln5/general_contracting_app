@@ -1,31 +1,28 @@
-
-<h1>Test Page</h1>
-
-
-<p id="notice"><%#= notice %></p>
-
-<!-- Button trigger modal -->
-
-<div class="card py-5 text-center">
-  <%= link_to "View My Clients", user_clients_path(current_user), class:"display-4 no-decoration-link" %>
+<!-- <p id="notice"><%#= notice %></p> -->
+<div class="card container text-center py-5">
+<br>
+<div class="display-4 text-center ">
+  Dashboard
 </div>
 
+<!-- <form class="form-inline">
+  <div class="container">
+     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </div>
+</form> -->
 
 <br>
 <hr>
+<%= link_to 'Add New Client',  new_user_client_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
 <br>
+<div id="map"></div>
+<br>
+</div>
 
-<div class="card container text-center py-5">
-
-  <%= link_to 'Add New Client',  new_user_client_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
-
-  <br>
-  <div id="map"></div>
-  <br> <hr>
-  <div class="tex">
-  <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
-  </div>
-  <br>
+ <br>
+<div class="text-center">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>
 
 <script>

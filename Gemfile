@@ -9,6 +9,7 @@ gem 'geocoder'
 gem 'byebug'
 gem 'jquery-rails'
 gem 'searchkick'
+gem 'rename'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

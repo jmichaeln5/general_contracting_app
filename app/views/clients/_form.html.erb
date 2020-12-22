@@ -1,0 +1,254 @@
+<%#= form_with(model: client, local: true) do |form| %>
+
+<div class="card container text-center">
+  <br>
+  <div class="display-4 text-center py-5"> Add New Client </div>
+  <!-- <hr> -->
+  <hr>
+  <br>
+
+  <form id="location-form">
+    <input type="text" id="location-input" class="form-control form-control-lg">
+    <br>
+    <br>
+    <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
+  </form>
+<!-- <hr> -->
+
+<%= form_with(model: [ @user, @user.clients.build ]) do |form| %>
+
+  <br>
+
+  <div class="container">
+    <div class="btn btn-outline-secondary reset">
+      Clear Fields
+    </div>
+  </div>
+
+  <br>
+  <hr>
+
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.hidden_field :user_id, id: :user_id, value: @current_user.id %>
+  </div>
+
+  <br>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :link %>
+    <br>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :description %>
+    <br>
+    <%= form.text_field :description %>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+  <div id="scroll-to-address"></div>
+
+
+  <div id="invalid-address" class="hidden">
+    <div class=" container display-4" style="font-size:300%; color:red;">
+      Invalid Address
+    </div>
+  </div>
+
+  <div id="address-form">
+    <div class="field display-4"  style="font-size:200%;" id="client-address">
+      <%= form.label :address %>
+      <br>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="field display-4"  style="font-size:200%;" id="client-city">
+      <%= form.label :city %>
+      <br>
+      <%= form.text_field :city %>
+    </div>
+
+    <div class="field display-4"  style="font-size:200%;" id="client-state">
+      <%= form.label :state %>
+      <br>
+      <%= form.text_field :state %>
+    </div>
+
+    <div class="field display-4"  style="font-size:200%;" id="client-zip">
+      <%= form.label :zip %>
+      <br>
+      <%= form.text_field :zip %>
+    </div>
+
+    <div class="field hidden" id="geometry-lat">
+      <%= form.label :latitude %>
+      <br>
+      <%= form.text_field :latitude %>
+    </div>
+
+    <div  class="field hidden" id="geometry-lng">
+      <%= form.label :longitude %>
+      <br>
+      <%= form.text_field :longitude %>
+    </div>
+ </div>
+
+  <br>
+  <br>
+
+  <div class="actions text-center container">
+    <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
+     Create Client
+    <% end %>
+  </div>
+
+  <br>
+
+<% end %>
+
+<br>
+</div>
+
+<br>
+<div>
+  <div class="actions text-center" stlye="">
+    <%= link_to 'Back', :back, class:"btn-primary btn-lg"  %>
+  </div>
+</div>
+
+<script>
+
+  var resetFeilds = $(".reset").click(function() {
+      $(this).closest('form').find("input[type=text], textarea").val("");
+  });
+
+  // Get location form
+  var submitAddress = document.getElementById("submit-address");
+  submitAddress.addEventListener('click', geocode);
+
+  var addressScrollDown = $("#submit-address").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#scroll-to-address").offset().top
+      }, 500);
+  });
+
+    function geocode(e){
+      // Prevent actual Submit
+      e.preventDefault();
+
+      let location = document.getElementById('location-input').value;
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
+        }
+      }).then(function(response){
+        // console.dir(response);
+        // debugger;
+
+        // let clientAddress = response.data.results[0].formatted_address;
+        let clientAddress =  response.data.results[0].address_components[0].long_name + ' ' + response.data.results[0].address_components[1].long_name
+        let clientCity = response.data.results[0].address_components[3].long_name
+        let clientState = response.data.results[0].address_components[5].long_name
+        let clientZip = response.data.results[0].address_components[7].long_name
+        let clientLatitude = response.data.results[0].geometry.location.lat;
+        let clientLongitude = response.data.results[0].geometry.location.lng;
+
+        const addressComponents = [
+        clientAddress ,
+        clientCity ,
+        clientState ,
+        clientZip ,
+        clientLatitude ,
+        clientLongitude
+        ]
+
+        let clientAddressOutput = `
+        <div class="field">
+            <label for="client_address">Address</label>
+            <br />
+            <input type="text" name="client[address]" id="client_address" value="${clientAddress}" >
+        </div>
+        `;
+
+        let clientCityOutput = `
+        <div class="field">
+            <label for="client_city">City</label>
+            <br />
+            <input type="text" name="client[city]" id="client_city" value="${clientCity}" >
+        </div>
+        `;
+
+        let clientStateOutput = `
+        <div class="field">
+            <label for="client_state">State</label>
+            <br />
+            <input type="text" name="client[state]" id="client_state" value="${clientState}" >
+        </div>
+        `;
+
+          let clientZipOutput = `
+          <div class="field">
+              <label for="client_zip">Zip</label>
+              <br />
+              <input type="text" name="client[zip]" id="client_zip" value="${clientZip}" >
+          </div>
+          `;
+
+          let geometryOutputLat = `
+          <div class="field">
+              <label for="client_latitude">Latitude</label>
+              <br />
+              <input type="text" name="client[latitude]" id="client_latitude" value="${clientLatitude}" >
+          </div>
+          `;
+
+          let geometryOutputLng = `
+          <div class="field">
+              <label for="client_longitude">Longitude</label>
+              <br />
+              <input type="text" name="client[longitude]" id="client_longitude" value="${clientLongitude}" >
+          </div>
+          `;
+
+        // Output to app
+        document.getElementById('client-address').innerHTML = clientAddressOutput;
+        document.getElementById('client-city').innerHTML = clientCityOutput;
+        document.getElementById('client-state').innerHTML = clientStateOutput;
+        document.getElementById('client-zip').innerHTML = clientZipOutput;
+        document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
+        document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
+
+        submitAddress.addEventListener('click', addressScrollDown);
+
+
+      }).catch(function(error){
+
+        // console.log(error);
+        // alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // $( ".field" ).effect( "shake" );
+        // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
+        $( ".reset" ).trigger( "click" );
+        $("#invalid-address").show().delay(2500).fadeOut();
+      });
+    }
+
+
+
+</script>

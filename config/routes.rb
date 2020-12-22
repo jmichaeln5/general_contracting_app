@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'directions/index'
 
-  get '/all_properties' => 'properties#all_properties'
+  get '/all_clients' => 'clients#all_clients'
 
   devise_for :user
   get '/users/:id', to:'users#show'
@@ -18,9 +18,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   resources :users do
-    resources :properties, only: [:index, :new, :create]
+    resources :clients, only: [:index, :new, :create]
   end
-  resources :properties, only: [:show, :edit, :update, :destroy]
+  resources :clients, only: [:show, :edit, :update, :destroy]
 
 
 

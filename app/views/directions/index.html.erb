@@ -13,12 +13,13 @@
     Start:
   </div>
   <select id="start">
-    <% @properties.each do |property|%>
-    <option value="<%=property.lat%>,<%=property.lng%>">
-      <%= property.state %>
-      <%= property.address %>
+    <% @clients.each do |client|%>
+    <option value="<%=client.lat%>,<%=client.lng%>">
+      <%= client.state %>
+      <%= client.address %>
     </option>
     <% end %>
+
   </select>
   <br>
 </div>
@@ -37,10 +38,10 @@
   </div>
   <br>
   <select multiple id="waypoints">
-    <% @properties.each do |property|%>
-      <option value="<%=property.lat%>,<%=property.lng%>">
-        <%= property.state %>-
-        <%= property.address %>
+    <% @clients.each do |client|%>
+      <option value="<%=client.lat%>,<%=client.lng%>">
+        <%= client.state %>-
+        <%= client.address %>
       </option>
       <br>
     <% end %>
@@ -59,10 +60,10 @@
 <div class="display-4"  style="font-size:200%;">
 End:</div>
 <select id="end">
-  <% @properties.reverse.each do |property|%>
-    <option value="<%=property.lat%>,<%=property.lng%>">
-      <%= property.state %>
-      <%= property.address %>
+  <% @clients.reverse.each do |client|%>
+    <option value="<%=client.lat%>,<%=client.lng%>">
+      <%= client.state %>
+      <%= client.address %>
     </option>
   <% end %>
 </select>
