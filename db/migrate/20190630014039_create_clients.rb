@@ -6,6 +6,7 @@ class CreateClients < ActiveRecord::Migration[5.2]
       t.string :phone_number
       t.string :email
       t.string :type_of_project
+      t.datetime :check_in
       t.string :payment_method
       t.text :description
       t.float :latitude

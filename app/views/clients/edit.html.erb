@@ -58,6 +58,9 @@
     <%= form.text_field :email %>
   </div>
 
+  <br>
+  <hr>
+
   <div class="field display-4"  style="font-size:200%;">
     <%= form.label :type_of_project %>
     <br>
@@ -65,10 +68,18 @@
   </div>
 
   <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :description %>
+    <br>
+    <%= form.text_field :description %>
+  </div>
+
+
+  <div class="field display-4"  style="font-size:200%;">
     <%= form.label :payment_method %>
     <br>
     <%= form.text_field :payment_method %>
   </div>
+
 
   <br>
   <hr>

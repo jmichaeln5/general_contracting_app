@@ -37,14 +37,22 @@ html {
 
 }
 
+
+
 @media screen and (max-width : 1920px){
   .div-only-mobile{
   visibility:hidden;
   }
+
+  .div-only-desktop{
+    visibility:visible;
+  }
+
+
 }
 @media screen and (max-width : 906px){
- .desk{
-  visibility:hidden;
+  .div-only-desktop{
+    visibility:hidden;
   }
  .div-only-mobile{
   visibility:visible;

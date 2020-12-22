@@ -15,7 +15,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= link_to 'View User', users_path(user) %></td>
+        <td><%= link_to 'View User', user_path(user) %></td>
       </tr>
     <% end %>
   </tbody>

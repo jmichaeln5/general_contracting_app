@@ -1,14 +1,87 @@
 <div class="card container">
 
-<div class="display-4 text-center py-5"> <%= @client.name %> </div>
+<div class="display-4 text-center py-5"> <%= @client.name %> (<%= @client.type_of_project %>) </div>
+
 
 <% if @client.description.present? %>
-  <div class="text-center">
-    <strong>Description:</strong>
-    <%= @client.description %>
+  <div class="display-4 text-center">
+    <p style="font-size:80%;">
+      <%= @client.description %>
+    </p>
   </div>
   <br>
 <% end %>
+
+
+
+<!-- Button trigger modal -->
+<div class="text-center">
+
+<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+  Client Info
+</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Client Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <!-- Client Info -->
+
+      <% if @client.description.present? %>
+        <div class="display-4 text-center">
+          <p style="font-size:50%;">
+            <%= @client.name %>
+            <br>
+            <%= @client.phone_number %>
+            <br>
+            <%= @client.email %>
+            <br>
+            <%= @client.full_street_address %>
+            <br>
+            <%= @client.description %>
+            <br>
+            <%= @client.type_of_project %>
+            <br>
+
+          </p>
+        </div>
+        <br>
+      <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <hr>
 
@@ -18,14 +91,8 @@
     <div class="card container">
     <br>
 
-    <% if @client.link.present? %>
-      <strong>Address:</strong>
-      <a href="<%= @client.link %>" target="_blank"><%= @client.full_street_address %></a>
-
-    <% else %>
       <strong>Address:</strong>
       <%= @client.full_street_address %></a>
-    <% end %>
 
     <br><br>
     <div id="map"></div>

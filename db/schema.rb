@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_235952) do
     t.string "type_of_project"
     t.string "payment_method"
     t.text "description"
+    t.datetime "check_in"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
