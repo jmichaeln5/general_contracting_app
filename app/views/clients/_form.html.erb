@@ -3,7 +3,19 @@
 <div class="card container text-center">
   <br>
   <div class="display-4 text-center py-5"> Add New Client </div>
-  <!-- <hr> -->
+
+  <hr>
+  <br>
+
+
+Test
+
+
+
+
+
+
+
   <hr>
   <br>
 
@@ -13,7 +25,6 @@
     <br>
     <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
   </form>
-<!-- <hr> -->
 
 <%= form_with(model: [ @user, @user.clients.build ]) do |form| %>
 
@@ -27,6 +38,7 @@
 
   <br>
   <hr>
+
 
   <% if client.errors.any? %>
     <div id="error_explanation">
@@ -47,15 +59,33 @@
   <br>
 
   <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :link %>
+    <%= form.label :name %>
     <br>
-    <%= form.text_field :link %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :description %>
+    <%= form.label :phone_number %>
     <br>
-    <%= form.text_field :description %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :email %>
+    <br>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :type_of_project %>
+    <br>
+    <%= form.text_field :type_of_project %>
+  </div>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= form.label :payment_method %>
+    <br>
+    <%= form.text_field :payment_method %>
   </div>
 
   <br>

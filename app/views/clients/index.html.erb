@@ -16,9 +16,19 @@
     <div class="card">
       <br>
       <br>
-        <div class="field display-4"  style="font-size:150%;">
-        <%= client.full_street_address %>
-        </div>
+      <div class="field display-4"  style="font-size:200%;">
+      <%= client.name %> <% if client.type_of_project.present? %> (<%= "#{client.type_of_project.capitalize}"%>) <% end %>
+
+      </div>
+      <div class="field display-4"  style="font-size:125%;">
+      <%= client.phone_number %>
+      </div>
+      <div class="field display-4"  style="font-size:125%;">
+      <%= client.email %>
+      </div>
+      <div class="field display-4"  style="font-size:125%;">
+      <%= client.full_street_address %>
+      </div>
       <div>
         <br>
       <%= link_to 'View Client', client, class:"btn btn-outline-primary", style: 'color:blue' %>
