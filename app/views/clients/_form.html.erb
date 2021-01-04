@@ -67,28 +67,15 @@
   <br>
   <hr>
 
-  <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :type_of_project %>
-    <br>
-    <%= form.text_field :type_of_project %>
-  </div>
 
-  <div class="field display-4"  style="font-size:200%;">
+  <div class="field display-4 px-10"  style="font-size:200%;">
     <%= form.label :description %>
     <br>
-    <%= form.text_field :description %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
 
 
-  <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :payment_method %>
-    <br>
-    <%= form.text_field :payment_method %>
-  </div>
-
-  <br>
-  <hr>
-  <br>
+  <br><hr><br>
 
   <div id="scroll-to-address"></div>
 

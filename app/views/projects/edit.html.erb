@@ -1,0 +1,323 @@
+<div class="card container text-center">
+  <br>
+  <div class="display-4 text-center py-5"> Editing Project </div>
+  <hr>
+  <br>
+
+  <form id="location-form">
+    <input type="text" id="location-input" class="form-control form-control-lg">
+    <br>
+    <br>
+    <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
+  </form>
+
+
+  <%= form_for [@projectable, @project] do |f| %>
+
+  <br>
+
+  <div class="container">
+    <div class="btn btn-outline-secondary reset">
+      Clear Fields
+    </div>
+  </div>
+
+  <br>
+  <hr>
+
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= f.label :title %>
+    <br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field display-4"  style="font-size:200%;">
+    <%= f.label :description %>
+    <br>
+    <%= f.text_field :description %>
+  </div>
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+  <div class="field display-4 px-10"  style="font-size:200%;">
+    <label for="project_category">Category</label>
+    <br>
+    <select class="form-control" name="project[category]" id="project_category">
+      <option disabled selected value> -- Select an option -- </option>
+      <option>Windows/Doors</option>
+      <option>Roof</option>
+      <option>Remodel</option>
+      <option>A/C</option>
+      <option>Other</option>
+    </select>  </div>
+
+    <br>
+
+    <div class="field display-4 px-10"  style="font-size:200%;">
+      <label for="project_status">Status</label>
+      <br>
+      <select class="form-control" name="project[status]" id="project_status">
+        <option disabled selected value> -- Select an option -- </option>
+        <option>Uninitiated</option>
+        <option>Signed</option>
+        <option>Material_list</option>
+        <option>Permit Package</option>
+        <option>Approved</option>
+        <option>Rejected</option>
+        <option>Scheduling</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+    </div>
+
+
+    <%#= f.input :solvency_ratio, as: :select, :include_blank => false, :collection => 1...6, :selected => f.object.solvency_ratio  %>
+
+
+<br>
+
+
+    <div class="field display-4 px-10"  style="font-size:200%;">
+      <label for="project_payment_method">Payment Method</label>
+      <br>
+      <select class="form-control" name="project[payment_method]" id="project_payment_method">
+        <option disabled selected value> -- Select an option -- </option>
+        <option>Ygrene</option>
+        <option>Renew</option>
+        <option>Cash</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+
+
+    <!-- <div class="field display-4"  style="font-size:200%;">
+      <%= f.label :payment_method %>
+      <br>
+      <%= f.text_field :payment_method %>
+    </div> -->
+
+    <br><hr><br>
+
+    <div id="scroll-to-address"></div>
+
+
+    <div id="invalid-address" class="hidden">
+      <div class=" container display-4" style="font-size:300%; color:red;">
+        Invalid Address
+      </div>
+    </div>
+
+    <div id="address-form">
+      <div class="field display-4"  style="font-size:200%;" id="project-address">
+        <%= f.label :address %>
+        <br>
+        <%= f.text_field :address %>
+      </div>
+
+      <div class="field display-4"  style="font-size:200%;" id="project-city">
+        <%= f.label :city %>
+        <br>
+        <%= f.text_field :city %>
+      </div>
+
+      <div class="field display-4"  style="font-size:200%;" id="project-state">
+        <%= f.label :state %>
+        <br>
+        <%= f.text_field :state %>
+      </div>
+
+      <div class="field display-4"  style="font-size:200%;" id="project-zip">
+        <%= f.label :zip %>
+        <br>
+        <%= f.text_field :zip %>
+      </div>
+
+      <div class="field hidden" id="geometry-lat">
+        <%= f.label :latitude %>
+        <br>
+        <%= f.text_field :latitude %>
+      </div>
+
+      <div  class="field hidden" id="geometry-lng">
+        <%= f.label :longitude %>
+        <br>
+        <%= f.text_field :longitude %>
+      </div>
+   </div>
+
+    <br>
+    <br>
+
+   <%#= f.submit "Update Project", class:"btn btn-primary"%>
+
+
+
+   <!--  -->
+   <!--  -->
+   <!--  -->
+
+   <div class="actions text-center container">
+     <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
+      Update Project
+     <% end %>
+   </div>
+
+   <br>
+   <hr>
+   <br>
+
+   <div class="actions text-center container">
+     <%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure you would like to delete this project forever?' }, class:"btn btn-danger btn-lg" %>
+   </div>
+
+   <br>
+
+   <!--  -->
+   <!--  -->
+   <!--  -->
+   <!--  -->
+
+
+
+
+
+<% end %> <!-- Project Form End -->
+
+<br>
+</div>
+
+
+<br>
+<div>
+  <div class="actions text-center" stlye="">
+    <%= link_to 'Back', :back, class:"btn-primary btn-lg"  %>
+  </div>
+</div>
+
+<script>
+
+  var resetFeilds = $(".reset").click(function() {
+      $(this).closest('form').find("input[type=text], textarea").val("");
+  });
+
+  // Get location form
+  var submitAddress = document.getElementById("submit-address");
+  submitAddress.addEventListener('click', geocode);
+
+  var addressScrollDown = $("#submit-address").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#scroll-to-address").offset().top
+      }, 500);
+  });
+
+    function geocode(e){
+      // Prevent actual Submit
+      e.preventDefault();
+
+      let location = document.getElementById('location-input').value;
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyCb7XJAeWDd5AXTQpyjeYIU93Gc7CfUpVk'
+        }
+      }).then(function(response){
+        // console.dir(response);
+        // debugger;
+
+        // let projectAddress = response.data.results[0].formatted_address;
+        let projectAddress =  response.data.results[0].address_components[0].long_name + ' ' + response.data.results[0].address_components[1].long_name
+        let projectCity = response.data.results[0].address_components[3].long_name
+        let projectState = response.data.results[0].address_components[5].long_name
+        let projectZip = response.data.results[0].address_components[7].long_name
+        let projectLatitude = response.data.results[0].geometry.location.lat;
+        let projectLongitude = response.data.results[0].geometry.location.lng;
+
+        const addressComponents = [
+        projectAddress ,
+        projectCity ,
+        projectState ,
+        projectZip ,
+        projectLatitude ,
+        projectLongitude
+        ]
+
+        let projectAddressOutput = `
+        <div class="field">
+            <label for="project_address">Address</label>
+            <br />
+            <input type="text" name="project[address]" id="project_address" value="${projectAddress}" >
+        </div>
+        `;
+
+        let projectCityOutput = `
+        <div class="field">
+            <label for="project_city">City</label>
+            <br />
+            <input type="text" name="project[city]" id="project_city" value="${projectCity}" >
+        </div>
+        `;
+
+        let projectStateOutput = `
+        <div class="field">
+            <label for="project_state">State</label>
+            <br />
+            <input type="text" name="project[state]" id="project_state" value="${projectState}" >
+        </div>
+        `;
+
+          let projectZipOutput = `
+          <div class="field">
+              <label for="project_zip">Zip</label>
+              <br />
+              <input type="text" name="project[zip]" id="project_zip" value="${projectZip}" >
+          </div>
+          `;
+
+          let geometryOutputLat = `
+          <div class="field">
+              <label for="project_latitude">Latitude</label>
+              <br />
+              <input type="text" name="project[latitude]" id="project_latitude" value="${projectLatitude}" >
+          </div>
+          `;
+
+          let geometryOutputLng = `
+          <div class="field">
+              <label for="project_longitude">Longitude</label>
+              <br />
+              <input type="text" name="project[longitude]" id="project_longitude" value="${projectLongitude}" >
+          </div>
+          `;
+
+        // Output to app
+        document.getElementById('project-address').innerHTML = projectAddressOutput;
+        document.getElementById('project-city').innerHTML = projectCityOutput;
+        document.getElementById('project-state').innerHTML = projectStateOutput;
+        document.getElementById('project-zip').innerHTML = projectZipOutput;
+        document.getElementById('geometry-lat').innerHTML = geometryOutputLat;
+        document.getElementById('geometry-lng').innerHTML = geometryOutputLng;
+
+        submitAddress.addEventListener('click', addressScrollDown);
+
+
+      }).catch(function(error){
+
+        // console.log(error);
+        // alert("Address Error. Please enter a valid address. Click OK to continue.");
+        // $( ".field" ).effect( "shake" );
+        // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
+        $( ".reset" ).trigger( "click" );
+        $("#invalid-address").show().delay(2500).fadeOut();
+      });
+    }
+
+
+
+</script>

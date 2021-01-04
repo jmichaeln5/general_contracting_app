@@ -9,7 +9,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
 
   def all_clients
-    @clients = Client.all
+    @clients = Client.all.order("created_at DESC")
   end
 
   def index

@@ -2,7 +2,7 @@
 
 <div class="card container text-center">
   <br>
-  <div class="display-4 text-center py-5"> Editing Client </div>
+  <div class="display-4 text-center py-5"> Editing <%= @client.name %> </div>
   <hr>
   <br>
 
@@ -61,24 +61,24 @@
   <br>
   <hr>
 
-  <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :type_of_project %>
-    <br>
-    <%= form.text_field :type_of_project %>
-  </div>
+  <!-- <div class="text_field">
+    <%= select_tag :type_of_projects, options_for_select(Client.type_of_projects) %>
+  </div> -->
 
-  <div class="field display-4"  style="font-size:200%;">
+
+  <div class="field display-4 px-10"  style="font-size:200%;">
     <%= form.label :description %>
     <br>
-    <%= form.text_field :description %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
 
 
-  <div class="field display-4"  style="font-size:200%;">
+
+  <!-- <div class="field display-4"  style="font-size:200%;">
     <%= form.label :payment_method %>
     <br>
     <%= form.text_field :payment_method %>
-  </div>
+  </div> -->
 
 
   <br>

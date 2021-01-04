@@ -8,6 +8,7 @@ gem 'hirb'
 gem 'geocoder'
 gem 'byebug'
 gem 'jquery-rails'
+# gem 'jquery-ui-rails'
 gem 'searchkick'
 gem 'rename'
 

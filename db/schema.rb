@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_235952) do
+ActiveRecord::Schema.define(version: 2020_12_29_035542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 2019_07_09_235952) do
     t.string "phone_number"
     t.string "email"
     t.string "type_of_project"
+    t.datetime "check_in"
     t.string "payment_method"
     t.text "description"
-    t.datetime "check_in"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
@@ -36,6 +36,32 @@ ActiveRecord::Schema.define(version: 2019_07_09_235952) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_clients_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "projectable_type"
+    t.integer "projectable_id"
+    t.integer "user_id"
+    t.string "title"
+    t.string "category"
+    t.text "description"
+    t.datetime "start_date"
+    t.datetime "estimated_end_date"
+    t.datetime "end_date"
+    t.float "estimated_cost"
+    t.float "cost"
+    t.string "status"
+    t.string "check_in"
+    t.string "payment_method"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+    t.string "link"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

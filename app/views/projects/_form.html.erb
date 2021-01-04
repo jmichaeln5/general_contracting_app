@@ -1,0 +1,60 @@
+
+<%= form_for [projectable, Project.new] do |f| %><!-- Project Form Begin -->
+
+
+     <%#= f.hidden_field :projectable_type, :value => "Note" %>
+     <!-- <div class="form-group">
+       <%#= f.label :projectable_type %>
+       <%#= f.text_field :projectable_type, class:"form-control", :value => "GeneralRemark"%>
+     </div> -->
+
+     <!-- <div class="form-group">
+       <%= f.label :user_id%>
+       <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
+     </div> -->
+
+     <div class="form-group">
+       <%= f.label :title %>
+       <%= f.text_field :title, class:"form-control" %>
+     </div>
+
+     <div class="form-group px-8">
+       <%= f.label :description %>
+       <%#= f.text_area :description, class:"form-control", placeholder: "Description"%>
+       <%= f.text_area :description, class:"form-control" %>
+     </div>
+
+     <div class="form-group px-8">
+            <label for="project_category">Category</label>
+            <select class="form-control" name="project[category]" id="project_category">
+              <option disabled selected value> -- Select an option -- </option>
+              <option>Windows/Doors</option>
+              <option>Roof</option>
+              <option>Remodel</option>
+              <option>A/C</option>
+              <option>Other</option>
+            </select>
+      </div>
+
+
+     <div class="form-group px-8">
+            <label for="project_status">Status</label>
+            <select class="form-control" name="project[status]" id="project_status">
+              <option disabled selected value> -- Select an option -- </option>
+              <option>Uninitiated</option>
+              <option>Signed</option>
+              <option>Material List</option>
+              <option>Permit Package</option>
+              <option>Approved</option>
+              <option>Rejected</option>
+              <option>Scheduling</option>
+              <option>In Progress</option>
+              <option>Completed</option>
+            </select>
+      </div>
+
+
+
+     <%= f.submit "Add Project", class:"btn btn-primary"%>
+
+<% end %> <!-- Project Form End -->

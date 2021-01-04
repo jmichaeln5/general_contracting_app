@@ -17,21 +17,52 @@
       <br>
       <br>
       <div class="field display-4"  style="font-size:200%;">
-      <%= client.name %> <% if client.type_of_project.present? %> (<%= "#{client.type_of_project.capitalize}"%>) <% end %>
+        <%= client.name %>
+        <br>
+
+
+        <!-- <span style="font-size:80%; color:green;">
+        <%= client.projects.count %> Active Projects
+        </span> -->
+
+
+
+        <% if client.projects.count == 1 %>
+            1 Project
+        <% elsif client.projects.count == 0 %>
+            0 Projects
+        <% else %>
+        <%= @client.projects.count %> Projects
+        <% end %>
+
+
+        <div style="font-size:60%;">
+        <%= client.phone_number %>
+        </div>
+        <div style="font-size:60%;">
+        <%= client.email %>
+        </div>
+        <div style="font-size:60%;">
+        <%= client.full_street_address %>
+        </div>
 
       </div>
-      <div class="field display-4"  style="font-size:125%;">
-      <%= client.phone_number %>
-      </div>
-      <div class="field display-4"  style="font-size:125%;">
-      <%= client.email %>
-      </div>
-      <div class="field display-4"  style="font-size:125%;">
-      <%= client.full_street_address %>
-      </div>
+
       <div>
         <br>
-      <%= link_to 'View Client', client, class:"btn btn-outline-primary", style: 'color:blue' %>
+        <%= link_to 'View Client', client, class:"btn btn-outline-primary", style: 'color:blue' %>
+
+
+        <% if client.projects.count == 1 %>
+
+          <%= link_to 'View Project', client_projects_path(client), class:"btn btn-outline-primary", style: 'color:blue' %>
+
+        <% elsif client.projects.count > 1 %>
+
+          <%= link_to 'View Projects', client_projects_path(client), class:"btn btn-outline-primary", style: 'color:blue' %>
+
+        <% end %>
+
       <br>
       <br>
       </div>

@@ -20,7 +20,15 @@ Rails.application.routes.draw do
   resources :users do
     resources :clients, only: [:index, :new, :create]
   end
-  resources :clients, only: [:show, :edit, :update, :destroy]
+
+  # resources :clients, only: [:show, :edit, :update, :destroy]
+  resources :clients, only: [:show, :edit, :update, :destroy] do
+    resources :projects, module: :clients
+  end
+
+  resources :projects
+  get 'all_projects', to: 'projects#all_projects'
+
 
 
 

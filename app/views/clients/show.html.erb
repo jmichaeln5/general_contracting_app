@@ -1,97 +1,103 @@
 <div class="card container">
 
-<div class="display-4 text-center py-5"> <%= @client.name %> (<%= @client.type_of_project %>) </div>
+<div class="display-4 text-center py-5">
+  <%= @client.name %> <%= "(#{@client.type_of_project})" if @client.type_of_project.present? %>
 
-
-<% if @client.description.present? %>
   <div class="display-4 text-center">
-    <p style="font-size:80%;">
-      <%= @client.description %>
+    <p style="font-size:50%;">
+
+      <% if @client.phone_number.present? %>
+        <br>
+        Phone: <%= @client.phone_number %>
+      <% end %>
+      <% if @client.email.present? %>
+        <br>
+        Email: <%= @client.email %>
+      <% end %>
+      <% if @client.description.present? %>
+        <br>
+        <%= @client.description %>
+      <% end %>
     </p>
   </div>
-  <br>
-<% end %>
 
+  <span class="text-center">
+  <%= link_to 'Edit Client', edit_client_path(@client), class:"btn btn-outline-secondary" %>
+  </span>
 
-
-<!-- Button trigger modal -->
-<div class="text-center">
-
-<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-  Client Info
-</button>
 </div>
-<!-- Modal -->
+
+<div class="card px-6">
+  <br>
+  <span class="display-4 text-center">
+    <p style="font-size:50%;">
+
+      <% if @client.projects.count > 1 %>
+        <%= @client.projects.count %> Projects:
+      <% end %>
+
+      <% if @client.projects.count == 1 %>
+          1 Project:
+      <% end %>
+
+      <% if @client.projects.count == 0 %>
+          0 Projects for <%= @client.name %>
+      <% end %>
+
+    </p>
+  </span>
+  <%= render partial: "projects/projects", locals: {projectable: @client}%>
+  <br>
+</div>
+
+<br>
+
+<%#= render partial: "projects/projects", locals: {projectable: @client}%>
+<%#= render partial: "projects/form", locals: {projectable: @client}%>
+
+<!-- Project Modal Button -->
+<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Project
+</button>
+<!-- Project Modal Begin -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Client Info</h5>
+        <h5 class="modal-title" id="exampleModalLabel">  New Project for <%= @client.name %>
+</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <!-- Client Info -->
+      <!-- Project Form -->
 
-      <% if @client.description.present? %>
         <div class="display-4 text-center">
-          <p style="font-size:50%;">
-            <%= @client.name %>
-            <br>
-            <%= @client.phone_number %>
-            <br>
-            <%= @client.email %>
-            <br>
-            <%= @client.full_street_address %>
-            <br>
-            <%= @client.description %>
-            <br>
-            <%= @client.type_of_project %>
-            <br>
+          <%= render partial: "projects/form", locals: {projectable: @client}%>
 
-          </p>
         </div>
         <br>
-      <% end %>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Project Modal End -->
 
 
 <hr>
+<br>
 
 <div class="text-center">
-<%= link_to 'Edit Client', edit_client_path(@client), class:"btn btn-outline-secondary" %>
-  <br><br>
+
     <div class="card container">
     <br>
 
-      <strong>Address:</strong>
+      <strong>Client Address:</strong>
       <%= @client.full_street_address %></a>
 
     <br><br>
@@ -101,6 +107,9 @@
 
     <br><br>
   </div>
+
+
+
 </div>
 <br>
 <div class="text-center">
