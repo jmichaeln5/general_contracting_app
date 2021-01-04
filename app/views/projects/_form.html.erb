@@ -19,12 +19,6 @@
      </div>
 
      <div class="form-group px-8">
-       <%= f.label :description %>
-       <%#= f.text_area :description, class:"form-control", placeholder: "Description"%>
-       <%= f.text_area :description, class:"form-control" %>
-     </div>
-
-     <div class="form-group px-8">
             <label for="project_category">Category</label>
             <select class="form-control" name="project[category]" id="project_category">
               <option disabled selected value> -- Select an option -- </option>
@@ -54,6 +48,25 @@
       </div>
 
 
+      <div class="form-group px-8">
+        <label for="project_payment_method">Payment Method</label>
+        <br>
+        <select class="form-control" name="project[payment_method]" id="project_payment_method">
+          <option disabled selected value> -- Select an option -- </option>
+          <option>Ygrene</option>
+          <option>Renew</option>
+          <option>Cash</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group px-8">
+        <%= f.label :description %>
+        <%#= f.text_area :description, class:"form-control", placeholder: "Description"%>
+        <%= f.text_area :description, class:"form-control" %>
+      </div>
+
+      <hr>
 
      <%= f.submit "Add Project", class:"btn btn-primary"%>
 

@@ -30,6 +30,8 @@
 <div class="card px-6">
   <br>
   <span class="display-4 text-center">
+    <strong>
+
     <p style="font-size:50%;">
 
       <% if @client.projects.count > 1 %>
@@ -45,6 +47,8 @@
       <% end %>
 
     </p>
+  </strong>
+
   </span>
   <%= render partial: "projects/projects", locals: {projectable: @client}%>
   <br>
