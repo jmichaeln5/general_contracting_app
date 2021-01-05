@@ -11,7 +11,9 @@
 
 </div>
 
+<!-- Nested Forms Vid -->
 
+<!-- https://www.youtube.com/watch?v=3fYQd1jSyag&list=PLRydhfFqzAnNnbtn7JxheZhtizP1o7AwF&index=3 -->
 <br>
 
 <hr>
@@ -22,16 +24,32 @@
     <div class="card container">
     <br>
 
-      <strong>Address:</strong>
-      <%= @project.full_street_address %></a>
+    <% if @project.address.present? %>
+    <strong>Address:</strong>
+    <%= @project.full_street_address %></a>
 
     <br><br>
     <div id="map"></div>
     <br>
+
+    <% else %>
+
+    <div class="display-4 text-center py-5">
+      <div style="font-size:60%;">
+        Project Address Not Available.
+        <br>
+        Click <%= link_to 'Here', edit_project_path(@project) %> to Add Project Address
+
+      </div>
     </div>
 
-    <br><br>
+
+    <% end %>
   </div>
+  <br><br>
+
+
+</div>
 
 
 
