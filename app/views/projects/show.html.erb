@@ -1,20 +1,92 @@
 <div class="card container">
 
-<div class="display-4 text-center py-5">
-  <%= @project.category.capitalize %> Project for <%= @project.projectable.name %>
+<div class="display-4 text-center">
 
+
+
+
+
+  <span class="float-right" style="font-size:70%;">
+    <% if ( @project.status ==  "Uninitiated" ) %>
+
+      <p style="color:grey;" >
+        Inactive
+      </p>
+
+    <% elsif ( @project.status ==  "Completed" ) %>
+
+      <p style="color:green;">
+        Completed
+      </p>
+
+    <% elsif ( @project.status ==  "Rejected" ) %>
+
+      <p style= "color:red;">
+        Rejected
+      </p>
+
+    <% else %>
+
+      <p style="color:green;">
+        <%= @project.status %>
+      </p>
+
+    <% end %>
+  </span>
+
+  <br>
+
+
+
+
+
+
+  <%= @project.category.capitalize %>
   <% if @project.description.present? %>
       <p style="font-size:80%;">
         <%= @project.description %>
       </p>
   <% end %>
 
+
+
+  <div class="card" style="font-size:50%;">
+
+    <%#= link_to "#{project.title}", project %>
+    <span class="p-2">
+
+      <span class="p-2">
+
+
+
+
+
+      </span>
+
+
+      <br>
+
+      <div class="text-center">
+        <%= @project.title %> <%= @project.category %>
+        <br>
+        <%= @project.payment_method %>
+      </div>
+
+      <br>
+    </span>
+
+  </div>
+
+
+
+
+
+
 </div>
 
 <!-- Nested Forms Vid -->
 
 <!-- https://www.youtube.com/watch?v=3fYQd1jSyag&list=PLRydhfFqzAnNnbtn7JxheZhtizP1o7AwF&index=3 -->
-<br>
 
 <hr>
 

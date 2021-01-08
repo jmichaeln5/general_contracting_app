@@ -6,9 +6,49 @@
   <span class="p-2">
 
     <span class="p-2">
-      <span class="float-left">
+
+
+
+
+      <!-- <span class="float-left">
         <%= project.status %>
-      </span>
+      </span> -->
+
+<!--  -->
+
+  <span class="float-left">
+    <% if ( project.status ==  "Uninitiated" ) %>
+
+      <p style="color:grey;" >
+        Inactive
+      </p>
+
+    <% elsif ( project.status ==  "Completed" ) %>
+
+      <p style="color:green;">
+        Completed
+      </p>
+
+    <% elsif ( project.status ==  "Rejected" ) %>
+
+      <p style= "color:red;">
+        Rejected
+      </p>
+
+    <% else %>
+
+      <p style="color:green;">
+        <%= project.status %>
+      </p>
+
+    <% end %>
+  </span>
+<!--  -->
+
+
+
+
+
 
       <span class="float-right">
         <%= link_to "View", project %>
@@ -16,12 +56,17 @@
     </span>
 
 
-    <br>
 
-    <div class="text-center" style="font-size:130%;">
-      <%= project.title %> <%= project.category %>
-      <br>
-      <%= project.payment_method %>
+  <div class="text-center pr-8">
+
+      <span class="" style="font-size:130%;">
+
+        <%= project.title %>
+
+        <%= project.category %>
+        <%= project.payment_method %>
+
+      </span>
     </div>
 
     <br>

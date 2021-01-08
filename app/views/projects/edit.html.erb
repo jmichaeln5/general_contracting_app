@@ -1,6 +1,6 @@
 <div class="card container text-center">
   <br>
-  <div class="display-4 text-center py-5"> Editing Project </div>
+  <div class="display-4 text-center py-5"> Editing <%= @project.projectable.name %> <%= @project.category %> Project </div>
   <hr>
   <br>
 
@@ -46,7 +46,7 @@
 
 
   <div class="field display-4 px-10"  style="font-size:200%;">
-    <label for="project_category">Category</label>
+    <label for="project_category">Project Type</label>
     <br>
     <select class="form-control" name="project[category]" id="project_category">
       <option disabled selected value> -- Select an option -- </option>
@@ -66,7 +66,7 @@
         <option disabled selected value> -- Select an option -- </option>
         <option>Uninitiated</option>
         <option>Signed</option>
-        <option>Material_list</option>
+        <option>Material List</option>
         <option>Permit Package</option>
         <option>Approved</option>
         <option>Rejected</option>
