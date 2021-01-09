@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   def all_projects
     @projects = Project.all.where(user_id: current_user).order("created_at DESC")
-    # @clients = Client.all.where(user_id: current_user).order("created_at DESC")
+    @clients = Client.all.where(user_id: current_user).order("created_at DESC")
   end
 
   def index
@@ -54,7 +54,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip)
+    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip, :estimated_cost, :cost )
   end
 
 end

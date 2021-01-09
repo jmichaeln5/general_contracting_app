@@ -9,8 +9,41 @@
 
 <% @projects.each do |project| %>
     <div class="card">
-      <br>
-      <br>
+
+
+
+      <span class="pt-2">
+        <span class="float-left pl-2" style="font-size:100%;">
+          <% if ( project.status ==  "Uninitiated" ) %>
+
+            <p style="color:grey;" >
+              Inactive
+            </p>
+
+          <% elsif ( project.status ==  "Completed" ) %>
+
+            <p style="color:green;">
+              Completed
+            </p>
+
+          <% elsif ( project.status ==  "Rejected" ) %>
+
+            <p style= "color:red;">
+              Rejected
+            </p>
+
+          <% else %>
+
+            <p style="color:green;">
+              <%= project.status %>
+            </p>
+
+          <% end %>
+        </span>
+      </span>
+
+
+
       <div class="field display-4"  style="font-size:200%;">
 
         <%= project.category.capitalize %> for <%= project.projectable.name %>

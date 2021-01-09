@@ -4,7 +4,6 @@
 <div class="display-4 text-center ">
   Dashboard
 </div>
-<br>
 
 <!-- <form class="form-inline">
   <div class="container">
@@ -14,6 +13,29 @@
 </form> -->
 
 <br>
+
+  <div class="flex-grid display-4"  style="font-size:150%;">
+
+
+  <%= link_to(user_clients_path(current_user)) do %>
+  <span class="col border-solid border p-2">
+    <%=  @clients.count %> <%= "#{@clients.size == 1 ? 'Client' : 'Clients'}"%>
+  </span>
+  <% end %>
+
+  <%= link_to(all_projects_path) do %>
+  <span class="col  border-solid border p-2">
+    <%=  @projects.count %> <%= "#{@projects.size == 1 ? 'Project' : 'Projects'}"%>
+  </span>
+  <% end %>
+
+  <!-- <span class="col">
+  </span> -->
+
+  </div>
+
+  <br>
+
 <hr>
 <%= link_to 'Add New Client',  new_user_client_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
 <br>

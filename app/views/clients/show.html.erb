@@ -1,11 +1,8 @@
 <div class="card container">
-
 <div class="display-4 text-center py-5">
   <%= @client.name %> <%= "(#{@client.type_of_project})" if @client.type_of_project.present? %>
-
   <div class="display-4 text-center">
     <p style="font-size:50%;">
-
       <% if @client.phone_number.present? %>
         <br>
         Phone: <%= @client.phone_number %>
@@ -24,41 +21,9 @@
   <span class="text-center">
   <%= link_to 'Edit Client', edit_client_path(@client), class:"btn btn-outline-secondary" %>
   </span>
-
 </div>
-
-<div class="card px-6">
-  <br>
-  <span class="display-4 text-center">
-    <strong>
-
-    <p style="font-size:50%;">
-
-      <% if @client.projects.count > 1 %>
-        <%= @client.projects.count %> Projects:
-      <% end %>
-
-      <% if @client.projects.count == 1 %>
-          1 Project:
-      <% end %>
-
-      <% if @client.projects.count == 0 %>
-          0 Projects for <%= @client.name %>
-      <% end %>
-
-    </p>
-  </strong>
-
-  </span>
-  <%= render partial: "projects/projects", locals: {projectable: @client}%>
-  <br>
-</div>
-
+<%= render partial: "projects/projects", locals: {projectable: @client}%>
 <br>
-
-<%#= render partial: "projects/projects", locals: {projectable: @client}%>
-<%#= render partial: "projects/form", locals: {projectable: @client}%>
-
 <!-- Project Modal Button -->
 <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add Project
@@ -68,21 +33,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">  New Project for <%= @client.name %>
-</h5>
+        <h5 class="modal-title" id="exampleModalLabel">
+           New Project for <%= @client.name %>
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       <!-- Project Form -->
-
         <div class="display-4 text-center">
           <%= render partial: "projects/form", locals: {projectable: @client}%>
-
         </div>
         <br>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,35 +54,24 @@
   </div>
 </div>
 <!-- Project Modal End -->
-
-
 <hr>
 <br>
-
 <div class="text-center">
-
     <div class="card container">
     <br>
-
       <strong>Client Address:</strong>
       <%= @client.full_street_address %></a>
-
     <br><br>
     <div id="map"></div>
     <br>
     </div>
-
     <br><br>
   </div>
-
-
-
 </div>
 <br>
 <div class="text-center">
   <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>
-
 
 <script type="text/javascript">
 

@@ -1,8 +1,14 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 <div class="card container text-center">
 <br>
-<div class="display-4 text-center py-5"> My Clients </div>
+<div class="display-4 text-center py-5">
+  My Clients
+  <div style="font-size:60%;">
+    <%=  @clients.count %> <%= "#{@clients.size == 1 ? 'Client' : 'Clients'}"%>
+  </div>
+</div>
 <hr>
+
 <%= link_to 'Add New Client',  new_user_client_path(current_user), class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
 
 <br>
@@ -20,12 +26,9 @@
         <%= client.name %>
         <br>
 
-
         <!-- <span style="font-size:80%; color:green;">
         <%= client.projects.count %> Active Projects
         </span> -->
-
-
 
         <% if client.projects.count == 1 %>
             1 Project
@@ -34,7 +37,6 @@
         <% else %>
         <%= client.projects.count %> Projects
         <% end %>
-
 
         <div style="font-size:60%;">
         <%= client.phone_number %>

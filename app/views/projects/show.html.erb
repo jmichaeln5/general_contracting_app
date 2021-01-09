@@ -2,11 +2,7 @@
 
 <div class="display-4 text-center">
 
-
-
-
-
-  <span class="float-right" style="font-size:70%;">
+  <span class="float-left pt-2 pl-2" style="font-size:40%;">
     <% if ( @project.status ==  "Uninitiated" ) %>
 
       <p style="color:grey;" >
@@ -39,11 +35,10 @@
 
 
 
+  <%= @project.title.capitalize %>
 
-
-  <%= @project.category.capitalize %>
   <% if @project.description.present? %>
-      <p style="font-size:80%;">
+      <p style="font-size:50%;">
         <%= @project.description %>
       </p>
   <% end %>
@@ -67,9 +62,30 @@
       <br>
 
       <div class="text-center">
-        <%= @project.title %> <%= @project.category %>
-        <br>
-        <%= @project.payment_method %>
+
+        <% if @project.title %>
+          <strong>Project Title:</strong> <%= @project.title %> <br>
+        <% end %>
+
+        <% if @project.category %>
+          <strong>Project Type:</strong> <%= @project.category %> <br>
+        <% end %>
+
+        <% if @project.payment_method %>
+          <strong>Payment Method:</strong> <%= @project.payment_method %> <br>
+        <% end %>
+
+
+        <% if @project.estimated_cost %>
+          <strong>Estimated Cost:</strong> $<%= @project.estimated_cost %> <br>
+        <% end %>
+
+
+
+        <% if @project.cost %>
+          <strong>Cost:</strong> $<%= @project.cost %> <br>
+        <% end %>
+
       </div>
 
       <br>

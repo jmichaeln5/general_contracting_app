@@ -1,7 +1,11 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 <div class="card container text-center">
 <br>
-<div class="display-4 text-center py-5"> My Projects </div>
+<div class="display-4 text-center py-5"> My Projects
+  <div style="font-size:60%;">
+    <%=  @projects.count %> <%= "#{@projects.size == 1 ? 'Project' : 'Projects'}"%>
+  </div>
+</div>
 <hr>
 
 <br>

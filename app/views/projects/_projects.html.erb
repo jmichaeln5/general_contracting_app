@@ -1,80 +1,56 @@
+<div class="card px-6">
+  <br>
+  <span class="display-4 text-center">
+    <strong>
+    <p style="font-size:50%;">
+      <%=  @client.projects.count %> <%= "#{@client.projects.size == 1 ? 'Project:' : 'Projects:'}"%>
+    </p>
+  </strong>
+  </span>
 <% projectable.projects.reverse.each do |project| %>
-
 <div class="card">
-
   <%#= link_to "#{project.title}", project %>
   <span class="p-2">
 
     <span class="p-2">
 
-
-
-
-      <!-- <span class="float-left">
-        <%= project.status %>
-      </span> -->
-
-<!--  -->
-
-  <span class="float-left">
-    <% if ( project.status ==  "Uninitiated" ) %>
-
-      <p style="color:grey;" >
-        Inactive
-      </p>
-
-    <% elsif ( project.status ==  "Completed" ) %>
-
-      <p style="color:green;">
-        Completed
-      </p>
-
-    <% elsif ( project.status ==  "Rejected" ) %>
-
-      <p style= "color:red;">
-        Rejected
-      </p>
-
-    <% else %>
-
-      <p style="color:green;">
-        <%= project.status %>
-      </p>
-
-    <% end %>
-  </span>
-<!--  -->
-
-
-
-
-
+      <!-- Project Status -->
+      <span class="float-left">
+        <% if ( project.status ==  "Uninitiated" ) %>
+          <p style="color:grey;" >
+            Inactive
+          </p>
+        <% elsif ( project.status ==  "Completed" ) %>
+          <p style="color:green;">
+            Completed
+          </p>
+        <% elsif ( project.status ==  "Rejected" ) %>
+          <p style= "color:red;">
+            Rejected
+          </p>
+        <% else %>
+          <p style="color:green;">
+            <%= project.status %>
+          </p>
+        <% end %>
+      </span>
 
       <span class="float-right">
         <%= link_to "View", project %>
       </span>
     </span>
-
-
-
-  <div class="text-center pr-8">
-
+    <div class="text-center pr-8">
       <span class="" style="font-size:130%;">
-
         <%= project.title %>
-
         <%= project.category %>
         <%= project.payment_method %>
-
       </span>
     </div>
-
     <br>
   </span>
 
 </div>
-
-
-  <br>
-
+<br>
 <% end %>
+<br>
+</div>
