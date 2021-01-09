@@ -40,7 +40,7 @@
   </div>
   <br>
 
-  <div class="field display-4 border-solid border"  style="font-size:200%;">
+  <div class="field display-4"  style="font-size:200%;">
     <%= f.label :estimated_cost %>
     <br>
     <%#= f.text_field :estimated_cost %>
@@ -48,16 +48,16 @@
 
     <%#= f.number_field :estimated_cost, value: number_to_currency(f.object.estimated_cost.to_f, delimiter: '', unit: ''), :step => 0.01 %>
 
-    <%= f.number_field :estimated_cost, value: @project.estimated_cost ? '%.2f' % @project.estimated_cost : nil, min: 0, step: 0.01%>
+    <%= f.number_field :estimated_cost, value: @project.estimated_cost ? '%.2f' % @project.estimated_cost : nil, min: 0, step: 0.01, class:"border-solid border" %>
 
 
   </div>
   <br>
 
-  <div class="field display-4 border-solid border"  style="font-size:200%;">
+  <div class="field display-4"  style="font-size:200%;">
     <%= f.label :cost %>
     <br>
-    <%= f.number_field :cost, value: @project.cost ? '%.2f' % @project.cost : nil, min: 0, step: 0.01%>
+    <%= f.number_field :cost, value: @project.cost ? '%.2f' % @project.cost : nil, min: 0, step: 0.01, class:"border-solid border" %>
   </div>
 
 
