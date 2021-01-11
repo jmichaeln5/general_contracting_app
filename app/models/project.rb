@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   belongs_to :projectable, polymorphic: true
-  # enum status: {uninitiated: 0, signed: 1, material_list: 2, permit_package: 3, approved: 4, rejected: 5, scheduling: 6, in_progress: 7, completed: 8}
+  has_many :comments, as: :commentable
 
 
   geocoded_by :full_street_address   # can also be an IP address

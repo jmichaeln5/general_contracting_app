@@ -1,0 +1,25 @@
+<div class="card">
+  <br>
+  <span class="display-4 text-center">
+    <strong>
+    <p style="font-size:50%;">
+      <%=  commentable.comments.count %> <%= "#{commentable.comments.size == 1 ? 'Comment:' : 'Comments:'}"%>
+    </p>
+  </strong>
+  </span>
+
+
+<% commentable.comments.reverse.each do |comment| %>
+  <div class="">
+    <div class="card p-8">
+      <%#= link_to "#{comment.title}", comment %>
+        <div class="text-center">
+            <%= comment.body %>
+        </div>
+    </div>
+    <br>
+  </div>
+<% end %>
+
+<br>
+</div>

@@ -134,7 +134,10 @@
 
     <% end %>
   </div>
-  <br><br>
+  <br>
+  <%= render partial: "comments/comments", locals: {commentable: @project}%>
+
+  <br>
 
 
 </div>
