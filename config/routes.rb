@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   # resources :clients, only: [:show, :edit, :update, :destroy]
   resources :clients, only: [:show, :edit, :update, :destroy] do
     resources :projects, module: :clients
+    resources :comments, module: :clients
   end
 
   resources :projects

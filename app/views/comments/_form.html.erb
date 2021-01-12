@@ -1,0 +1,19 @@
+<%= form_for [commentable, Comment.new] do |f| %>
+
+     <!-- <div class="form-group">
+       <%= f.label :user_id%>
+       <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
+     </div> -->
+
+    <br>
+
+     <div class="form-group">
+       <%= f.text_field :body, class:"form-control" %>
+     </div>
+
+
+      <hr>
+
+     <%= f.submit "Add Comment", class:"btn btn-primary"%>
+
+<% end %> <!-- Project Form End -->

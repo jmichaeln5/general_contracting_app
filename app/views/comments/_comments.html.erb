@@ -8,12 +8,54 @@
   </strong>
   </span>
 
-
 <% commentable.comments.reverse.each do |comment| %>
   <div class="">
     <div class="card p-8">
       <%#= link_to "#{comment.title}", comment %>
         <div class="text-center">
+            <span>
+
+              <!-- Edit Comment -->
+              <span class="float-right" type="button" data-toggle="modal" data-target="#CommentModal">
+                Edit
+              </span>
+
+
+              <!-- Comment Modal Begin -->
+              <div class="modal fade" id="CommentModal" tabindex="-1" role="dialog" aria-labelledby="CommentModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="CommentModalLabel">
+                      <!-- Comment Title -->
+                      </h5>
+
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    <!-- Comment Form -->
+                      <div class="display-4 text-center">
+                        <%= render partial: "comments/edit", locals: {commentable: @client}%>
+                      </div>
+                      <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Comment Modal End -->
+
+              <br>
+
+              <span class="float-right">
+                <%= link_to 'Delete', @comment, method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' } %>
+              </span>
+
+             </span>
             <%= comment.body %>
         </div>
     </div>

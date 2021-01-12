@@ -1,4 +1,4 @@
-class CommentssController < ApplicationController
+class CommentsController < ApplicationController
   before_action :authenticate_user!
 
 
@@ -32,8 +32,8 @@ class CommentssController < ApplicationController
     # byebug
     @comment.save
 
-    # redirect_to @commentable, notice:"Comment Created Successfully."
-    redirect_to @comment, notice:"Comment Created Successfully."
+    redirect_to @commentable, notice:"Comment Created Successfully."
+    # redirect_to @comment, notice:"Comment Created Successfully."
   end
 
 
@@ -42,7 +42,7 @@ class CommentssController < ApplicationController
     @comment.destroy
 
     if @comment.destroy
-      redirect_to all_comments_path, notice: "Comment deleted."
+      redirect_to @comment.commentable, notice: "Comment deleted."
     end
   end
 
