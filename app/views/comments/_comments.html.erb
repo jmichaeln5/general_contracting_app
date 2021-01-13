@@ -11,7 +11,7 @@
 <% commentable.comments.reverse.each do |comment| %>
   <div class="">
     <div class="card p-8">
-      <%#= link_to "#{comment.title}", comment %>
+      <%#= link_to "#{comment.body}", comment %>
         <div class="text-center">
             <span>
 
@@ -35,9 +35,22 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                    <!-- Comment Form -->
                       <div class="display-4 text-center">
-                        <%= render partial: "comments/edit", locals: {commentable: @client}%>
+
+                        <!-- Comment Update Form -->
+                        <%= form_for [commentable, comment] do |f| %>
+                        <!-- <div class="form-group">
+                          <%= f.label :user_id%>
+                          <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
+                        </div> -->
+                        <br>
+                        <div class="form-group">
+                          <%= f.text_field :body, class:"form-control" %>
+                        </div>
+                         <hr>
+                        <%= f.submit "Update Comment", class:"btn btn-primary"%>
+                        <% end %> <!-- Comment Form End -->
+
                       </div>
                       <br>
                     </div>
@@ -52,7 +65,7 @@
               <br>
 
               <span class="float-right">
-                <%= link_to 'Delete', @comment, method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' } %>
+                <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' } %>
               </span>
 
              </span>

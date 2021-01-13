@@ -43,22 +43,13 @@
       </p>
   <% end %>
 
-
-
   <div class="card" style="font-size:50%;">
-
     <%#= link_to "#{project.title}", project %>
     <span class="p-2">
 
       <span class="p-2">
 
-
-
-
-
       </span>
-
-
       <br>
 
       <div class="text-center">
@@ -79,8 +70,6 @@
         <% if @project.estimated_cost %>
           <strong>Estimated Cost:</strong> $<%= @project.estimated_cost %> <br>
         <% end %>
-
-
 
         <% if @project.cost %>
           <strong>Cost:</strong> $<%= @project.cost %> <br>
@@ -135,7 +124,8 @@
     <% end %>
   </div>
   <br>
-  <%#= render partial: "comments/comments", locals: {commentable: @project}%>
+  <%= render partial: "comments/comments", locals: {commentable: @project}%>
+  <%= render partial: "comments/form", locals: {commentable: @project}%>
 
   <br>
 

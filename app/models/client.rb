@@ -1,7 +1,7 @@
 class Client < ApplicationRecord
   belongs_to :user
-  has_many :projects, as: :projectable
-  has_many :comments, as: :commentable
+  has_many :projects, as: :projectable, dependent: :destroy
+  has_many :comments, as: :commentable, dependent: :destroy
 
   geocoded_by :full_street_address   # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates

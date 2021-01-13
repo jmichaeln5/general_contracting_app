@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   belongs_to :projectable, polymorphic: true
-  has_many :comments, as: :commentable
+  has_many :comments, as: :commentable, dependent: :destroy
 
 
   geocoded_by :full_street_address   # can also be an IP address

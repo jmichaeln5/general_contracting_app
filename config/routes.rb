@@ -30,6 +30,12 @@ Rails.application.routes.draw do
   resources :projects
   get 'all_projects', to: 'projects#all_projects'
 
+  resources :projects, only: [:show, :edit, :update, :destroy] do
+    resources :comments, module: :projects
+  end
+
+
+  resources :comments
 
 
 

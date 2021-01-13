@@ -12,14 +12,14 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(params[:id])
+    # @comment = Comment.find(params[:id])
   end
 
   def update
       # @comment = @commentable.comments.find(params[:id])
       @comment = Comment.find(params[:id])
       if @comment.update_attributes(comment_params)
-          redirect_to @comment, notice: "Comment was updated."
+          redirect_to @commentable, notice: "Comment was updated."
       else
           render :edit, notice: "Comment could not be updated."
       end
@@ -39,10 +39,14 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+
+    # byebug
+
     @comment.destroy
 
     if @comment.destroy
       redirect_to @comment.commentable, notice: "Comment deleted."
+      # redirect_to @commentable, notice: "Comment deleted."
     end
   end
 
