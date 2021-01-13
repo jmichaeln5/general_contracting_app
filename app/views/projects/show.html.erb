@@ -32,9 +32,6 @@
 
   <br>
 
-
-
-
   <%= @project.title.capitalize %>
 
   <% if @project.description.present? %>
@@ -76,17 +73,10 @@
         <% end %>
 
       </div>
-
       <br>
     </span>
 
   </div>
-
-
-
-
-
-
 </div>
 
 <!-- Nested Forms Vid -->
@@ -126,20 +116,14 @@
   <br>
   <%= render partial: "comments/comments", locals: {commentable: @project}%>
   <%= render partial: "comments/form", locals: {commentable: @project}%>
-
   <br>
-
-
 </div>
-
-
 
 </div>
 <br>
 <div class="text-center">
   <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>
-
 
 <script type="text/javascript">
 
