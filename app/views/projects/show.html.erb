@@ -54,24 +54,24 @@
 
       <div class="text-center">
 
-        <% if @project.title %>
+        <% if @project.title.present? %>
           <strong>Project Title:</strong> <%= @project.title %> <br>
         <% end %>
 
-        <% if @project.category %>
+        <% if @project.category.present? %>
           <strong>Project Type:</strong> <%= @project.category %> <br>
         <% end %>
 
-        <% if @project.payment_method %>
+        <% if @project.payment_method.present? %>
           <strong>Payment Method:</strong> <%= @project.payment_method %> <br>
         <% end %>
 
 
-        <% if @project.estimated_cost %>
+        <% if @project.estimated_cost.present? %>
           <strong>Estimated Cost:</strong> $<%= @project.estimated_cost %> <br>
         <% end %>
 
-        <% if @project.cost %>
+        <% if @project.cost.present? %>
           <strong>Cost:</strong> $<%= @project.cost %> <br>
         <% end %>
 

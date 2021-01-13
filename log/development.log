@@ -28932,3 +28932,196 @@ Processing by ClientsController#index as HTML
 Completed 200 OK in 79ms (Views: 68.3ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/clients/7" for ::1 at 2021-01-13 09:27:06 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (1.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:93
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:98
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:31
+  Rendering clients/show.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."projectable_id" = $1 AND "projects"."projectable_type" = $2[0m  [["projectable_id", 7], ["projectable_type", "Client"]]
+  ↳ app/views/projects/_projects.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."projectable_id" = $1 AND "projects"."projectable_type" = $2[0m  [["projectable_id", 7], ["projectable_type", "Client"]]
+  ↳ app/views/projects/_projects.html.erb:6
+  Rendered projects/_projects.html.erb (4.5ms)
+  Rendered projects/_form.html.erb (2.9ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 7], ["commentable_type", "Client"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 7], ["commentable_type", "Client"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (6.9ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered clients/show.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 533ms (Views: 517.2ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/clients/7/projects" for ::1 at 2021-01-13 09:27:18 -0500
+Processing by Clients::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gZ7qOxfinpUZ7cucvBga8AN3y37DOwuFvWrCgngzd7oIGvQ18e36omTB4HhMMLX4OsuSw9koLQTLRBNo7CJ5tg==", "project"=>{"title"=>"", "category"=>"Roof", "payment_method"=>"Renew", "status"=>"Uninitiated", "description"=>""}, "commit"=>"Add Project", "client_id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (0.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/clients/projects_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:37
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("projectable_type", "projectable_id", "user_id", "title", "category", "description", "status", "payment_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["projectable_type", "Client"], ["projectable_id", 7], ["user_id", 1], ["title", ""], ["category", "Roof"], ["description", ""], ["status", "Uninitiated"], ["payment_method", "Renew"], ["created_at", "2021-01-13 14:27:18.431862"], ["updated_at", "2021-01-13 14:27:18.431862"]]
+  ↳ app/controllers/projects_controller.rb:37
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:37
+Redirected to http://localhost:3000/projects/11
+Completed 302 Found in 364ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/projects/11" for ::1 at 2021-01-13 09:27:18 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (4.6ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered projects/show.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/projects/11" for ::1 at 2021-01-13 09:28:10 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (3.9ms)
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered projects/show.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 70ms (Views: 62.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/11" for ::1 at 2021-01-13 09:28:35 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (3.6ms)
+  Rendered comments/_form.html.erb (2.8ms)
+  Rendered projects/show.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 78ms (Views: 71.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/11" for ::1 at 2021-01-13 09:28:55 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (3.9ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered projects/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 70ms (Views: 62.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/11" for ::1 at 2021-01-13 09:30:48 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (4.3ms)
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered projects/show.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 87ms (Views: 76.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/11" for ::1 at 2021-01-13 09:30:55 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 11], ["commentable_type", "Project"]]
+  ↳ app/views/comments/_comments.html.erb:6
+  Rendered comments/_comments.html.erb (3.3ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered projects/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_nav.html.erb (3.6ms)
+Completed 200 OK in 72ms (Views: 63.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/11/edit" for ::1 at 2021-01-13 09:30:56 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:19
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/projects/edit.html.erb:3
+  Rendered projects/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 83ms (Views: 71.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/11/edit" for ::1 at 2021-01-13 09:31:52 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jonathannorton/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:19
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/projects/edit.html.erb:3
+  Rendered projects/edit.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 1.2ms)
+
+
