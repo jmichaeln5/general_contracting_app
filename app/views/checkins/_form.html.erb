@@ -1,0 +1,30 @@
+<%= form_for [checkinable, Checkin.new] do |f| %>
+
+     <!-- <div class="form-group">
+       <%= f.label :user_id%>
+       <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
+     </div> -->
+
+      <%#= date_select :date, :start_year => Date.current.year, :end_year => 1920 %>
+
+      <%#= date_select order: [:month, :day, :year], :start_year => Date.current.year, end_year: Date.current.year - 10 %>
+
+      <%#= f.datetime_select :time_contacted, {  order: [:month, :day, :year] }, { class: "" } %>
+
+    <div class=" p-2" style="font-size:50%;">
+      <%= f.date_field :time_contacted, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    </div>
+
+
+     <span class="form-group">
+       <%= f.label :description, style:"font-size:50%;" %>
+       <%= f.text_field :description, class:"form-control" %>
+     </span>
+
+
+     <%#= Time.now if @projects_page %>
+
+      <hr>
+     <%= f.submit "Add Check-in", class:"btn btn-primary"%>
+
+<% end %> <!-- Checkin Form End -->

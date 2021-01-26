@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
+  before_action :projects_page
+
 
   def all_projects
     @projects = Project.all.where(user_id: current_user).order("created_at DESC")
@@ -29,7 +31,6 @@ class ProjectsController < ApplicationController
       end
   end
 
-
   def create
     @project = @projectable.projects.new project_params
     @project.user_id = current_user.id
@@ -54,7 +55,11 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip, :estimated_cost, :cost )
+    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip, :estimated_cost, :cost)
+  end
+
+  def projects_page
+    @projects_page = true
   end
 
 end

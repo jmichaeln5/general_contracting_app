@@ -1,4 +1,6 @@
 <!-- <p id="notice"><%#= notice %></p> -->
+
+<%#= link_to "Clients", user_clients_path(current_user) %>
 <div class="card container text-center">
 <br>
 <div class="display-4 text-center py-5">
@@ -19,8 +21,24 @@
 <% end %> -->
 
 <% @clients.each do |client| %>
-    <div class="card">
-      <br>
+    <div class="card p-2">
+
+
+      <span style="font-size:100%;">
+        <% if client.checkins.any? %>
+          <span class="date float-left pl-2 pt-2" style="color:green;">
+            Last Check-In:
+            <% if client.checkins.last.time_contacted.present? %>
+              <%= "#{client.checkins.last.time_contacted.strftime("%m-%d-%y")}"  %>
+
+              <%#= "#{client.checkins.last.time_contacted.strftime("%m-%d-%y")} at #{client.checkins.last.time_contacted.strftime("%I:%M %p") }"  %>
+            <% else client.checkins.last.created_at %>
+              <%= "#{client.checkins.last.created_at.strftime("%m-%d-%y")}" %>
+            <% end %>
+          </span>
+        <% end %>
+      </span>
+
       <br>
       <div class="field display-4"  style="font-size:200%;">
         <%= client.name %>
@@ -45,7 +63,7 @@
         <%= client.email %>
         </div>
         <div style="font-size:60%;">
-        <%= client.full_street_address %>
+        <%= client.full_street_address if client.address.present? %>
         </div>
 
       </div>

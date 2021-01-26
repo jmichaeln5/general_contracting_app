@@ -1,0 +1,13 @@
+  <%= form_for [@checkinable, @checkin] do |f| %>
+  <!-- <div class="form-group">
+    <%= f.label :user_id%>
+    <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
+  </div> -->
+
+  <div class="form-group -mt-10">
+    <%= f.text_field :description, class:"form-control" %>
+  </div>
+
+   <hr>
+  <%= f.submit "Upd8 Check-in", class:"btn btn-primary"%>
+  <% end %>

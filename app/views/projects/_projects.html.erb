@@ -1,56 +1,111 @@
-<div class="card px-6">
-  <br>
   <span class="display-4 text-center">
     <strong>
     <p style="font-size:50%;">
       <%=  @client.projects.count %> <%= "#{@client.projects.size == 1 ? 'Project:' : 'Projects:'}"%>
     </p>
   </strong>
+  <hr>
+  <!-- Project Modal Button -->
+  <button type="button" class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+    Add Project
+  </button>
+  <!-- Project Modal Begin -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+             New Project for <%= @client.name %>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <!-- Project Form -->
+          <div class="display-4 text-center">
+            <%= render partial: "projects/form", locals: {projectable: @client}%>
+          </div>
+          <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Project Modal End -->
   </span>
-<% projectable.projects.reverse.each do |project| %>
-<div class="card">
+<% projectable.projects.each do |project| %>
   <%#= link_to "#{project.title}", project %>
-  <span class="p-2">
+<hr>
 
-    <span class="p-2">
+<span class="-my-4 mx-2">
 
-      <!-- Project Status -->
-      <span class="float-left">
-        <% if ( project.status ==  "Uninitiated" ) %>
-          <p style="color:grey;" >
-            Inactive
-          </p>
-        <% elsif ( project.status ==  "Completed" ) %>
-          <p style="color:green;">
-            Completed
-          </p>
-        <% elsif ( project.status ==  "Rejected" ) %>
-          <p style= "color:red;">
-            Rejected
-          </p>
-        <% else %>
-          <p style="color:green;">
-            <%= project.status %>
-          </p>
-        <% end %>
-      </span>
 
+    <span class="p-4">
       <span class="float-right">
         <%= link_to "View", project %>
       </span>
     </span>
-    <div class="text-center pr-8">
-      <span class="" style="font-size:130%;">
-        <%= project.title %>
-        <%= project.category %>
-        <%= project.payment_method %>
+
+    <div class="text-center">
+      <span class="">
+        <span>
+          <%= project.title %>
+        </span>
+          <br>
+        <span>
+          <%= project.category %>
+        </span>
+          <br>
+        <span>
+          <%= project.payment_method %>
+        </span>
+          <br>
+        <!-- Project Status -->
+        <% if ( project.status ==  "Uninitiated" ) %>
+          <span style="color:grey;" >
+            Inactive
+          </span>
+          <br>
+
+        <% elsif ( project.status ==  "Completed" ) %>
+          <span style="color:green;">
+            Completed
+          </span>
+          <br>
+
+        <% elsif ( project.status ==  "Material List" ) %>
+          <span style="color:green;">
+            Material List
+          </span>
+          <br>
+
+        <% elsif ( project.status ==  "Rejected" ) %>
+          <span style= "color:red;">
+            Rejected
+          </span>
+          <br>
+
+        <% else %>
+          <span style="color:grey;">
+            n/a
+          </span>
+          <br>
+        <% end %>
+
+
       </span>
     </div>
-    <br>
+
   </span>
 
-</div>
-<br>
+
+
+    <br>
 <% end %>
-<br>
-</div>
+
+<% if (projectable.projects.count < 4) && (projectable.projects.count <= 0 ) %>
+  <span> <hr> </span>
+<% end %>

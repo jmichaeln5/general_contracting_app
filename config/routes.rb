@@ -21,10 +21,10 @@ Rails.application.routes.draw do
     resources :clients, only: [:index, :new, :create]
   end
 
-  # resources :clients, only: [:show, :edit, :update, :destroy]
   resources :clients, only: [:show, :edit, :update, :destroy] do
     resources :projects, module: :clients
     resources :comments, module: :clients
+    resources :checkins, module: :clients
   end
 
   resources :projects
@@ -32,10 +32,11 @@ Rails.application.routes.draw do
 
   resources :projects, only: [:show, :edit, :update, :destroy] do
     resources :comments, module: :projects
+    resources :checkins, module: :projects
   end
 
-
   resources :comments
+  resources :checkins
 
 
 

@@ -8,7 +8,7 @@
   </strong>
   </span>
 
-<% commentable.comments.reverse.each do |comment| %>
+<% commentable.comments.each do |comment| %>
   <div class="p-4">
     <div class="card p-8">
       <%#= link_to "#{comment.body}", comment %>
@@ -16,7 +16,8 @@
             <span>
 
               <!-- Edit Comment -->
-              <span class="float-left" type="" data-toggle="modal" data-target="#CommentModal">
+              <span class="float-left" type="" data-toggle="modal" data-target="#CommentModal<%= comment.id %>
+">
                 <!-- Edit Icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                   <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -31,12 +32,9 @@
                 <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' }, class:"text-red-400 hover:text-red-700 " %>
               </span>
 
-
-
-
-
               <!-- Comment Modal Begin -->
-              <div class="modal fade" id="CommentModal" tabindex="-1" role="dialog" aria-labelledby="CommentModalLabel" aria-hidden="true">
+              <div class="modal fade" id="CommentModal<%= comment.id %>
+" tabindex="-1" role="dialog" aria-labelledby="CommentModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -58,7 +56,6 @@
                           <%= f.label :user_id%>
                           <%= f.text_field :user_id, class:"form-control", :value => current_user.id %>
                         </div> -->
-                        <br>
                         <div class="form-group">
                           <%= f.text_field :body, class:"form-control" %>
                         </div>
@@ -67,7 +64,6 @@
                         <% end %> <!-- Comment Form End -->
 
                       </div>
-                      <br>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

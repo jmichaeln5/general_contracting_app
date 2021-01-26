@@ -1,63 +1,51 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 <div class="card container text-center">
 <br>
-<div class="display-4 text-center py-5">
-  <%= @client.name %>'s Projects
-  <br>
-  <%= link_to 'View Client', @client, class:"btn btn-outline-primary btn-lg", style: 'color:blue' %>
 
-</div>
+<span class="display-4 text-center py-5">
+  <%= @client.name %>'s Projects
+  <div style="font-size:60%;">
+    <%=  @projects.count %> <%= "#{@projects.size == 1 ? 'Project' : 'Projects'}"%>
+  </div>
+  <%= link_to 'View Client', @client, class:"btn btn-outline-primary btn-lg", style: 'color:blue' %>
+</span>
+
 <hr>
 
 <br>
 
-
-<% @projects.each do |project| %>
+<% @projects.reverse.each do |project| %>
     <div class="card">
 
+      <span class="pt-2">
+        <span class="float-left pl-2" style="font-size:100%;">
+          <% if ( project.status ==  "Uninitiated" ) %>
 
+            <p style="color:grey;" >
+              Inactive
+            </p>
 
+          <% elsif ( project.status ==  "Completed" ) %>
 
+            <p style="color:green;">
+              Completed
+            </p>
 
+          <% elsif ( project.status ==  "Rejected" ) %>
 
+            <p style= "color:red;">
+              Rejected
+            </p>
 
-            <span class="pt-2">
-              <span class="float-left pl-2" style="font-size:100%;">
-                <% if ( project.status ==  "Uninitiated" ) %>
+          <% else %>
 
-                  <p style="color:grey;" >
-                    Inactive
-                  </p>
+            <p style="color:green;">
+              <%= project.status %>
+            </p>
 
-                <% elsif ( project.status ==  "Completed" ) %>
-
-                  <p style="color:green;">
-                    Completed
-                  </p>
-
-                <% elsif ( project.status ==  "Rejected" ) %>
-
-                  <p style= "color:red;">
-                    Rejected
-                  </p>
-
-                <% else %>
-
-                  <p style="color:green;">
-                    <%= project.status %>
-                  </p>
-
-                <% end %>
-              </span>
-            </span>
-
-
-
-
-
-
-
-
+          <% end %>
+        </span>
+      </span>
 
       <div class="field display-4"  style="font-size:200%;">
 
@@ -65,22 +53,27 @@
         <% if project.projectable.type_of_project.present? %> (<%= "#{client.type_of_project.capitalize}"%>) <% end %>
 
       </div>
+
       <div class="field display-4"  style="font-size:125%;">
       <%= project.projectable.phone_number %>
       </div>
+
       <div class="field display-4"  style="font-size:125%;">
       <%= project.projectable.email %>
       </div>
+
       <div class="field display-4"  style="font-size:125%;">
-      <%= project.full_street_address %>
+      <%= project.full_street_address  if (project.address.present?)   %>
       </div>
+
       <div>
         <br>
-      <%= link_to 'View Project', project, class:"btn btn-outline-primary", style: 'color:blue' %>
-      <br>
-      <br>
+        <%= link_to 'View Project', project, class:"btn btn-outline-primary", style: 'color:blue' %>
+        <br>
+        <br>
       </div>
     </div>
+
     <br>
 <% end %>
 

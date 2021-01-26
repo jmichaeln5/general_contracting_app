@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkinable_type: MyString
+  checkinable_id: 1
+  user_id: 1
+  time_contacted: 2021-01-25 18:12:22
+  description: MyText
+
+two:
+  checkinable_type: MyString
+  checkinable_id: 1
+  user_id: 1
+  time_contacted: 2021-01-25 18:12:22
+  description: MyText

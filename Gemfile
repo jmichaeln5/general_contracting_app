@@ -9,7 +9,7 @@ gem 'geocoder'
 gem 'byebug'
 gem 'jquery-rails'
 # gem 'jquery-ui-rails'
-gem 'nested_form_fields'
+# gem 'nested_form_fields'
 gem 'searchkick'
 gem 'rename'
 

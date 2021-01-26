@@ -10,15 +10,69 @@
 
 <br>
 
+<% if  current_user.clients.count == 0  %>
+
+<div class="card display-4 text-center py-5">
+  <div style="font-size:60%;">
+    No Projects Available.
+    <br>
+    Click <%= link_to 'Here', new_user_client_path(current_user) %> to add a Client to create your first project.
+  </div>
+</div>
+
+<% elsif (current_user.clients.count > 0) &&  (@projects.count == 0)%>
+
+<div class="card display-4 text-center py-5">
+  <div style="font-size:60%;">
+    No Projects Available.
+    <br>
+    Please select a client <%= link_to 'Here', user_clients_path(current_user) %> and create your first project.
+  </div>
+</div>
+
+<% end %>
+
+
+
 <% @projects.each do |project| %>
-      <div class="card">
+      <div class="card pb-12">
+
+        <span class="pt-2">
+          <span class="float-left pl-2" style="font-size:100%;">
+            <% if ( project.status ==  "Uninitiated" ) %>
+
+              <p style="color:grey;" >
+                Inactive
+              </p>
+
+            <% elsif ( project.status ==  "Completed" ) %>
+
+              <p style="color:green;">
+                Completed
+              </p>
+
+            <% elsif ( project.status ==  "Rejected" ) %>
+
+              <p style= "color:red;">
+                Rejected
+              </p>
+
+            <% else %>
+
+              <p style="color:green;">
+                <%= project.status %>
+              </p>
+
+            <% end %>
+          </span>
+        </span>
+
         <br>
 
         <div class="field display-4"  style="font-size:200%;">
 
-          <%= project.category.capitalize %> Project for <%= project.projectable.name %>
-          <br>
-
+        <%= project.category.capitalize %> Project for <%= project.projectable.name %>
+        <br>
 
         <div style="font-size:60%;">
         <%= project.projectable.phone_number %>
@@ -27,7 +81,7 @@
         <%= project.projectable.email %>
         </div>
         <div style="font-size:60%;">
-        <%= project.projectable.full_street_address %>
+        <%= project.full_street_address if (project.address.present?)  %>
         </div>
 
 

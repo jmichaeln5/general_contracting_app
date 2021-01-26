@@ -47,17 +47,23 @@
 
     <%#= f.number_field :estimated_cost, value: number_to_currency(f.object.estimated_cost.to_f, delimiter: '', unit: ''), :step => 0.01 %>
 
-    <%= f.number_field :estimated_cost, value: @project.estimated_cost ? '%.2f' % @project.estimated_cost : nil, min: 0, step: 0.01, class:"border-solid border" %>
+    $<%= f.number_field :estimated_cost, value: @project.estimated_cost ? '%.2f' % @project.estimated_cost : nil, min: 0, step: 0.01, class:"border-solid border", style:"width:80%;" %>
 
 
   </div>
   <br>
 
-  <div class="field display-4"  style="font-size:200%;">
-    <%= f.label :cost %>
-    <br>
-    <%= f.number_field :cost, value: @project.cost ? '%.2f' % @project.cost : nil, min: 0, step: 0.01, class:"border-solid border" %>
+
+  <div>
+    <div class="field display-4"  style="font-size:200%;">
+      <%= f.label :cost %>
+      <br>
+      $<%= f.number_field :cost, value: @project.cost ? '%.2f' % @project.cost : nil, min: 0, step: 0.01, class:"border-solid border", style:"width:80%;" %>
+    </div>
   </div>
+
+
+
 
   <br>
   <hr>
@@ -100,7 +106,7 @@
     <%#= f.input :solvency_ratio, as: :select, :include_blank => false, :collection => 1...6, :selected => f.object.solvency_ratio  %>
 
 
-<br>
+    <br>
 
 
     <div class="field display-4 px-10"  style="font-size:200%;">
@@ -123,7 +129,6 @@
       <br>
       <%= f.text_field :payment_method %>
     </div> -->
-
 
     <br><hr><br>
 

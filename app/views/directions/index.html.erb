@@ -13,7 +13,7 @@
     Start:
   </div>
   <select id="start">
-    <% @clients.each do |client|%>
+    <% @valid_clients.each do |client|%>
     <option value="<%=client.lat%>,<%=client.lng%>">
       <%= client.state %>
       <%= client.address %>
@@ -38,7 +38,7 @@
   </div>
   <br>
   <select multiple id="waypoints">
-    <% @clients.each do |client|%>
+    <% @valid_clients.each do |client|%>
       <option value="<%=client.lat%>,<%=client.lng%>">
         <%= client.state %>-
         <%= client.address %>
@@ -60,7 +60,7 @@
 <div class="display-4"  style="font-size:200%;">
 End:</div>
 <select id="end">
-  <% @clients.reverse.each do |client|%>
+  <% @valid_clients.reverse.each do |client|%>
     <option value="<%=client.lat%>,<%=client.lng%>">
       <%= client.state %>
       <%= client.address %>

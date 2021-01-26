@@ -1,80 +1,122 @@
 <div class="card container">
-<div class="display-4 text-center py-5">
+
+  <!--Last Check in  -->
+  <% if @client.checkins.any? %>
+    <span class="date float-left p-2" style="color:green;">
+      Last Check-In:
+      <% if @client.checkins.last.time_contacted.present? %>
+        <%= "#{@client.checkins.last.time_contacted.strftime("%m-%d-%y")}"  %>
+        <%#= "#{@client.checkins.last.time_contacted.strftime("%m-%d-%y")} at #{@client.checkins.last.time_contacted.strftime("%I:%M %p") }"  %>
+      <% else @client.checkins.last.created_at %>
+        <%= "#{@client.checkins.last.created_at.strftime("%m-%d-%y")}" %>
+      <% end %>
+    </span>
+  <% end %>
+
+
+<div class="display-4 text-center py-10">
   <%= @client.name %> <%= "(#{@client.type_of_project})" if @client.type_of_project.present? %>
-  <div class="display-4 text-center">
-    <p style="font-size:50%;">
-      <% if @client.phone_number.present? %>
-        <br>
-        Phone: <%= @client.phone_number %>
-      <% end %>
-      <% if @client.email.present? %>
-        <br>
-        Email: <%= @client.email %>
-      <% end %>
-      <% if @client.description.present? %>
-        <br>
-        <%= @client.description %>
-      <% end %>
-    </p>
+</div>
+
+<br>
+
+
+
+  <div class="container-fluid text-center">
+    <div class="row">
+
+      <div class="col-md-4 card p-2">
+          <%= render partial: "checkins/checkins", locals: {checkinable: @client}%>
+      </div>
+
+      <div class="col-md-4 card p-2">
+        <span class="display-4">
+          <strong>
+            <p style="font-size:50%;">
+              Client Info:
+            </p>
+          </strong>
+          <hr>
+          <span>
+          <%= link_to 'Edit Client', edit_client_path(@client), class:"btn btn-lg btn-outline-secondary", style:"width:80%;" %>
+          </span>
+          <hr>
+        </span>
+
+        <div class="-mt-4 display-4" style="font-size:125%;">
+
+            <% if @client.phone_number.present? %>
+              <div class="p-10">
+                <strong>Phone:</strong>
+                <%= @client.phone_number %>
+              </div>
+              <hr>
+            <% end %>
+
+            <% if @client.email.present? %>
+              <div class="p-10">
+                <strong>Email:</strong>
+                <%= @client.email %>
+              </div>
+              <hr>
+            <% end %>
+
+            <% if @client.description.present? %>
+              <div class="p-10">
+                <strong>Description:</strong>
+                <br>
+                <%= @client.description %>
+              </div>
+            <% end %>
+
+            <br>
+            <br>
+        </div>
+      </div>
+
+      <div class="col-md-4 card p-2">
+        <%= render partial: "projects/projects", locals: {projectable: @client}%>
+      </div>
+
+    </div>
+
   </div>
 
-  <span class="text-center">
-  <%= link_to 'Edit Client', edit_client_path(@client), class:"btn btn-outline-secondary" %>
-  </span>
-</div>
-<%= render partial: "projects/projects", locals: {projectable: @client}%>
-<br>
-<!-- Project Modal Button -->
-<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Add Project
-</button>
-<!-- Project Modal Begin -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-           New Project for <%= @client.name %>
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <!-- Project Form -->
-        <div class="display-4 text-center">
-          <%= render partial: "projects/form", locals: {projectable: @client}%>
-        </div>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Project Modal End -->
-<hr>
-<br>
 <div class="text-center">
+
+
     <div class="card container">
     <br>
-      <strong>Client Address:</strong>
-      <%= @client.full_street_address %></a>
+
+    <% if @client.address.present? %>
+    <strong>Address:</strong>
+    <%= @client.full_street_address %></a>
+
     <br><br>
     <div id="map"></div>
     <br>
+
+    <% else %>
+
+    <div class="display-4 text-center py-5">
+      <div style="font-size:60%;">
+        Client Address Not Available.
+        <br>
+        Click <%= link_to 'Here', edit_client_path(@client) %> to Add Client Address
+
+      </div>
     </div>
-    <br>
 
 
-    <%= render partial: "comments/comments", locals: {commentable: @client}%>
-    <%= render partial: "comments/form", locals: {commentable: @client}%>
-
-    <br>
-    <br>
-
+    <% end %>
+  </div>
+  <br>
+  <%= render partial: "comments/comments", locals: {commentable: @client}%>
+  <%= render partial: "comments/form", locals: {commentable: @client}%>
+  <br>
 </div>
+
+
 
 
 </div>

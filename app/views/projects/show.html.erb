@@ -1,123 +1,231 @@
 <div class="card container">
 
-<div class="display-4 text-center">
+  <span class="float-left p-2" >
+    <!--Last Check in  -->
+      <% if @project.checkins.any? %>
+        <p style="color:green;">
+          Last Check-In:
+          <% if @project.checkins.last.time_contacted.present? %>
+            <%= "#{@project.checkins.last.time_contacted.strftime("%m-%d-%y")}"  %>
+            <%#= "#{@project.checkins.last.time_contacted.strftime("%m-%d-%y")} at #{@project.checkins.last.time_contacted.strftime("%I:%M %p") }"  %>
+          <% else @project.checkins.last.created_at %>
+            <%= "#{@project.checkins.last.created_at.strftime("%m-%d-%y")}" %>
+          <% end %>
+        </p>
+      <% end %>
 
-  <span class="float-left pt-2 pl-2" style="font-size:40%;">
-    <% if ( @project.status ==  "Uninitiated" ) %>
-
-      <p style="color:grey;" >
-        Inactive
+      <p class="-mt-4">
+        <% if ( @project.status ==  "Uninitiated" ) %>
+          <p style="color:grey;" >
+          Project Status: Inactive
+          </p>
+        <% elsif ( @project.status ==  "Completed" ) %>
+          <p style="color:green;">
+          Project Status: Completed
+          </p>
+        <% elsif ( @project.status ==  "Rejected" ) %>
+          <p style= "color:red;">
+          Project Status: Rejected
+          </p>
+        <% else %>
+          <p style="color:green;">
+          Project Status: <%= @project.status %>
+          </p>
+        <% end %>
       </p>
 
-    <% elsif ( @project.status ==  "Completed" ) %>
-
-      <p style="color:green;">
-        Completed
-      </p>
-
-    <% elsif ( @project.status ==  "Rejected" ) %>
-
-      <p style= "color:red;">
-        Rejected
-      </p>
-
-    <% else %>
-
-      <p style="color:green;">
-        <%= @project.status %>
-      </p>
-
-    <% end %>
   </span>
 
-  <br>
-
-  <%= @project.title.capitalize %>
-
-  <% if @project.description.present? %>
-      <p style="font-size:50%;">
-        <%= @project.description %>
-      </p>
-  <% end %>
-
-  <div class="card" style="font-size:50%;">
-    <%#= link_to "#{project.title}", project %>
-    <span class="p-2">
-
-      <span class="p-2">
-
+  <div class="display-4 text-center pt-2">
+      <span>
+        <%= @project.category %> Project
+        <br>
       </span>
-      <br>
 
-      <div class="text-center">
-
-        <% if @project.title.present? %>
-          <strong>Project Title:</strong> <%= @project.title %> <br>
-        <% end %>
-
-        <% if @project.category.present? %>
-          <strong>Project Type:</strong> <%= @project.category %> <br>
-        <% end %>
-
-        <% if @project.payment_method.present? %>
-          <strong>Payment Method:</strong> <%= @project.payment_method %> <br>
-        <% end %>
-
-
-        <% if @project.estimated_cost.present? %>
-          <strong>Estimated Cost:</strong> $<%= @project.estimated_cost %> <br>
-        <% end %>
-
-        <% if @project.cost.present? %>
-          <strong>Cost:</strong> $<%= @project.cost %> <br>
-        <% end %>
-
-      </div>
-      <br>
-    </span>
+    <br>
 
   </div>
-</div>
 
-<!-- Nested Forms Vid -->
+    <div class="container-fluid text-center">
+      <div class="row" >
 
-<!-- https://www.youtube.com/watch?v=3fYQd1jSyag&list=PLRydhfFqzAnNnbtn7JxheZhtizP1o7AwF&index=3 -->
+        <!-- Check-Ins Div -->
+        <div class="col-md-4 card p-2">
+          <%= render partial: "checkins/checkins", locals: {checkinable: @project}%>
+        </div>
 
-<hr>
 
-<div class="text-center">
-<%= link_to 'Edit Project', edit_project_path(@project), class:"btn btn-outline-secondary" %>
-  <br><br>
-    <div class="card container">
-    <br>
 
-    <% if @project.address.present? %>
-    <strong>Address:</strong>
-    <%= @project.full_street_address %></a>
 
-    <br><br>
-    <div id="map"></div>
-    <br>
 
-    <% else %>
+        <!-- Project Div -->
+        <div class="col-md-4 card p-2">
+          <span class="display-4">
+            <strong>
+              <p class="" style="font-size:50%;">
+                Project Info:
+              </p>
+            </strong>
+            <hr>
+            <span>
+            <%= link_to 'Edit Project', edit_project_path(@project), class:"btn btn-lg btn-secondary", style:"width:80%;" %>
+            </span>
+            <hr>
+          </span>
 
-    <div class="display-4 text-center py-5">
-      <div style="font-size:60%;">
-        Project Address Not Available.
-        <br>
-        Click <%= link_to 'Here', edit_project_path(@project) %> to Add Project Address
+          <div class="-mt-4 display-4" style="font-size:125%;">
+
+          <% if @project.title.present? %>
+            <div class="p-8">
+              <strong>Project Title:</strong>
+              <br>
+              <%= @project.title %>
+            </div>
+             <hr>
+          <% end %>
+
+          <% if @project.category.present? %>
+             <div class="p-8">
+               <strong>Project Type:</strong>
+               <br>
+               <%= @project.category %>
+             </div>
+              <hr>
+          <% end %>
+
+          <% if @project.payment_method.present? %>
+            <div class="p-8">
+              <strong>Payment Method:</strong>
+              <br>
+              <%= @project.payment_method %>
+              <br>
+              <br>
+              <hr>
+
+            </div>
+          <% end %>
+
+          <% if @project.estimated_cost.present? %>
+            <div class="p-8">
+              <strong>Estimated Cost:</strong>
+              <br>
+              $<%= @project.estimated_cost %>
+            </div>
+             <hr>
+          <% end %>
+
+          <% if @project.cost.present? %>
+            <div class="p-8">
+            <strong>Cost:</strong>
+            <br>
+            $<%= @project.cost %>
+          </div>
+          <% end %>
+
+          </div>
+        </div>
+
+        <!-- Cient Info Div -->
+        <div class="col-md-4 card p-2">
+
+          <span class="display-4">
+            <strong>
+              <p style="font-size:50%;">
+                Client Info:
+              </p>
+            </strong>
+            <hr>
+            <span>
+            <%= link_to 'Edit Client', edit_client_path(@project.projectable), class:"btn btn-lg btn-outline-secondary"%>
+            </span>
+            <hr>
+          </span>
+
+
+          <div class="-mt-4 display-4" style="font-size:125%;">
+            <% if @project.projectable.name.present? %>
+              <div class="p-10">
+                <strong>Client:</strong>
+                <%= @project.projectable.name %>
+              </div>
+              <hr>
+              <br>
+            <% end %>
+
+            <% if @project.projectable.phone_number.present? %>
+              <div class="p-10">
+                <strong>Phone:</strong>
+                <%= @project.projectable.phone_number %>
+              </div>
+              <% if @project.projectable.email.present? %>
+              <hr>
+                  <br>
+              <% end %>
+            <% end %>
+
+            <% if @project.projectable.email.present? %>
+              <div class="p-10">
+                <strong>Email:</strong>
+                <%= @project.projectable.email %>
+              </div>
+                <% if @project.projectable.description.present? %>
+                <hr>
+                  <br>
+                <% end %>
+            <% end %>
+
+            <% if @project.projectable.description.present? %>
+              <div class="p-10">
+                <strong>Description:</strong>
+                <br>
+                <%= @project.projectable.description %>
+              </div>
+            <% end %>
+
+            <br>
+            <br>
+          </div>
+        </div>
 
       </div>
+
     </div>
 
+  <br>
 
-    <% end %>
+  <div class="text-center">
+
+
+      <div class="card container">
+      <br>
+
+      <% if @project.address.present? %>
+      <strong>Address:</strong>
+      <%= @project.full_street_address %></a>
+
+      <br><br>
+      <div id="map"></div>
+      <br>
+
+      <% else %>
+
+      <div class="display-4 text-center py-5">
+        <div style="font-size:60%;">
+          Project Address Not Available.
+          <br>
+          Click <%= link_to 'Here', edit_project_path(@project) %> to Add Project Address
+
+        </div>
+      </div>
+
+
+      <% end %>
+    </div>
+    <br>
+    <%= render partial: "comments/comments", locals: {commentable: @project}%>
+    <%= render partial: "comments/form", locals: {commentable: @project}%>
+    <br>
   </div>
-  <br>
-  <%= render partial: "comments/comments", locals: {commentable: @project}%>
-  <%= render partial: "comments/form", locals: {commentable: @project}%>
-  <br>
-</div>
 
 </div>
 <br>

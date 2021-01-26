@@ -8,7 +8,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @on_dash = true
+
     @clients = current_user.clients.all.order("created_at DESC")
+    @valid_clients = []
+    @clients.map {|c| @valid_clients << c if c.address.present? }
     @projects = Project.all.where(user_id: current_user).order("created_at DESC")
   end
 
