@@ -66,6 +66,12 @@
         <%= client.full_street_address if client.address.present? %>
         </div>
 
+        <% if client.description.present? %>
+        <div style="font-size:60%;">
+        <br>
+        <%= client.description %>
+        </div>
+        <% end %>
       </div>
 
       <div>
@@ -83,6 +89,7 @@
 
         <% end %>
 
+      <br>
       <br>
       <br>
       </div>
