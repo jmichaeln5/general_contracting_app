@@ -11,7 +11,7 @@
 
       <%#= f.datetime_select :time_contacted, {  order: [:month, :day, :year] }, { class: "" } %>
 
-    <div class=" p-2" style="font-size:50%;">
+    <div class="" style="font-size:50%;">
       <%= f.date_field :time_contacted, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
     </div>
 

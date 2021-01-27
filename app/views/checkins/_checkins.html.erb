@@ -38,9 +38,9 @@
 
           <!-- Check in form for Projects Page -->
         <% if @projects_page == true %>
-            Project checkin
+            <br>
             <%= form_for [checkinable, Checkin.new] do |f| %>
-            <div class=" p-2" style="font-size:50%;">
+            <div class="" style="font-size:50%;">
               <%= f.date_field :time_contacted, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
             </div>
 
