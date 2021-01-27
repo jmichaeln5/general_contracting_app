@@ -65,7 +65,6 @@
         <div style="font-size:60%;">
         <%= client.full_street_address if client.address.present? %>
         </div>
-
         <% if client.description.present? %>
         <div style="font-size:60%;">
         <br>
@@ -77,16 +76,10 @@
       <div>
         <br>
         <%= link_to 'View Client', client, class:"btn btn-outline-primary", style: 'color:blue' %>
-
-
         <% if client.projects.count == 1 %>
-
-          <%= link_to 'View Project', client_projects_path(client), class:"btn btn-outline-primary", style: 'color:blue' %>
-
+          <a class="btn btn-outline-primary" style="color:blue" href="<%="/clients/#{client.id}/projects/#{client.projects.last.id}"%>">View Project</a>
         <% elsif client.projects.count > 1 %>
-
           <%= link_to 'View Projects', client_projects_path(client), class:"btn btn-outline-primary", style: 'color:blue' %>
-
         <% end %>
 
       <br>

@@ -15,7 +15,6 @@ class ClientsController < ApplicationController
   def index
     @user = current_user
     @clients = current_user.clients.all.order("created_at DESC")
-
     # if params[:search_data]
     #   byebug
     #   @clients = current_user.clients.search(params[:search_data]).order("created_at DESC")

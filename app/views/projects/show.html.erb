@@ -17,20 +17,21 @@
       <p class="-mt-4">
         <% if ( @project.status ==  "Uninitiated" ) %>
           <p style="color:grey;" >
-          Project Status: Inactive
-          </p>
-        <% elsif ( @project.status ==  "Completed" ) %>
-          <p style="color:green;">
-          Project Status: Completed
+          Project Status: Uninitiated
           </p>
         <% elsif ( @project.status ==  "Rejected" ) %>
           <p style= "color:red;">
           Project Status: Rejected
           </p>
         <% else %>
-          <p style="color:green;">
-          Project Status: <%= @project.status %>
-          </p>
+            <% if @project.status.present? %>
+              <p style="color:green;">
+                Project Status: <%= @project.status %>
+              </p>
+            <% else %>
+              <br>
+              <br>
+            <% end %>
         <% end %>
       </p>
 

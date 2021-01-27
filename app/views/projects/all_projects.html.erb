@@ -40,29 +40,17 @@
         <span class="pt-2">
           <span class="float-left pl-2" style="font-size:100%;">
             <% if ( project.status ==  "Uninitiated" ) %>
-
               <p style="color:grey;" >
-                Inactive
+               Uninitiated
               </p>
-
-            <% elsif ( project.status ==  "Completed" ) %>
-
-              <p style="color:green;">
-                Completed
-              </p>
-
             <% elsif ( project.status ==  "Rejected" ) %>
-
               <p style= "color:red;">
-                Rejected
+               Rejected
               </p>
-
             <% else %>
-
               <p style="color:green;">
-                <%= project.status %>
+               <%= project.status %>
               </p>
-
             <% end %>
           </span>
         </span>
