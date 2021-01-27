@@ -3,8 +3,10 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 
 <% if @on_dash == true %>
-  <div class="text-gray-600 text-center display-4" style="font-size:150%;">
-    Welcome <%= current_user.email %>
+  <div class="text-gray-600 text-center display-4" style="font-size:100%;">
+    <span class="flex-wrap">
+      Welcome <%= current_user.email %>
+    </span>
   </div>
 
 <% end %>
