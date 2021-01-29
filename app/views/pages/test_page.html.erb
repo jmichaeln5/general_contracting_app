@@ -6,6 +6,125 @@
   </h1>
 </div>
 
+
+<div class="card py-5 text-center">
+  <h1> Add a Note</h1>
+  <div class="field display-4 px-10" style="font-size:200%;">
+      <label for="project_category">Project Type</label>
+      <br>
+      <select class="form-control" name="project[category]" id="project_category noteSelector">
+        <option disabled="" selected="" value=""> -- Select an option -- </option>
+        <option value="general">General</option>
+        <option value="client">Client</option>
+        <option value="project">Project</option>
+      </select>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+
+<div class="card border border-solid p-20">
+  <select id="noteSelector" class="border border-solid p-2">
+    <option disabled="" selected="" value=""> -- Note Type -- </option>
+    <option value="general">General</option>
+    <option value="client">Client</option>
+    <option value="project">Project</option>
+  </select>
+
+
+    <div id="general" class="noteParent" style="display:none">
+      <br>
+
+      <select id="noteSelector" class="p-2 card border border-solid ">
+        <option selected="" value="general"> General Note </option>
+      </select>
+
+
+    </div>
+
+    <div id="project" class="noteParent" style="display:none">
+
+      <br>
+      <!-- <select id="noteSelector" class="p-2 card border border-solid ">
+        <option disabled="" selected="" value=""> -- Select a Project -- </option>
+        <% @projects.each do |project| %>
+          <option value="project"> <%= project.category %> for <%= project.projectable.name %> </option>
+        <% end %>
+      </select> -->
+
+      <select id="noteSelector" class="p-2 card border border-solid" style="width:100%">
+        <option disabled="" selected="" value=""> -- Select a Project -- </option>
+        <% @clients.each do |client| %>
+          <% client.projects.each do |project| %>
+            <option value="project">  <%= project.projectable.name %> - <%= project.category %> </option>
+          <% end %>
+        <% end %>
+      </select>
+
+
+
+
+    </div>
+
+
+    <div id="client" class="noteParent" style="display:none">
+      <br>
+      <select id="noteSelector" class="p-2 card border border-solid ">
+        <option disabled="" selected="" value=""> -- Select a Client -- </option>
+        <% @clients.each do |client| %>
+          <option value="client"> <%= client.name %> </option>
+        <% end %>
+      </select>
+    </div>
+
+
+    <div class="pt-4">
+      <textarea>Your content here...</textarea>
+
+    </div>
+
+</div>
+
+
+  <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+  <!-- wysiwig CDN -->
+  <script>
+
+  tinymce.init({selector:'textarea'});
+
+
+  $(function() {    // Makes sure the code contained doesn't run until
+                    //     all the DOM elements have loaded
+
+    $('#noteSelector').change(function(){
+        $('.noteParent').hide();
+        $('#' + $(this).val()).show();
+    });
+
+  });
+ </script>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 
 <div class="card py-5 text-center">
@@ -29,15 +148,6 @@
 
 <br>
 
-<div class="card py-5 text-center">
-  <h2> Client </h2>
-  <p> (inheirets feilds from contact, if any fields left blank from contact show missing fields)</p>
-  <p> First & Last Name </p>
-  <p> Phone </p>
-  <p> Email </p>
-  <p> Address Fields </p>
-  <p> Description </p>
-</div>
 
 <br>
 

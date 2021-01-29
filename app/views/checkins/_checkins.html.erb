@@ -64,6 +64,10 @@
           <% end %>
 
           </div>
+          <span class="sm">
+            <div class="p-20"></div>
+          </span>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -157,7 +161,12 @@
             <!-- <%= checkin.id %> -->
             <br>
             <br>
-             <%= checkin.description %>
+            <%= checkin.description %>
+
+            <% if  checkin.description.present? != true  %>
+            Checked in on <%= checkin.time_contacted ? checkin.time_contacted.strftime("%m-%d-%y") : checkin.created_at.strftime("%B %d, %Y") %> 
+            <% end %>
+
         </div>
     </div>
     <br>
