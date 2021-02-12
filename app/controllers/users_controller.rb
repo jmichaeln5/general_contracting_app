@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   # GET /users.json
 
   def index
-    @users = User.all
+    # @users = User.all
+    redirect_to dashboard_path, alert: "Invalid URL"
+
   end
 
   # GET /users/1
