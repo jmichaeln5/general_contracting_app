@@ -19,7 +19,7 @@
 
   <div class="container">
     <div class="btn btn-outline-secondary reset">
-      Clear Fields
+      Clear Address Fields
     </div>
   </div>
 
@@ -146,7 +146,7 @@
   <br>
 
   <div class="actions text-center container">
-    <%= link_to 'Delete Client', @client, method: :delete, data: { confirm: 'Are you sure you would like to delete this client forever?' }, class:"btn btn-danger btn-lg" %>
+    <%= link_to 'Delete Client', @client, method: :delete, data: { confirm: 'Are you sure you would like to delete this client forever?' }, class:"btn btn-danger btn-lg", style: 'color:#FFFFFF;' %>
   </div>
 
   <br>
@@ -159,14 +159,18 @@
 <br>
 <div>
   <div class="actions text-center" stlye="">
-    <%= link_to 'Back', :back, class:"btn-primary btn-lg"  %>
+    <%= link_to 'Back', :back, class:"btn-primary btn-lg", style: 'color:#FFFFFF;'  %>
   </div>
 </div>
 
 <script>
 
   var resetFeilds = $(".reset").click(function() {
-      $(this).closest('form').find("input[type=text], textarea").val("");
+      $('#address-form').find("input[type=text], textarea").val("");
+
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#scroll-to-address").offset().top
+      }, 500);
   });
 
   // Get location form

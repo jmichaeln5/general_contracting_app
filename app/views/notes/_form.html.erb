@@ -1,0 +1,131 @@
+<div class="card container text-center">
+  <br>
+  <div class="display-4 text-center py-5"> New Note </div>
+
+  <hr>
+  <br>
+
+<%= form_with(model: note, local: true) do |form| %>
+  <% if note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+      <% note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :user_id, value:current_user.id %>
+
+  <div class="field display-4"  style="font-size:150%;">
+
+
+  <div class="card border border-solid p-4">
+    <br>
+    <br>
+
+    <div class="selectContainer py-2 px-4 card border border-solid">
+        <select id="note_notable_type" class="theSelect" name="note[notable_type]">
+            <option value=""> Select Note Type </option>
+            <option value="Client">Client</option>
+            <option value="Project">Project</option>
+            <!-- <option value="General">General</option> -->
+        </select>
+    </div>
+
+    <div class="isClient py-2 px-4 ">
+      <div class="  card border border-solid ">
+        <%#= select("note", "notable_id", @clients.collect {|c| [ ("#{c.name}"), c.id ] }, { :prompt => "-- Select a Client -- " }) %>
+      <select>
+        <option value=""> Select a Client </option>
+        <% @clients.each do |client| %>
+          <option value="<%= client.id %>"> <%= "#{client.name }"%> </option>
+        <% end %>
+      </select>
+      </div>
+    </div>
+
+    <div class="isProject py-2 px-4 ">
+      <div class="card border border-solid ">
+        <%#= select("note", "notable_id", @projects.collect {|p| [ ("#{p.projectable.name} | #{p.category}") , p.id ] }, { :prompt => "-- Select a Project -- " }) %>
+        <select>
+          <option value=""> Select a Project </option>
+          <% @projects.each do |project| %>
+            <option value="<%= project.id %>"> <%= "#{project.projectable.name } | #{project.category}"%> </option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <!-- <div class="isGeneral">General</div> -->
+
+    <%= form.hidden_field :notable_id, :value => "" %>
+
+    <div class="field display-4 p-4" style="font-size:110%;">
+      <%= form.label :title, "Note Title" %>
+      <br>
+      <%= form.text_field :title, class:" card border border-solid w-full" %>
+    </div>
+
+    <div class="field display-4 p-2" style="font-size:100%;">
+      <%= form.label :body, "Note Body" %>
+      <br>
+      <%= form.text_area :body, class:"content-center p-4 card border border-solid w-full" %>
+    </div>
+
+    <br>
+
+    <div class="actions" id="submitNote">
+      <%= form.submit %>
+    </div>
+
+  </div>
+</div>
+
+<% end %>
+</div>
+<br><br><br>
+  <div class="actions  container">
+    <div class="text-center">
+      <%= link_to 'Back', :back, class:"btn-primary btn-lg ", style:"color:white;"  %>
+
+    </div>
+  </div>
+
+<script>
+
+$(document).ready(function(){ // Start of JS
+
+  $('[class^=is]').hide();
+
+  $(".theSelect").change(function(){
+      var value = $(".theSelect option:selected").val();
+      var theDiv = $(".is" + value);
+
+      theDiv.slideDown();
+      // theDiv.siblings('option:selected', this).remove();
+      theDiv.siblings('[class^=is]').slideUp();
+  });
+
+  $( "#submitNote" ).click(function() {
+
+    if($('.isClient').is(':visible')) {
+      var noteId = $('.isClient :selected').val();
+      var selectedClientName = $('.isClient :selected').text();
+      $('#note_notable_id').val(`${noteId}`);
+    }
+
+    if($('.isProject').is(':visible')) {
+      var noteId = $('.isProject :selected').val();
+      var selectedProjectName = $('.isProject :selected').text();
+      $('#note_notable_id').val(`${noteId}`);
+    }
+
+  });
+
+
+}); // End of JS
+</script>

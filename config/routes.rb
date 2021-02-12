@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :projects, module: :clients
     resources :comments, module: :clients
     resources :checkins, module: :clients
+    resources :notes, only: [:index, :new, :create]
   end
 
   resources :projects
@@ -33,10 +34,12 @@ Rails.application.routes.draw do
   resources :projects, only: [:show, :edit, :update, :destroy] do
     resources :comments, module: :projects
     resources :checkins, module: :projects
+    resources :notes, only: [:index, :new, :create]
   end
 
   resources :comments
   resources :checkins
+  resources :notes
 
 
 

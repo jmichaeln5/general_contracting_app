@@ -1,0 +1,93 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Notable type</th>
+      <th>Notable</th>
+      <th>User</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.notable_type %></td>
+        <td><%= note.notable_id %></td>
+        <td><%= note.user_id %></td>
+        <td><%= note.title %></td>
+        <td><%= note.body %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Note', new_note_path %> -->
+
+<div class="card container text-center">
+<br>
+<div class="display-4 text-center py-5">
+  All Notes
+  <div style="font-size:60%;">
+    <%=  @notes.count %> <%= "#{@notes.size == 1 ? 'Note' : 'Notes'}"%>
+  </div>
+</div>
+<hr>
+
+<%= link_to 'Add New Note',  new_note_path, class:"btn-success btn-lg", style: 'color:#FFFFFF;' %>
+
+<br>
+
+<% @notes.each do |note| %>
+<div class="card p-4">
+
+  <div class="field display-4 p-4"  style="font-size:200%;">
+
+     Note for
+
+    <%#= link_to "#{note.notable.category.capitalize}",  %>
+
+     <%= "#{note.notable.category.capitalize} Project" if note.notable_type == "Project" %>
+
+     <%= "#{note.notable.name.capitalize}" if note.notable_type == "Client" %>
+
+     <div class="pt-2" style="font-size:60%;">
+       <%= "Client: #{note.notable.projectable.name}" if note.notable_type == "Project"  %>
+     </div>
+
+     <div style="font-size:60%;">
+       <%= note.title %>
+     </div>
+
+
+     <div style="font-size:60%;">
+       <%= note.body %>
+     </div>
+
+  </div>
+
+
+      <div class="-mt-4">
+        <%= link_to 'View Note', note, class:"btn btn-outline-primary", style: 'color:blue' %>
+      </div>
+
+    </div>
+    <br>
+<% end %>
+
+</div>
+
+<br>
+<br>
+
+<br>

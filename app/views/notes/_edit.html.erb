@@ -1,0 +1,44 @@
+<%= form_with(model: @note, local: true) do |form| %>
+<% if @note.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+    <ul>
+    <% @note.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form.hidden_field :user_id, value:current_user.id %>
+
+<div class="field display-4"  style="font-size:150%;">
+
+
+<div class="card border border-solid p-4">
+  <!-- <div class="isGeneral">General</div> -->
+
+  <%= form.hidden_field :notable_id, value:@note.notable_id %>
+
+  <div class="field display-4 p-4" style="font-size:110%;">
+    <%= form.label :title, "Note Title" %>
+    <br>
+    <%= form.text_field :title, class:" card border border-solid w-full" %>
+  </div>
+
+  <div class="field display-4 p-2" style="font-size:100%;">
+    <%= form.label :body, "Note Body" %>
+    <br>
+    <%= form.text_area :body, class:"content-center p-4 card border border-solid w-full" %>
+  </div>
+
+  <br>
+
+  <div class="actions" id="submitNote">
+    <%= form.submit %>
+  </div>
+
+</div>
+
+<% end %>

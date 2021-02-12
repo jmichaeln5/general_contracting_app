@@ -21,12 +21,14 @@ class PagesController < ApplicationController
   end
 
   def test_page
-    if current_user.present? && current_user.email == "sampleaccount@gmail.com"
+    # if current_user.present? && current_user.email == "sampleaccount@gmail.com"
       @clients = current_user.clients.all.order(:name)
       @projects = Project.all.where(user_id: current_user).order("created_at DESC")
-    else
-      redirect_to dashboard_path  
-    end
+    # else
+    #   redirect_to dashboard_path
+    # end
+
+
   end
 
   private

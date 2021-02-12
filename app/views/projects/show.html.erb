@@ -51,16 +51,12 @@
       <div class="row" >
 
         <!-- Check-Ins Div -->
-        <div class="col-md-4 card p-2">
-          <%= render partial: "checkins/checkins", locals: {checkinable: @project}%>
+        <div class="col-md-4 card py-2 mt-4 border-b-8 border-solid ">
+          <%= render partial: "checkins/checkins", locals: {checkinable: @project} %>
         </div>
 
-
-
-
-
         <!-- Project Div -->
-        <div class="col-md-4 card p-2">
+        <div class="col-md-4 card py-2 mt-4 border-b-8 border-solid ">
           <span class="display-4">
             <strong>
               <p class="" style="font-size:50%;">
@@ -69,7 +65,7 @@
             </strong>
             <hr>
             <span>
-            <%= link_to 'Edit Project', edit_project_path(@project), class:"btn btn-lg btn-secondary", style:"width:80%;" %>
+            <%= link_to 'Edit Project', edit_project_path(@project), class:"btn btn-lg btn-secondary text-white", style:"width:80%;" %>
             </span>
             <hr>
           </span>
@@ -127,7 +123,7 @@
         </div>
 
         <!-- Cient Info Div -->
-        <div class="col-md-4 card p-2">
+        <div class="col-md-4 card py-2 mt-4 border-b-8 border-solid ">
 
           <span class="display-4">
             <strong>
@@ -137,7 +133,9 @@
             </strong>
             <hr>
             <span>
-            <%= link_to 'Edit Client', edit_client_path(@project.projectable), class:"btn btn-lg btn-outline-secondary"%>
+            <%#= link_to 'Edit Client', edit_client_path(@project.projectable), class:"btn btn-lg btn-outline-secondary"%>
+            <%= link_to 'View Client', client_path(@project.projectable), class:"btn btn-lg btn-outline-primary",id:"fixedBtnText", style:"color:rgb(44, 97, 232);" %>
+
             </span>
             <hr>
           </span>
@@ -147,7 +145,8 @@
             <% if @project.projectable.name.present? %>
               <div class="p-10">
                 <strong>Client:</strong>
-                <%= @project.projectable.name %>
+                <%#= @project.projectable.name %>
+                <%= link_to "#{@project.projectable.name}", @project.projectable %>
               </div>
               <hr>
               <br>
@@ -215,10 +214,8 @@
           Project Address Not Available.
           <br>
           Click <%= link_to 'Here', edit_project_path(@project) %> to Add Project Address
-
         </div>
       </div>
-
 
       <% end %>
     </div>
