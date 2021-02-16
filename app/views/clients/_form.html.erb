@@ -4,18 +4,17 @@
   <br>
   <div class="display-4 text-center py-5"> Add New Client </div>
 
-  <hr>
-  <br>
+  <hr><br>
 
   <div class="card border border-solid py-4">
     <br>
 
-  <form id="location-form">
-    <input type="text" id="location-input" class="form-control form-control-lg">
-    <br>
-    <br>
-    <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
-  </form>
+    <form id="location-form">
+      <input type="text" id="location-input" class="form-control form-control-lg">
+      <br>
+      <br>
+      <button type="submit" id="submit-address" class="btn-success btn-lg">Search Address</button>
+    </form>
 
 <%= form_with(model: [ @user, @user.clients.build ]) do |form| %>
 
@@ -30,10 +29,7 @@
     </ul>
   </div>
 <% end %>
-
-
   <br>
-
   <div class="container">
     <div class="btn btn-outline-secondary reset">
       Clear Fields
@@ -42,7 +38,6 @@
 
   <br>
   <hr>
-
 
   <% if client.errors.any? %>
     <div id="error_explanation">
@@ -263,7 +258,6 @@
               <input type="text" name="client[longitude]" id="client_longitude" value="${clientLongitude}" >
           </div>
           `;
-
         // Output to app
         document.getElementById('client-address').innerHTML = clientAddressOutput;
         document.getElementById('client-city').innerHTML = clientCityOutput;
@@ -276,29 +270,19 @@
 
 
       }).catch(function(error){
-
-        // console.log(error);
-        // alert("Address Error. Please enter a valid address. Click OK to continue.");
-        // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
-
         $( ".reset" ).trigger( "click" );
         $("#invalid-address").show().delay(4000).fadeOut();
       });
     }
 
     $( ".before-submit" ).click(function( event ) {
-
         if ($("#invalid-name").val("")) {
-
           $("#invalid-name").show().delay(2500).fadeOut();
-
           var target = $("#invalid-name");
           $('html, body').animate({
             scrollTop: ($(target).offset().top - 70)
           }, 700);
-
         }
-
       event.preventDefault();
     });
 

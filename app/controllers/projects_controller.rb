@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
-  before_action :projects_page
+  before_action :projects_page, except:[:new, :edit]
 
 
   def all_projects
@@ -54,12 +54,12 @@ class ProjectsController < ApplicationController
 
   private
 
-  def project_params
-    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip, :estimated_cost, :cost)
-  end
-
   def projects_page
     @projects_page = true
+  end
+
+  def project_params
+    params.require(:project).permit(:projectable_type, :projectable_id,  :user_id, :title, :description, :category, :status, :payment_method, :latitude, :longitude, :address, :city, :state, :zip, :estimated_cost, :cost)
   end
 
 end

@@ -29,7 +29,6 @@
       <%= yield %>
     <% else %>
       <%= render "layouts/nav" %>
-
       <div class="text-center display-4" style="font-size:200%;">
         <br>
       </div>
@@ -38,28 +37,16 @@
 
         <p class="notice" style="color:green;"><%= notice %></p>
         <p class="alert"  style="color:red;"><%= alert %></p>
+        <% if (current_user = true ) && (@clients_page || @projects_page || @pages_page || @notes_page || @directions_page) %>
+          <span>
+            <%= render "search/search_partial"%>
+          </span>
+        <% else %>
+          <!-- Empty to take up space rendering search partial wouldve -->
+          <div class=""> <br> <br> <br> </div>
+        <% end %>
 
-
-
-
-
-
-            <span class="">
-              <!-- <div class=" rounded-lg transition duration-500 ease-in-out hover:bg-white "> -->
-                <%= render "search/search_partial"%>
-              <!-- </div> -->
-
-            </span>
-
-
-
-
-          <!--  -->
-          <!--  -->
-          <!--  -->
-
-            <%= yield %>
-
+        <%= yield %>
       </div>
       <br>
     <% end %>

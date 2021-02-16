@@ -4,6 +4,7 @@ class ClientsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   before_action :client_og, only: [:show, :edit, :update, :destroy]
+  before_action :clients_page, except:[:new, :edit]
 
   # GET /clients
   # GET /clients.json
@@ -45,7 +46,6 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @user = current_user
-    # @client = Client.new(client_params)
     @client = @user.clients.build(client_params)
 
     respond_to do |format|
@@ -97,10 +97,12 @@ class ClientsController < ApplicationController
       @client_og = User.find_by_id(@client_og_id)
     end
 
+    def clients_page
+      @clients_page = true
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      # params.require(:client).permit(:name, :phone_number, :email, :type_of_project, :payment_method, :description, :check_in, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id, :search_data)
-
       params.require(:client).permit(:name, :phone_number, :email, :type_of_project, :payment_method, :description, :check_in, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id, :q)
     end
 end

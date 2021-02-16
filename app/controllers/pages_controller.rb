@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:dashboard]
+  before_action :pages_page
 
   def home
   end
@@ -33,5 +34,8 @@ class PagesController < ApplicationController
 
   private
 
+  def pages_page
+    @pages_page = true
+  end
 
 end

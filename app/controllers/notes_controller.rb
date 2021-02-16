@@ -2,6 +2,8 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   before_action :access_to_notable_types
   before_action :form_options
+  before_action :notes_page, except:[:new, :edit]
+
   # GET /notes
   # GET /notes.json
   def index
@@ -99,6 +101,10 @@ class NotesController < ApplicationController
 
     def form_options
       @form_options = ['General', 'Client', 'Project']
+    end
+
+    def notes_page
+      @notes_page = true
     end
 
     # def set_notable
