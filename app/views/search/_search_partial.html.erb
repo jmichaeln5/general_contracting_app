@@ -1,0 +1,122 @@
+<div class=" rounded-lg transition duration-500 ease-in-out hover:bg-white ">
+
+
+  <span class="float-right">
+    <div class="input-group">
+      <select class="custom-select px-4 search-select viewSelector" id="inputGroupSelect04">
+        <option selected disabled> Search...</option>
+        <option value="Clients">Clients</option>
+        <option value="Projects">Projects</option>
+        <option value="Notes">Notes</option>
+      </select>
+      <div class="input-group-append">
+        <button class="btn btn-outline-success" type="button">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+
+        </button>
+      </div>
+    </div>
+
+  </span>
+
+</div>
+
+<br>
+
+
+
+<div class="rounded-lg p-4 ">
+
+
+
+  <div class="hidden p-4 transition duration-500 ease-in-out bg-gray-100 hover:bg-white" id="Clients">
+
+  <!-- <form class="form-inline my-2 my-lg-0" action="/search/results"> -->
+  <form class="form-inline my-2 my-lg-0 " action="/search/results">
+    <input class="form-control mr-sm-2 w-100" type="search" name="clients" placeholder="Search Clients" aria-label="Search">
+    <br>
+    <br>
+    <button class="float-right btn btn-success my-2 my-sm-0"> Search </button>
+  </form>
+
+  </div>
+
+
+
+
+  <div class="hidden p-4 transition duration-500 ease-in-out bg-gray-100 hover:bg-white" id="Projects">
+
+    <form class="form-inline my-2 my-lg-0 " action="/search/results">
+      <input class="form-control mr-sm-2 w-100" type="search" name="projects" placeholder="Search Projects" aria-label="Search">
+      <br>
+      <br>
+      <button class="float-right btn btn-success my-2 my-sm-0"> Search </button>
+    </form>
+  </div>
+
+
+
+
+  <div class="hidden p-4 transition duration-500 ease-in-out bg-gray-100 hover:bg-white" id="Notes">
+
+  <form class="form-inline my-2 my-lg-0 " action="/search/results">
+    <input class="form-control mr-sm-2 w-100" type="search" name="notes" placeholder="Search Notes" aria-label="Search">
+    <br>
+    <br>
+    <button class="float-right btn btn-success my-2 my-sm-0"> Search </button>
+  </form>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+$(document).ready(function(){ // Start of JS
+
+
+  $(document).ready(function() {
+    $.viewMap = {
+      'Clients' : $('#Clients'),
+      'Projects' : $('#Projects'),
+      'Notes' : $('#Notes')
+    };
+
+    $('.viewSelector').change(function() {
+      // hide all
+      $.each($.viewMap, function() { this.hide(); });
+      // show current
+      $.viewMap[$(this).val()].show();
+    });
+  });
+
+
+
+
+}); // End of JS
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->

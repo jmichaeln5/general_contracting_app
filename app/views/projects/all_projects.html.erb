@@ -32,8 +32,6 @@
 
 <% end %>
 
-
-
 <% @projects.each do |project| %>
       <div class="card pb-12">
 
@@ -59,7 +57,7 @@
 
         <div class="field display-4"  style="font-size:200%;">
 
-        <%= project.category.capitalize %> Project for <%= project.projectable.name %>
+        <%= project.category %> Project for <%= project.projectable.name %>
         <br>
 
         <div style="font-size:60%;">

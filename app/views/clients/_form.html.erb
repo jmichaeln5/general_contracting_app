@@ -19,6 +19,19 @@
 
 <%= form_with(model: [ @user, @user.clients.build ]) do |form| %>
 
+<% if client.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+    <ul>
+    <% client.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
   <br>
 
   <div class="container">
@@ -49,8 +62,15 @@
 
   <br>
 
+  <div id="invalid-name" class="hidden">
+    <div class=" container display-4" style="font-size:300%; color:red;">
+      Client Must Include Name.
+    </div>
+  </div>
+
+
   <div class="field display-4"  style="font-size:200%;">
-    <%= form.label :name %>
+      <%= form.label :name %>
     <br>
     <%= form.text_field :name %>
   </div>
@@ -67,21 +87,18 @@
     <%= form.text_field :email %>
   </div>
 
-  <br>
-  <hr>
-
+  <br><hr>
 
   <div class="field display-4 px-10"  style="font-size:200%;">
     <%= form.label :description %>
     <br>
     <%= form.text_area :description, class:"form-control" %>
   </div>
-
-
-  <br><hr><br>
+  <div id="scroll-to-name"></div>
 
   <div id="scroll-to-address"></div>
 
+  <br><hr><br>
 
   <div id="invalid-address" class="hidden">
     <div class=" container display-4" style="font-size:300%; color:red;">
@@ -130,8 +147,8 @@
   <br>
   <br>
 
-  <div class="actions text-center container">
-    <%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
+  <div class="actions text-center container before-submit">
+    <%= button_tag(type: 'submit', id: "formBtn") do %>
      Create Client
     <% end %>
   </div>
@@ -148,7 +165,7 @@
 
 <div>
   <div class="actions text-center" stlye="">
-    <%= link_to 'Back', :back, class:"btn-primary btn-lg"  %>
+    <%= link_to 'Back', :back, class:"btn-primary btn-lg", style: 'color:#FFFFFF;'  %>
   </div>
 </div>
 
@@ -262,12 +279,28 @@
 
         // console.log(error);
         // alert("Address Error. Please enter a valid address. Click OK to continue.");
-        // $( ".field" ).effect( "shake" );
         // $( "#invalid-address" ).effect("highlight", {color: 'red'}, 3000);
+
         $( ".reset" ).trigger( "click" );
-        $("#invalid-address").show().delay(2500).fadeOut();
+        $("#invalid-address").show().delay(4000).fadeOut();
       });
     }
+
+    $( ".before-submit" ).click(function( event ) {
+
+        if ($("#invalid-name").val("")) {
+
+          $("#invalid-name").show().delay(2500).fadeOut();
+
+          var target = $("#invalid-name");
+          $('html, body').animate({
+            scrollTop: ($(target).offset().top - 70)
+          }, 700);
+
+        }
+
+      event.preventDefault();
+    });
 
 
 

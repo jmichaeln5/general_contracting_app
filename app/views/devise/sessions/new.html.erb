@@ -38,7 +38,7 @@
     <% end %>
 
     <div class="actions fadeIn fourth">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in", id:"formBtn" %>
     </div>
     <% end %>
 
@@ -53,8 +53,11 @@
 
   $( "#sample-login" ).click(function() {
 
-    var sampleEmail = "SampleAccount@gmail.com";
-    var samplePassword = "sampleaccount";
+    // var sampleEmail = "SampleAccount@gmail.com";
+    // var samplePassword = "sampleaccount";
+
+    var sampleEmail = "user1@gmail.com";
+    var samplePassword = "123456";
 
     $( "#add-sample-email" ).val( sampleEmail );
     $( "#add-sample-password" ).val( samplePassword );

@@ -9,7 +9,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
 
   def all_clients
-    @clients = Client.all.order("created_at DESC")
+    @clients = current_user.clients.all.order("created_at DESC")
   end
 
   def index
@@ -81,7 +81,7 @@ class ClientsController < ApplicationController
 
     @client.destroy
     respond_to do |format|
-      format.html { redirect_to user_clients_path(@user), notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to user_clients_path(@user), notice: 'Client deleted successfully.' }
       format.json { head :no_content }
     end
   end
@@ -101,6 +101,6 @@ class ClientsController < ApplicationController
     def client_params
       # params.require(:client).permit(:name, :phone_number, :email, :type_of_project, :payment_method, :description, :check_in, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id, :search_data)
 
-      params.require(:client).permit(:name, :phone_number, :email, :type_of_project, :payment_method, :description, :check_in, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id)
+      params.require(:client).permit(:name, :phone_number, :email, :type_of_project, :payment_method, :description, :check_in, :latitude, :longitude, :address, :city, :state, :zip, :link, :user_id, :q)
     end
 end

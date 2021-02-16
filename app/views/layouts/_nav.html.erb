@@ -51,8 +51,6 @@
       <hr>
 <!-- Nav Right -->
       <ul class="navbar-nav ml-auto">
-
-
         <% if current_user.email == "sampleaccount@gmail.com" %>
           <!-- <li class="nav-link nav-item btn disabled" href="#"  onclick="return confirm('Link disabled for Sample Account.');">
             Account Settings
@@ -61,7 +59,6 @@
           <!-- <li class="nav-item disabled" >
             <%= link_to "Account Settings", edit_user_registration_path, class:"nav-link",  :confirm => 'Are you sure?' %>
           </li> -->
-
 
         <% else%>
             <li class="nav-item disabled" >
@@ -73,6 +70,8 @@
            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
         </li>
       </ul>
+
+
     <% else %>
 <!-- Nav Left -->
           <ul class="navbar-nav mr-auto">

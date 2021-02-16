@@ -1,0 +1,59 @@
+
+<div class="card container text-center">
+
+  <br>
+  <div class="display-4 text-center py-5"> Search Results
+    <div style="font-size:60%;">
+      <%=  @results.count %>  <%= "#{@results.size == 1 ? "#{@name}" : "#{@name}s" }"%>
+    </div>
+  </div>
+  <hr>
+
+  <br>
+
+<% if @results.empty? %>
+
+
+
+  <div class="card display-4 text-center py-5">
+    <div style="font-size:60%;">
+      No Results Found.
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+
+<% else %>
+
+
+
+  <% @results.each do | result | %>
+    <div class="card pb-12">
+      <div class="field display-4"  style="font-size:200%;">
+      <br>
+
+        <%= link_to "Client: #{result.name}", result if @results.name == "Client"  %>
+
+        <%= link_to "#{result.notable.class.name} Note: #{result.title}", result if @results.name == "Note"  %>
+
+        <%= link_to "#{result.title} for #{result.projectable.name}", result if @results.name == "Project"  %>
+      </div>
+
+      <br>
+    </div>
+    <br>
+  <% end  %>
+
+
+
+<% end  %>
+
+</div>
+
+<br>
+<div class="text-center">
+<%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+</div>
+<br>

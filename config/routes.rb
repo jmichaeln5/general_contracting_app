@@ -14,9 +14,15 @@ Rails.application.routes.draw do
   get '/users/:id', to:'users#show'
   # get '/users', to:'users#index'
 
+  resources :search, only: [:index] do
+    collection do
+      get 'results'
+    end
+  end
+
+
   resources :users, only: [:show]
 
-  # resources :users do
   resources :users do
     resources :clients, only: [:index, :new, :create]
   end
@@ -40,6 +46,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :checkins
   resources :notes
+
 
 
 

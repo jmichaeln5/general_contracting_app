@@ -4,7 +4,6 @@
 <hr>
 
 <div id="map"></div>
-
 <br>
 
 <div class="card container">
@@ -32,12 +31,12 @@
   <div class="display-4"  style="font-size:200%;">
     Add Another Stop:
     <br>
-    <div class="display-4 desk"  style="font-size:50%;">
+    <div class="display-4 desk "  style="font-size:50%;">
       (Ctrl+Click or Cmd+Click for multiple selection)
     </div>
   </div>
   <br>
-  <select multiple id="waypoints">
+  <select multiple id="waypoints" class="py-8">
     <% @valid_clients.each do |client|%>
       <option value="<%=client.lat%>,<%=client.lng%>">
         <%= client.state %>-
@@ -91,10 +90,8 @@ End:</div>
 </div>
 
 <br>
-<div>
-  <div class="actions text-center" stlye="">
-    <%= link_to 'Back', :back, class:"btn-primary btn" %>
-  </div>
+<div class="text-center">
+  <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
 </div>
 <br>
 

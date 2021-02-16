@@ -21,6 +21,10 @@ html {
     /* scroll-behavior: smooth !important; */
 }
 
+.custom-select{
+background: white !important;
+}
+
 .no-decoration-link{
     text-decoration: none !important;
     color: black;

@@ -66,7 +66,7 @@
         <!-- Project Status -->
         <% if ( project.status ==  "Uninitiated" ) %>
           <span style="color:grey;" >
-            Inactive
+            Uninitiated
           </span>
           <br>
 
@@ -76,9 +76,27 @@
           </span>
           <br>
 
+        <% elsif ( project.status ==  "Approved" ) %>
+          <span style="color:green;">
+            Approved
+          </span>
+          <br>
+
+        <% elsif ( project.status ==  "Signed" ) %>
+          <span style="color:green;">
+          Signed
+          </span>
+          <br>
+
         <% elsif ( project.status ==  "Material List" ) %>
           <span style="color:green;">
-            Material List
+          Material List
+          </span>
+          <br>
+
+        <% elsif ( project.status ==  "Permit Package" ) %>
+          <span style="color:green;">
+            Permit Package
           </span>
           <br>
 

@@ -2,16 +2,16 @@
 
 <!-- <p id="notice"><%#= notice %></p> -->
 
-<% if @on_dash == true %>
-  <div class="text-gray-600 text-center display-4" style="font-size:100%;">
-    <span class="flex-wrap">
-      Welcome <%= current_user.email %>
-    </span>
-  </div>
-
-<% end %>
-
 <div class="card container text-center py-5">
+  
+  <% if @on_dash == true %>
+    <div class="text-gray-600 text-center display-4 float-left" style="font-size:100%;">
+      <span class="flex-wrap">
+        Welcome <%= current_user.email %>
+      </span>
+    </div>
+  <% end %>
+
 <br>
 <div class="display-4 text-center ">
   Dashboard

@@ -2,6 +2,8 @@
 
 <div class="card container text-center">
   <div class="display-4 text-center py-3">
+  <br>
+
     <%= "#{@note.notable.projectable.name} #{@note.notable.category}" if @note.notable_type == "Project"  %>
 
     <%= "#{@note.notable.name}"  if @note.notable_type == "Client" %>

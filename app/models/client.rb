@@ -5,6 +5,8 @@ class Client < ApplicationRecord
   has_many :checkins, as: :checkinable, dependent: :destroy
   has_many :notes, as: :notable, dependent: :destroy
 
+  validates :name, presence: true
+
   geocoded_by :full_street_address   # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
 
