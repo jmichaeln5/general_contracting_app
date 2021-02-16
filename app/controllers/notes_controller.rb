@@ -44,9 +44,6 @@ class NotesController < ApplicationController
 
     @note = Note.new(note_params)
 
-
-
-
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }

@@ -31,15 +31,37 @@ class ProjectsController < ApplicationController
       end
   end
 
+
+
+
+
+
   def create
+    # @project = @projectable.projects.new project_params
+    # @project.user_id = current_user.id
+    # @project.save
+    # redirect_to @project, notice:"Project Created Successfully."
+
     @project = @projectable.projects.new project_params
     @project.user_id = current_user.id
-    # byebug
-    @project.save
+    # @project.save
 
-    # redirect_to @projectable, notice:"Project Created Successfully."
-    redirect_to @project, notice:"Project Created Successfully."
+
+
+      if @project.save
+        redirect_to @project, notice:"Project Created Successfully."
+      else
+        redirect_to @project.projectable, alert:"Sorry, unable to create project. Please select a Project Type."
+      end
+
+
   end
+
+
+
+
+
+
 
 
   def destroy

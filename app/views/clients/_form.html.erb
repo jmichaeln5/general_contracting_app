@@ -67,7 +67,7 @@
   <div class="field display-4"  style="font-size:200%;">
       <%= form.label :name %>
     <br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"isPresent" %>
   </div>
 
   <div class="field display-4"  style="font-size:200%;">
@@ -276,14 +276,17 @@
     }
 
     $( ".before-submit" ).click(function( event ) {
-        if ($("#invalid-name").val("")) {
+
+        if ($(".isPresent").val().length < 1) {
           $("#invalid-name").show().delay(2500).fadeOut();
           var target = $("#invalid-name");
           $('html, body').animate({
             scrollTop: ($(target).offset().top - 70)
           }, 700);
+
+          event.preventDefault();
         }
-      event.preventDefault();
+      // event.preventDefault();
     });
 
 
