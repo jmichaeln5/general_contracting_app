@@ -26,14 +26,21 @@
 
       <span style="font-size:100%;">
         <% if client.checkins.any? %>
-          <span class="date float-left pl-2 pt-2" style="color:green;">
+          <span class="date float-left pl-2 pt-2" style="color:green;" >
             Last Check-In:
             <% if client.checkins.last.time_contacted.present? %>
-              <%= "#{client.checkins.last.time_contacted.strftime("%m-%d-%y")}"  %>
 
-              <%#= "#{client.checkins.last.time_contacted.strftime("%m-%d-%y")} at #{client.checkins.last.time_contacted.strftime("%I:%M %p") }"  %>
+              <%="#{client.checkins.last.time_contacted.strftime("%m-%d-%y")}"  %>
+
             <% else client.checkins.last.created_at %>
-              <%= "#{client.checkins.last.created_at.strftime("%m-%d-%y")}" %>
+
+
+              <%="#{client.checkins.last.created_at.strftime("%m-%d-%y")}" %>
+
+              <div>
+              <button class="text-black opacity-0 hover:opacity-100 ">Hello</button>
+            </div>
+
             <% end %>
           </span>
         <% end %>
