@@ -5,6 +5,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def landing_page
+    @landing_page = true
+  end
+
   def index
   end
 
@@ -28,8 +32,6 @@ class PagesController < ApplicationController
     # else
     #   redirect_to dashboard_path
     # end
-
-
   end
 
   private

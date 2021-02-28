@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  # root 'pages#home'
+  root 'pages#landing_page'
   get 'pages/index'
   get 'pages/about'
   get 'pages/test_page'

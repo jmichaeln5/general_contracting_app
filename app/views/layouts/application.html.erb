@@ -22,8 +22,11 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
-
-  <body class="bg-indigo-100">
+  <% if @landing_page != true %>
+      <body class="bg-indigo-100">
+    <% else %>
+      <body class="">
+    <% end %>
 
     <% if current_page?(root_path) %>
       <%= yield %>
