@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:dashboard]
-  before_action :pages_page
+  before_action :pages_page, only: [:dashboard]
 
   def home
   end
