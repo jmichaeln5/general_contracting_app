@@ -43,6 +43,7 @@
         <p class="alert"  style="color:red;"><%= alert %></p>
         <% if (current_user = true ) && (@clients_page || @projects_page || @pages_page || @notes_page || @directions_page) %>
           <span>
+            <br>
             <%= render "search/search_partial"%>
           </span>
         <% else %>

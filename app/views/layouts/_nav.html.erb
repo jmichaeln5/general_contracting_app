@@ -1,15 +1,8 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light"> -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <% if current_user %>
-    <li class="navbar-brand">
-      <%= link_to  "General Contracting App", dashboard_path, class:"navbar-brand" %>
-    </li>
-  <% else %>
-      <li class="navbar-brand">
-        <a class="navbar-brand" href="/"> General Contracting App </a>
-      </li>
-  <% end %>
+  <li class="navbar-brand">
+    <a class="navbar-brand" href="/"> General Contracting App </a>
+  </li>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,7 +11,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <% if current_user %>
-<!-- Nav Left -->
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item">
@@ -45,21 +37,14 @@
         <li class="nav-item">
           <%#= link_to "Test Page", pages_test_page_path, class:"nav-link" %>
         </li>
-
       </ul>
 
       <hr>
-<!-- Nav Right -->
       <ul class="navbar-nav ml-auto">
         <% if current_user.email == "sampleaccount@gmail.com" %>
-          <!-- <li class="nav-link nav-item btn disabled" href="#"  onclick="return confirm('Link disabled for Sample Account.');">
+          <li class="nav-link nav-item btn disabled" href="#"  onclick="return confirm('Link disabled for Sample Account.');">
             Account Settings
-          </li> -->
-
-          <!-- <li class="nav-item disabled" >
-            <%= link_to "Account Settings", edit_user_registration_path, class:"nav-link",  :confirm => 'Are you sure?' %>
-          </li> -->
-
+          </li>
         <% else%>
             <li class="nav-item disabled" >
               <%= link_to "Account Settings", edit_user_registration_path, class:"nav-link" %>
@@ -70,16 +55,12 @@
            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
         </li>
       </ul>
-
-
     <% else %>
-<!-- Nav Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <%= link_to "About", pages_about_path, class:"nav-link" %>
-            </li>
-          </ul>
-<!-- Nav Right -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "About", pages_about_path, class:"nav-link" %>
+        </li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <%= link_to "Sign In",  new_user_session_path, class:"nav-link"   %>
@@ -91,4 +72,114 @@
     <% end %>
 
   </div>
+</nav> -->
+
+
+<nav id="header" class="fixed w-full z-10 bg-gray-500 bg-opacity-25 shadow text-gray-800">
+
+  <div id="progress" class="h-1 z-20" style="background:linear-gradient(to right, #56baed var(--scroll), transparent 0);"></div>
+
+  <div class="md:max-w-4xl mx-auto flex flex-wrap items-center justify-between py-3">
+    <% if (current_page? root_path) or (current_page? new_user_session_path) %>
+    <div class="pl-4">
+      <a class="text-gray-200 hover:text-gray-900 text-base no-underline hover:no-underline font-extrabold text-2xl" href="/">
+        General Contracting App
+      </a>
+    </div>
+  <% end %>
+
+    <div class="block lg:hidden pr-4">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-600 hover:text-gray-900 hover:appearance-none focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-transparent md:bg-transparent z-20" id="nav-content">
+      <ul class="list-reset lg:flex justify-end flex-1 items-center">
+
+        <% if current_user %>
+          <li class="mr-3">
+          <%= link_to "Dashboard", dashboard_path, class:"inline-block py-2 px-4 text-gray-400 font-bold no-underline hover:text-white" %>
+          </li>
+
+          <li class="mr-3">
+          <%= link_to "Clients", user_clients_path(current_user), class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+          </li>
+
+          <li class="mr-3">
+          <%= link_to "Directions", directions_index_path, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+          </li>
+
+          <li class="mr-3">
+          <%= link_to "Notes", notes_path, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+          </li>
+
+          <li class="mr-3">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4"  %>
+          </li>
+
+          <% if current_user.email != "sampleaccount@gmail.com" %>
+          <li class="mr-3">
+          <%= link_to "Account Settings", edit_user_registration_path, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+          </li>
+          <% end %>
+
+        <% end %>
+
+        <% if !current_user %>
+          <li class="mr-3">
+          <%= link_to "Sign In", new_user_session_path, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+
+          </li>
+
+          <li class="mr-3">
+          <%= link_to "Register", new_user_registration_path, class:"inline-block text-gray-600 no-underline hover:text-white hover:text-underline py-2 px-4" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </nav>
+
+
+<script type="text/javascript">
+/* Progress bar */
+//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+var h = document.documentElement,
+  b = document.body,
+  st = 'scrollTop',
+  sh = 'scrollHeight',
+  progress = document.querySelector('#progress'),
+  scroll;
+var scrollpos = window.scrollY;
+var header = document.getElementById("header");
+var navcontent = document.getElementById("nav-content");
+document.addEventListener('scroll', function() {
+
+  /*Refresh scroll % width*/
+  scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+
+  /*Apply classes for slide in bar*/
+  scrollpos = window.scrollY;
+  // if UNDER Top of Page
+  if (scrollpos > 10) {
+    header.classList.add("border-b", "border-gray-100", "bg-gray-500", "bg-opacity-50", "text-gray-100");
+    header.classList.remove("shadow", "text-gray-800");
+
+  } else {
+    header.classList.remove("bg-gray-500", "bg-opacity-50", "border-b", "border-gray-100");
+    header.classList.add("bg-gray-500", "bg-opacity-25", "shadow", "text-gray-800");
+
+  }
+});
+
+//Javascript to toggle the menu
+document.getElementById('nav-toggle').onclick = function() {
+  document.getElementById("nav-content").classList.toggle("hidden");
+}
+
+</script>
